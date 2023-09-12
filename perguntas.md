@@ -405,3 +405,17 @@ imas.
 8. A) O deus Trickster Anansi é conhecido por suas travessuras e astúcia, enquanto Mami Wata é associada à água e à fertilidade.
 9. D) Shango, o deus do trovão e do fogo, é frequentemente associado à justiça e à vingança na mitologia iorubá.
 10. B) Os mitos e lendas africanos são transmitidos oralmente de geração em geração e desempenham um papel fundamental na preservação da cultura e da história africanas.
+
+## Color Theme Swatches in Hex 
+color: #F2F2F2;
+color: #D9D9D9;
+color: #D9BD89;
+color: #BF9B6F;
+color: #8C6849;
+
+## Color Theme Swatches in RGBA 
+color: rgba(242, 242, 242, 1);
+color: rgba(216, 216, 216, 1);
+color: rgba(216, 188, 136, 1);
+color: rgba(191, 155, 110, 1);
+color: rgba(140, 104, 72, 1); 
