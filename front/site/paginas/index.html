@@ -13,9 +13,7 @@
       padding: 0;
     }
 
-    body {
-      padding:20px 80px;
-    }
+
 
     header {
       display: flex;
@@ -54,6 +52,10 @@
       height: 100%;
     }
 
+    .card > img{
+      max-height: 300px;
+    }
+
     .main-banner{
       height: 350px;
       background: rgb(3,0,57);
@@ -63,8 +65,13 @@
       display: flex;
       text-align: center;
       justify-content: center;
+      margin: 0 0 50px 0
+    }
 
-
+    .banner-text {
+      justify-content: center;
+      display: flex;
+      align-items: center;  
     }
 
     .main-banner h1, .main-banner p{
@@ -73,7 +80,18 @@
     justify-content: center;
     }
 
-    .main-banner > p{
+    #pbanner {
+      padding: 10px;
+    }
+
+    main{
+      padding: 0 30px;
+    }
+
+    footer{
+      margin: 70px 0 0 0;
+      background-color: black;
+      height: 300px;
     }
 
   </style>
@@ -110,100 +128,107 @@
   </header>
 
   <div class="main-banner">
-    <h1>MITOLOGIAS</h1>
+    <div class="banner-text">
+      <h1>MITOLOGIAS</h1> 
+    </div>
 
   </div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-africana.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">AFRICANA</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia africana.</p>
+<main>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-africana.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">AFRICANA</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia africana.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-egipcia.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">EGÍPCIA</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia egípcia.</p>
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-egipcia.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">EGÍPCIA</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia egípcia.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-greco-romana.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">GREGO-ROMANA</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia greco-romana.</p>
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-greco-romana.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GRECO-ROMANA</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia greco-romana.</p>
+        </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-grega.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">GREGA</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia grega.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-hindu.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">HINDU</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia hindu.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-mesopotamica.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">MESOPOTÂMICA</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia mesopotâmica.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-romana.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">ROMANA</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia romana.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="../../back/imagens/mitologia-nordica.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">NÓRDICA</h5>
-        <p class="card-text">Clicando aqui você aprende sobre a mitologia nórdica.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="https://wp.thecollector.com/wp-content/uploads/2020/06/giulio-romano-olympian-gods-wall-painting-1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
-      </div>
-      
     </div>
     
-     
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-grega.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">GREGA</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia grega.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-hindu.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">HINDU</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia hindu.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-mesopotamica.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">MESOPOTÂMICA</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia mesopotâmica.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-romana.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ROMANA</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia romana.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="../../../back/imagens/mitologia-nordica.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">NÓRDICA</h5>
+          <p class="card-text">Clicando aqui você aprende sobre a mitologia nórdica.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://wp.thecollector.com/wp-content/uploads/2020/06/giulio-romano-olympian-gods-wall-painting-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+        </div>
+        
+      </div>
+      
+       
+    </div>
   </div>
-</div>
+</main>
+<footer>
+
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
