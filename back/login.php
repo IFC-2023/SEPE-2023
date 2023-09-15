@@ -1,3 +1,38 @@
+<?php
+
+if (isset($_POST['submit'])) {
+  // print_r('Nome: ' . $_POST['nome']);
+  // print_r('<br>');
+  // print_r('Email: ' . $_POST['email']);
+  // print_r('<br>');
+  // print_r('Telefone: ' . $_POST['telefone']);
+  // print_r('<br>');
+  // print_r('Sexo' . $_POST['genero']);
+  // print_r('<br>');
+  // print_r('Data de nascimento: ' . $_POST['data_nascimento']);
+  // print_r('<br>');
+  // print_r('Cidade: ' . $_POST['cidade']);
+  // print_r('<br>');
+  // print_r('Estado: ' . $_POST['estado']);
+  // print_r('<br>');
+  // print_r('Endereço: ' . $_POST['endereco']);
+
+  include_once('config.php');
+
+  $nome = $_POST['nome'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+  $telefone = $_POST['telefone'];
+  $sexo = $_POST['genero'];
+  $data_nasc = $_POST['data_nascimento'];
+  $cidade = $_POST['cidade'];
+  $estado = $_POST['estado'];
+  $endereco = $_POST['endereco'];
+
+  $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, telefone, sexo, data_nasc, cidade, estado, endereco) VALUES ('$nome', '$email', '$senha', '$telefone', '$sexo', '$data_nasc', '$cidade', '$estado', '$endereco')");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,16 +40,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-php.css">
+  <link rel="stylesheet" href="login.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
   <title>Formulário | LF</title>
-  <style>
-   
-  </style>
 </head>
-
+<body>
+  
 <div class="container" >
   <a class="links" id="paracadastro"></a>
   <a class="links" id="paralogin"></a>

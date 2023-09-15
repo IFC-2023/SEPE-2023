@@ -5,6 +5,9 @@
   padding: 0;
   font-family: Arial, sans-serif;
 }
+body {
+  background-color: #000000 !important;
+}
 
 .container {
   position: absolute;
@@ -59,12 +62,12 @@ p {
 }
 
 label {
-  color: #405c60;
+  color: #303030;
   position: relative;
 }
 
 ::-webkit-input-placeholder {
-  color: #bebcbc;
+  color: #919191;
   font-style: italic;
 }
 
@@ -120,7 +123,7 @@ input[type="submit"]:hover {
 
 .link {
   position: absolute;
-  color: #7f7c7c;
+  color: #1f1f1f;
   left: 0px;
   height: 20px;
   width: 440px;
@@ -135,9 +138,9 @@ input[type="submit"]:hover {
   font-weight: bold;
   background: #f7f8f1;
   padding: 6px;
-  color: rgb(29, 162, 193);
+  color: #52bce6;
   margin-left: 10px;
-  border: 1px solid #6b8e23;
+  border: 1px solid #5963f1;
 
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -147,9 +150,9 @@ input[type="submit"]:hover {
 }
 
 .link a:hover {
-  color: #39bfd7;
+  color: #0077be;
   background: #f7f7f7;
-  border: 1px solid #4ab3c6;
+  border: 1px solid #2633eb;
 }
 
 #cadastro,
@@ -160,7 +163,7 @@ input[type="submit"]:hover {
   padding: 18px 6% 60px 6%;
   margin: 0 0 35px 0;
   background: #f7f7f7;
-  border: 1px solid rgba(147, 184, 189, 0.8);
+  border: 1px solid rgba(1, 37, 104, 0.8);
 
   --webkit-box-shadow: 5px;
   border-radius: 5px;
