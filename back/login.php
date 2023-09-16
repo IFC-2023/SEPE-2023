@@ -1,35 +1,55 @@
 <?php
 
-if (isset($_POST['submit'])) {
-  // print_r('Nome: ' . $_POST['nome']);
-  // print_r('<br>');
-  // print_r('Email: ' . $_POST['email']);
-  // print_r('<br>');
-  // print_r('Telefone: ' . $_POST['telefone']);
-  // print_r('<br>');
-  // print_r('Sexo' . $_POST['genero']);
-  // print_r('<br>');
-  // print_r('Data de nascimento: ' . $_POST['data_nascimento']);
-  // print_r('<br>');
-  // print_r('Cidade: ' . $_POST['cidade']);
-  // print_r('<br>');
-  // print_r('Estado: ' . $_POST['estado']);
-  // print_r('<br>');
-  // print_r('Endereço: ' . $_POST['endereco']);
+if (isset($_POST['submit-cad'])) {
 
   include_once('config.php');
 
-  $nome = $_POST['nome'];
-  $email = $_POST['email'];
-  $senha = $_POST['senha'];
-  $telefone = $_POST['telefone'];
-  $sexo = $_POST['genero'];
-  $data_nasc = $_POST['data_nascimento'];
-  $cidade = $_POST['cidade'];
-  $estado = $_POST['estado'];
-  $endereco = $_POST['endereco'];
+  $nome = $_POST['nome_cad'];
+  $email = mysqli_real_escape_string($conexao, $_POST['email_cad']);
+  $senha = password_hash($_POST['senha_cad'], PASSWORD_DEFAULT);
 
-  $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, telefone, sexo, data_nasc, cidade, estado, endereco) VALUES ('$nome', '$email', '$senha', '$telefone', '$sexo', '$data_nasc', '$cidade', '$estado', '$endereco')");
+  $query = "SELECT * FROM informacoes WHERE email = '$email'";
+  $result = mysqli_query($conexao, $query);
+
+  if (mysqli_num_rows($result) > 0) {
+      echo "Este email já está cadastrado. Por favor, use outro email.";
+  } else {
+      $result = mysqli_query($conexao, "INSERT INTO informacoes (nome, email, senha) VALUES ('$nome', '$email',       '$senha')");
+
+      $confirmResult = mysqli_query($conexao, "SELECT email FROM informacoes WHERE email = '$email'");
+  
+      if ($confirmResult && mysqli_num_rows($confirmResult) === 0) {
+        echo "Email não cadastrado";
+      } else {
+          echo "Email cadastrado";
+      }
+    }
+  }
+
+  if(isset($_POST['submit-login'])) {
+    include_once('config.php');
+
+    $emailLogin = $_POST['email_login'];
+    $senhaLogin = $_POST['senha_login'];
+
+    $resultLogin = mysqli_query($conexao, "SELECT email,senha FROM informacoes WHERE email = '$emailLogin'");
+
+    if ($resultLogin && mysqli_num_rows($resultLogin) === 0) {
+        echo "Email incorreto";
+    }
+
+     else if ($resultLogin && mysqli_num_rows($resultLogin) > 0) {
+        $usuario = mysqli_fetch_assoc($resultLogin);
+
+        if(password_verify($senhaLogin, $usuario['senha'])) {
+            header("Location: http://localhost/SEPE/front/site/paginas/index.html");
+            exit();
+        }
+
+        else {
+            echo "Senha incorreta";
+        }
+    }
 }
 
 ?>
@@ -54,16 +74,16 @@ if (isset($_POST['submit'])) {
   <div class="content">      
     <!--FORMULÁRIO DE LOGIN-->
     <div id="login">
-      <form method="post" action=""> 
+      <form method="post" action="login.php"> 
         <h1>Login</h1> 
         <p> 
-          <label for="nome_login">Seu nome</label>
-          <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. contato@gmail.com"/>
+          <label for="nome_login">Seu email</label>
+          <input id="nome_login" name="email_login" required="required" type="text" placeholder="ex. contato@gmail.com"/>
         </p>
          
         <p> 
-          <label for="email_login">Seu e-mail</label>
-          <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" /> 
+          <label for="email_login">Sua senha</label>
+          <input id="email_login" name="senha_login" required="required" type="password" placeholder="ex. senha" /> 
         </p>
          
         <p> 
@@ -72,7 +92,7 @@ if (isset($_POST['submit'])) {
         </p>
          
         <p> 
-          <input type="submit" value="Logar" /> 
+          <input type="submit" name="submit-login" value="Logar" /> 
         </p>
          
         <p class="link">
@@ -84,7 +104,7 @@ if (isset($_POST['submit'])) {
 
     <!--FORMULÁRIO DE CADASTRO-->
     <div id="cadastro">
-      <form method="post" action=""> 
+      <form method="post" action="login.php"> 
         <h1>Cadastro</h1> 
          
         <p> 
@@ -103,7 +123,7 @@ if (isset($_POST['submit'])) {
         </p>
          
         <p> 
-          <input type="submit" value="Cadastrar"/> 
+          <input type="submit" name="submit-cad" value="Cadastrar"/> 
         </p>
          
         <p class="link">  
