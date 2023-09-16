@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-quiz/grecia-quiz.css">
+    <link rel="stylesheet" href="css-quiz/animations-css/grecia.css">
+    <script src="js/animacoes.js" defer></script>
     <title>Quiz Grécia</title>
 </head>
 <body>
     <header>
         <nav>
             <ul class="lista-nav">
-                <li><a href="">HOME</a></li>
-                <div class="menu-dropdown">
-                    <button class="menu-button">QUIZ</button>
-                    <div class="dropdown-itens">
-                        <a href="egipcia.html">Egípcia</a>
-                        <a href="fenicia.html">Fenícia</a>
-                        <a href="greco-romana.html">Greco-Romana</a>
-                        <a href="grega.html">Grega</a>
-                        <a href="hindu.html">Hindu</a>
-                        <a href="mesopotamica.html">Mesopotâmica</a>
-                        <a href="nordica.html">Nórdica</a>
-                        <a href="romana.html">Romana</a>
-                    </div>
-                </div>
-                <li><a href="../paginas/grega.html">MITOLOGIA GREGA</a></li>
+                <li id="link-home"><a href="../paginas/index.html">HOME</a></li>
+                <li>
+                    <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
+                    <ul class="dropdown">
+                        <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
+                        <li class="link-dropdown" id="linkFenicia"><a href="fenicia.html">Fenícia</a></li>
+                        <li class="link-dropdown" id="linkGrecoRomana"><a href="greco-romana.html">Greco-Romana</a></li>
+                        <li class="link-dropdown"id="linkHindu"><a href="hindu.html">Hindu</a></li>
+                        <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
+                        <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
+                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
+                        <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
+                    </ul>
+                </li>
+                <li id="link-grecia"><a href="../paginas/grega.html">MITOLOGIA GREGA</a></li>
             </ul>
         </nav>
     </header>
