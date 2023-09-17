@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .lista-nav {
@@ -215,4 +216,45 @@ ul li:hover ul.dropdown {
         width: 0%;
         height: 2px;
     }
+}
+
+main {
+    margin-top: 50px;
+}   
+
+#introducao > h1 {
+    font-size: 3em;
+    margin-left: 5px;
+}
+
+#introducao > ol {
+    margin-top: 20px;
+}
+
+#introducao > ol > li {
+    font-size: 1.25em;
+    margin-left: 25px;
+}
+
+#introducao > h2 {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+#facil {
+    margin-top: 50px;
+}
+
+#facil > h3 {
+    font-size: 2em;
+    color: lightgreen;
+}
+
+label {
+    display: block;
+}
+
+input {
+    margin-top: 10px;
+    margin-left: 5px;
 }
