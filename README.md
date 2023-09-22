@@ -452,4 +452,67 @@
 10. Qual é a relação entre a mitologia fenícia e a cultura marítima e comercial da região?
     - [ ] A mitologia fenícia não tinha relação com a cultura marítima e comercial.
     - [ ] A mitologia fenícia estava focada principalmente na agricultura e não tinha conexão com o mar.
-    - [x] A mitologia fenícia refletia a importância do mar para a cultura fenícia, com deuses relacionados à navegac
+    - [x] A mitologia fenícia refletia a importância do mar para a cultura fenícia, com deuses relacionados à navegação 
+
+## **Mitologia Romana:**
+
+### *Nível Fácil:*
+
+1. Qual é o equivalente romano do deus grego Zeus?
+   - [ ] A Apolo
+   - [ ] B Hades
+   - [x] C Júpiter
+   - [ ] D Hermes
+
+2. Quem é a deusa romana do amor e da beleza, equivalente à Afrodite grega?
+   - [ ] A Hera
+   - [ ] B Deméter
+   - [x] C Vênus
+   - [ ] D Atena
+
+3. Quem é o deus romano dos mares, equivalente a Poseidon na mitologia grega?
+   - [ ] A Hades
+   - [ ] B Ares
+   - [x] C Netuno
+   - [ ] D Dionísio
+
+### *Nível Médio:*
+
+4. Explique como a mitologia romana absorveu elementos da mitologia grega e quais deuses romanos correspondem aos deuses gregos mais importantes.
+   - [ ] A Mitologia romana não tem conexões com a grega.
+   - [ ] A mitologia grega absorveu elementos da mitologia romana.
+   - [x] A mitologia romana é em grande parte uma adaptação da mitologia grega, com deuses romanos equivalentes, como Júpiter (Zeus), Vênus (Afrodite) e Netuno (Poseidon).
+
+5. Qual é a lenda da fundação de Roma e quem são os irmãos gêmeos envolvidos nela?
+   - [ ] A Roma foi fundada por um único herói sem irmãos.
+   - [ ] Os irmãos gêmeos na lenda de fundação de Roma são Castor e Pólux.
+   - [x] A lenda de fundação de Roma envolve os irmãos gêmeos Rômulo e Remo, criados por uma loba e destinados a fundar a cidade.
+
+6. Quem é o deus romano dos mensageiros, das estradas e dos viajantes, equivalente a Hermes na mitologia grega?
+   - [ ] A Hades
+   - [ ] B Marte
+   - [x] C Mercúrio
+   - [ ] D Plutão
+
+### *Nível Difícil:*
+
+7. Explique o papel e a importância do deus Jano na mitologia romana.
+   - [ ] Jano não é uma figura importante na mitologia romana.
+   - [ ] Jano é um deus guerreiro que liderou as legiões romanas.
+   - [x] Jano é o deus romano das portas, entradas, começos e fins, frequentemente representado com duas faces, uma olhando para frente e outra para trás, simbolizando a transição.
+
+8. Qual é a história do mito de Rômulo e Remo e como ela se relaciona com a fundação de Roma?
+   - [ ] Rômulo e Remo não têm relação com a fundação de Roma.
+   - [ ] Rômulo e Remo eram inimigos mortais que nunca colaboraram.
+   - [x] Rômulo e Remo são irmãos gêmeos que foram abandonados e criados por uma loba. Eles cresceram e fundaram a cidade de Roma, mas Rômulo matou Remo em uma disputa, tornando-se o primeiro rei de Roma.
+
+9. Qual é o papel de Mercúrio na mitologia romana, além de ser o mensageiro dos deuses?
+   - [ ] Mercúrio não tem outro papel além de mensageiro.
+   - [ ] Mercúrio é o deus do amor na mitologia romana.
+   - [x] Mercúrio é também o deus do comércio, dos viajantes, dos ladrões e da eloquência.
+
+10. Quem é a deusa romana da agricultura e da fertilidade, equivalente à Deméter na mitologia grega?
+    - [ ] A Hera
+    - [ ] B Afrodite
+    - [x] C Ceres
+    - [ ] D Ártemis
