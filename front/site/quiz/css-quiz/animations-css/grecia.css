@@ -58,6 +58,16 @@ ul li:hover ul.dropdown {
     display: block;
 }
 
+ul li ul.dropdown a {
+    opacity: 0.5;
+}
+  
+
+ul li ul.dropdown a:hover {
+    opacity: 1;
+    color: #fff;
+}
+
 .dropdown > li > a {
     padding: 10px 50px 10px 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -71,6 +81,10 @@ ul li:hover ul.dropdown {
     display: inline-block;
     position: relative;
     bottom: 2px;
+}
+
+#link-home > a, #link-grecia > a {
+    padding-bottom: 8px;
 }
 
 #link-home:hover::after {
@@ -155,6 +169,10 @@ ul li:hover ul.dropdown {
         width: 0%;
         height: 2px;
     }
+}
+
+.dropdown > li > a {
+    padding: 8px 8px;
 }
 
 #margin-top-dropdown:hover::after, #linkFenicia:hover::after, #linkGrecoRomana:hover::after, #linkHindu:hover::after, #linkNordica:hover::after, #linkRomana:hover::after, #linkGeral:hover::after {
@@ -253,7 +271,7 @@ ul li:hover ul.dropdown {
     margin-left: 5px;
 }
 
-#secao-pergunta {
+#secao-pergunta-1 {
     display: grid;
     grid-template-areas:
     "informacoes" "alternativas";
@@ -263,12 +281,28 @@ ul li:hover ul.dropdown {
 .informacoes-questao {
     grid-area: informacoes;
     background-color: #241bb9;
+    color: #fff;
     height: 92vh;
     display: grid;
     grid-template-areas:
     "pergunta"
     "texto"
     "nivel";
+    grid-template-rows: 20% 70% 10%;
+}
+
+.questao {
+    padding: 60px 60px;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.pergunta {
+    display: grid;
+    justify-items: center;
+    margin: 0 50px;
+    font-size: 2.8em;
+    text-align: left;
 }
 
 .alternativas {
