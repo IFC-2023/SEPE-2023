@@ -288,7 +288,7 @@ ul li ul.dropdown a:hover {
     "pergunta"
     "texto"
     "nivel";
-    grid-template-rows: 20% 70% 10%;
+    grid-template-rows: 30% 60% 10%;
 }
 
 .questao {
@@ -301,8 +301,14 @@ ul li ul.dropdown a:hover {
     display: grid;
     justify-items: center;
     margin: 0 50px;
-    font-size: 2.8em;
+    font-size: 4em;
     text-align: left;
+}
+
+.dificuldade {
+    text-align: right;
+    margin-right: 50px;
+    font-size: 2em;
 }
 
 .alternativas {
