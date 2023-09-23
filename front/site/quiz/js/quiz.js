@@ -28,14 +28,14 @@ function responder1() {
                 setTimeout (() => {
                     resCerta.style.display = "none";
                     pg2.style.display = "grid";
-                }, 3000);
+                }, 1500);
             } else if (valorResposta === "errado") {
                 pg1.style.display = "none";
                 resErrada.style.display = "grid";
                 setTimeout (() => {
                     resErrada.style.display = "none";
                     pg2.style.display = "grid";
-                }, 3000);
+                }, 1500);
             }
             break;
         }
@@ -57,14 +57,14 @@ function responder2() {
                 setTimeout(() => {
                     resCerta.style.display = "none";
                     pg3.style.display = "grid";
-                }, 3000);
+                }, 1500);
             } else if (valorResposta === "errado") {
                 pg2.style.display = "none";
                 resErrada.style.display = "grid";
                 setTimeout(() => {
                     resErrada.style.display = "none";
                     pg3.style.display = "grid";
-                }, 3000);
+                }, 1500);
             }
             break;
         }
@@ -87,7 +87,7 @@ function responder3() {
                 setTimeout(() => {
                     resCerta.style.display = "none";
                     pg4.style.display = "grid";
-                }, 3000);
+                }, 1500);
             } else if (valorResposta === "errado") {
                 pg3.style.display = "none";
                 resErrada.style.display = "grid";
@@ -95,7 +95,7 @@ function responder3() {
                 setTimeout(() => {
                     resErrada.style.display = "none";
                     pg4.style.display = "grid";
-                }, 3000);
+                }, 1500);
             }
             break;
         }
