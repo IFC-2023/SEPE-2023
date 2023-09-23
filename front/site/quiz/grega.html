@@ -43,6 +43,8 @@
             </ol>
 
             <h2>Eae, está preparado(a)? Então vamos começar!</h2>
+
+            <input type="button" value="COMEÇAR" id="btnComecar">
         </section>
 
         <section id="secao-pergunta-1">
@@ -52,12 +54,40 @@
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label for="">
-                    <input type="radio" name="" id="marginRadio"> A - Apolo
+                <label class="marginRadio">
+                    <input type="radio" name="questao1" id="" value="errado"> A - Apolo
                 </label>
-                <input type="radio" name="" id="">
-                <input type="radio" name="" id="">
-                <input type="radio" name="" id="">
+                <label>
+                    <input type="radio" name="questao1" id="" value="errado"> B - Ares
+                </label>
+                <label>
+                    <input type="radio" name="questao1" id="" value="certo"> C - Zeus
+                </label>
+                <label>
+                    <input type="radio" name="questao1" id="" value="errado"> D -Dionísio
+                </label>
+
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta1">
+                </div>
+            </div>
+        </section>
+
+        <section id="res-certa">
+            <div id="fraseCerta">
+                <h1>Resposta Certa!</h1>
+            </div>
+            <div class="proximo">
+                <input type="button" value="Próximo" id="btnCerta1"> <span>&rarr;</span>
+            </div>
+        </section>
+
+        <section id="res-errada">
+            <div id="fraseErrada">
+                <h1>Resposta Errada!</h1>
+            </div>
+            <div class="proximo">
+                <input type="button" value="Próximo" id="btnErrada1"><span>&rarr;</span>
             </div>
         </section>
     </main>
