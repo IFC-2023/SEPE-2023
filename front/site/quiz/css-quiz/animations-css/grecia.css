@@ -304,7 +304,7 @@ ul li ul.dropdown a:hover {
     grid-area: informacoes;
     background-color: #241bb9;
     color: #fff;
-    height: 92vh;
+    height: 91.9vh;
     display: grid;
     grid-template-areas:
     "pergunta"
@@ -430,8 +430,7 @@ input[type=radio] {
 
 #fraseErrada {
     grid-area: frase;
-    /* display: flex; */
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fa0b0b;
@@ -445,9 +444,34 @@ input[type=radio] {
 }
 
 #secao-pergunta-2 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-3 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-4 {
     display: grid;
     /* display: none; */
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
+}
+
+#correcaoTamanho {
+    width: 110px;
+}
+
+#secao-pergunta-4 > .alternativas > .buttonResponder > input[type=button] {
+    top: 50px;
+    position: relative;
 }
