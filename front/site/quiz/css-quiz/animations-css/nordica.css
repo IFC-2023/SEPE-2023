@@ -245,11 +245,10 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao {
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
     margin-top: 40px;
     margin-left: 13%;
     margin-right: 14%;
@@ -292,7 +291,7 @@ ul li ul.dropdown a:hover {
 }
 
 #secao-pergunta-1 {
-    display: grid;
+    display: none;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
@@ -459,8 +458,17 @@ input[type=radio] {
     grid-template-columns: 1fr 1fr;
 }
 #secao-pergunta-3 {
-    display: grid;
+    display: none;
     grid-template-areas: 
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
+}
+#secao-pergunta-4 {
+    display: none;
+    grid-template-areas: "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+#secao-pergunta-4 > .alternativas > .buttonResponder > input[type=button] {
+    top: 50px;
+    position: relative;
 }

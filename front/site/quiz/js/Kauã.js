@@ -1,6 +1,8 @@
+
 const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
 const pg3 = document.getElementById("secao-pergunta-3");
+const pg4 = document.getElementById("secao-pergunta-4");
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
 
@@ -10,6 +12,11 @@ function comecar() {
 
     introducao.style.display = "none";
     pg1.style.display = "grid";
+    if (comecar.onclick) {
+        introducao.style.display = "none";
+        pg1.style.display == 'grid';
+    }
+
 }
 
 document.getElementById("btnComecar").addEventListener("click", comecar);
@@ -81,15 +88,11 @@ function responder3() {
             valorResposta = resposta[d].value;
             if (valorResposta == 'certo') {
                 pg3.style.display = 'none';
-                finalCerto.style.display = 'grid';
+                resCerta.style.display = 'grid';
                 setTimeout(() => {
-                    finalCerto.style.display = 'none';
-                    quantidadeAcertos = 'grid';
+                    resCerta.style.display = 'none';
+                    pg4.style.display = 'grid';
                 }, 2000);
-            }
-            else {
-                pg3.style.display = 'none';
-                resErrada.style.display = 'grid';
             }
         }
     }
