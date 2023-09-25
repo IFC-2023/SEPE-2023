@@ -1,8 +1,8 @@
 const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
+const pg3 = document.getElementById("secao-pergunta-3");
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
-contador_erros = 0;
 
 function comecar() {
     const introducao = document.getElementById("introducao");
@@ -24,11 +24,20 @@ function responder1() {
             if (valorResposta === "certo") {
                 pg1.style.display = "none";
                 resCerta.style.display = "grid";
-                setTimeout (() => {
+                setTimeout(() => {
                     resCerta.style.display = "none";
                     pg2.style.display = "grid";
-                }, 3000);
+                }, 2000);
+            } 
+            else if (valorResposta === "errado") {
+                pg1.style.display = "none";
+                resErrada.style.display = "grid";
+                setTimeout(() => {
+                    resErrada.style.display = "none";
+                    pg2.style.display = "grid";
+                }, 2000);
             }
+    
         }
     }
 }
@@ -46,10 +55,43 @@ function responder2() {
                 pg2.style.display = "none";
                 resCerta.style.display = "grid";
                 setTimeout(() => {
+                    resCerta.style.display = "none";
+                    pg3.style.display = "grid";
+                }, 2000);
+            }
+            else if (valorResposta === "errado") {
+                pg2.style.display = "none";
+                resErrada.style.display = "grid";
+                setTimeout(() => {
+                    resErrada.style.display = "none";
+                    pg3.style.display = "grid";
                 }, 2000);
             }
         }
     }
 }
-
 document.getElementById("btnPergunta2").addEventListener("click", responder2);
+
+function responder3() {
+    let resposta = document.getElementsByName("questao3");
+    let valorResposta = ""; 
+    
+    for (let d = 0; d < resposta.length; d++) {
+        if (resposta[d].checked) {
+            valorResposta = resposta[d].value;
+            if (valorResposta == 'certo') {
+                pg3.style.display = 'none';
+                finalCerto.style.display = 'grid';
+                setTimeout(() => {
+                    finalCerto.style.display = 'none';
+                    quantidadeAcertos = 'grid';
+                }, 2000);
+            }
+            else {
+                pg3.style.display = 'none';
+                resErrada.style.display = 'grid';
+            }
+        }
+    }
+}
+document.getElementById("btnPergunta3").addEventListener("click", responder3);

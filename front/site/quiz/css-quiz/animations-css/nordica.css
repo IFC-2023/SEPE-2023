@@ -292,12 +292,10 @@ ul li ul.dropdown a:hover {
 }
 
 #secao-pergunta-1 {
-    /* display: grid; */
-    display: none;
+    display: grid;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
-    display: none;
 }
 
 .informacoes-questao {
@@ -340,6 +338,12 @@ ul li ul.dropdown a:hover {
     align-items: start;
     gap: 10px;
     margin-left: 100px;
+}
+#quantidadeAcertos {
+    display: grid;
+    grid-template-columns: "acertos";
+    color: black;
+    align-items: center;
 }
 
 .alternativas label {
@@ -427,10 +431,10 @@ input[type=radio] {
     "frase" "proximo";
     grid-template-columns: 1fr 1fr;
 }
+
 #fraseErrada {
     grid-area: frase;
-    /* display: flex; */
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fa0b0b;
@@ -438,15 +442,25 @@ input[type=radio] {
     color: #fff;
     font-size: 3em;
 }
+#finalCerto {
+    display: none;
+    grid-template-areas: "frase";
+    grid-template-columns: 1fr;
+}
 
 #fraseErrada > h1 {
     font-weight: normal;
 }
 
 #secao-pergunta-2 {
-    display: grid;
-    /* display: none; */
+    display: none;
     grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+#secao-pergunta-3 {
+    display: grid;
+    grid-template-areas: 
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
