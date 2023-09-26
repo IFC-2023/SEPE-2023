@@ -500,3 +500,21 @@ input[type=radio] {
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+#secao-pergunta-6 {
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+#secao-pergunta-7 {
+    display: none;
+    grid-template-areas: 
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+#secao-pergunta-8 {
+    display: none;
+    grid-template-areas: 
+    "informacoe" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}

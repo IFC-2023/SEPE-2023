@@ -1,9 +1,11 @@
-
 const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
 const pg3 = document.getElementById("secao-pergunta-3");
 const pg4 = document.getElementById("secao-pergunta-4");
 const pg5 = document.getElementById("secao-pergunta-5");
+const pg6 = document.getElementById("secao-pergunta-6");
+const pg7 = document.getElementById("secao-pergunta-7");
+const pg8 = document.getElementById("secao-pergunta-8");
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
 
@@ -152,13 +154,71 @@ function responder5() {
                 }, 2000);
             }
             else {
-                pg5.style.display = "none";
-                resErrada.style.display = "grid";
+                pg5.style.display = 'none';
+                resErrada.style.display = 'grid';
                 setTimeout(() =>{
-                    resErrada.style.display = "none";
-                    pg6.style.display = "grid";
+                    resErrada.style.display = 'none';
+                    pg6.style.display = 'grid';
                 }, 2000);
             }
         }
     }
 }
+document.getElementById("btnPergunta5").addEventListener("click", responder5)
+
+function responder6() {
+    let resposta = document.getElementsByName("questao6");
+    let valorResposta = ""; 
+    
+    for (let contador6 = 0; contador6 < resposta.length; contador6++) {
+        if (resposta[contador6].checked) {
+            valorResposta = resposta[contador6].value;
+            if (valorResposta == 'certo') {
+                pg6.style.display = 'none';
+                resCerta.style.display = 'grid';
+                setTimeout(() => {
+                    resCerta.style.display = 'none';
+                    pg7.style.display = 'grid';
+                }, 2000);
+            }
+            else {
+                pg6.style.display = 'none';
+                resErrada.style.display = 'grid';
+                setTimeout(() =>{
+                    resErrada.style.display = 'none';
+                    pg7.style.display = 'grid';
+                }, 2000);
+            }
+        }
+    }
+}
+document.getElementById("btnPergunta6").addEventListener("click", responder6);
+
+function responder7() {
+    let resposta = document.getElementsByName("questao7");
+    let valorResposta = ""; 
+    
+    for (let contador7 = 0; contador7 < resposta.length; contador7++) {
+        if (resposta[contador7].checked) {
+            valorResposta = resposta[contador7].value;
+            if (valorResposta == 'certo') {
+                pg7.style.display = 'none';
+                resCerta.style.display = 'grid';
+                setTimeout(() => {
+                    resCerta.style.display = 'none';
+                    pg8.style.display = 'grid';
+                }, 2000);
+            }
+            else {
+                pg7.style.display = 'none';
+                resErrada.style.display = 'grid';
+                setTimeout(() =>{
+                    resErrada.style.display = 'none';
+                    pg8.style.display = 'grid';
+                }, 2000);
+            }
+        }
+    }
+}
+
+document.getElementById("btnPergunta7").addEventListener("click", responder7);

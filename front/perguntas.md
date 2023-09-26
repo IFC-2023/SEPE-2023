@@ -107,7 +107,7 @@
 
 ### *Nível Difícil:*
 7. Quais são os eventos principais que ocorrem durante o Ragnarök na mitologia nórdica?
-   - A Uma grande festa dos deuses antes do fim do mundo.
+   - A Uma grande festa dos deuses antes do fim do mundo
    - B Uma batalha final entre os deuses e as forças do caos, resultando na destruição do mundo.
    - C Uma jornada de Thor para resgatar seu martelo Mjölnir do submundo.
    - D A ascensão de um novo deus supremo para governar os Nove Mundos.

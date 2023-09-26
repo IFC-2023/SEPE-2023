@@ -459,7 +459,7 @@ input[type=radio] {
 }
 
 #secao-pergunta-4 {
-    display: gri;
+    display: none;
     /* display: none; */
     grid-template-areas:
     "informacoes" "alternativas";
