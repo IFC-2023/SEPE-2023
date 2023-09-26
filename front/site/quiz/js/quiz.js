@@ -4,7 +4,6 @@ const pg3 = document.getElementById("secao-pergunta-3");
 const pg4 = document.getElementById("secao-pergunta-4");
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
-contador_erros = 0;
 
 function comecar() {
     const introducao = document.getElementById("introducao");
@@ -29,9 +28,6 @@ function responder1() {
                 setTimeout (() => {
                     resCerta.style.display = "none";
                     pg2.style.display = "grid";
-<<<<<<< HEAD
-                }, 3000);
-=======
                 }, 1500);
             } else if (valorResposta === "errado") {
                 pg1.style.display = "none";
@@ -40,10 +36,11 @@ function responder1() {
                     resErrada.style.display = "none";
                     pg2.style.display = "grid";
                 }, 1500);
->>>>>>> 071066fa049884f2ecd795f96e6cae5b6c114499
             }
+            break;
         }
     }
+}
 
 document.getElementById("btnPergunta1").addEventListener("click", responder1);
 
@@ -58,9 +55,6 @@ function responder2() {
                 pg2.style.display = "none";
                 resCerta.style.display = "grid";
                 setTimeout(() => {
-<<<<<<< HEAD
-                }, 2000);
-=======
                     resCerta.style.display = "none";
                     pg3.style.display = "grid";
                 }, 1500);
@@ -71,7 +65,6 @@ function responder2() {
                     resErrada.style.display = "none";
                     pg3.style.display = "grid";
                 }, 1500);
->>>>>>> 071066fa049884f2ecd795f96e6cae5b6c114499
             }
             break;
         }
@@ -79,8 +72,6 @@ function responder2() {
 }
 
 document.getElementById("btnPergunta2").addEventListener("click", responder2);
-<<<<<<< HEAD
-=======
 
 function responder3() {
     let resposta = document.getElementsByName("questao3");
@@ -133,4 +124,3 @@ function responder4() {
 }
 
 document.getElementById("btnPergunta4").addEventListener("click", responder4);
->>>>>>> 071066fa049884f2ecd795f96e6cae5b6c114499
