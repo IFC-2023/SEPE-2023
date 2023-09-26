@@ -54,18 +54,25 @@
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao1" id="" value="errado"> A - Apolo
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="errado"> B - Ares
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="certo"> C - Zeus
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="errado"> D -Dionísio
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A - Apolo</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>B - Ares</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>C - Zeus</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>D -Dionísio</label>
+                </div>
 
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta1">
@@ -98,18 +105,25 @@
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao2" id="" value="errado"> A - Afrodite
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="certo"> B - Atena
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="errado"> C - Deméter
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="errado"> D - Héstia
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A - Afrodite</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>B - Atena</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>C - Deméter</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>D - Héstia</label>
+                </div>
 
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta2">
@@ -124,18 +138,25 @@
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao3" id="" value="errado"> A - Perseu
-                </label>
-                <label>
-                    <input type="radio" name="questao3" id="" value="errado"> B - Teseu
-                </label>
-                <label>
-                    <input type="radio" name="questao3" id="" value="errado"> C - Édipo
-                </label>
-                <label>
-                    <input type="radio" name="questao3" id="" value="certo"> D - Hércules
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A - Perseu</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>B - Teseu</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>C - Édipo</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="certo">
+                    <label> D - Hércules</label>
+                </div>
 
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta3">
@@ -150,12 +171,15 @@
                 <p class="dificuldade">Nível Médio</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao4" id="" value="errado"> Na mitologia grega, o mundo foi criado por um único deus, Zeus.
-                </label>
-                <label>
-                    <input type="radio" name="questao4" id="correcaoTamanho" value="certo"> Na mitologia grega, o mundo começou com o Caos, seguido pelos titãs, que foram sucedidos pelos deuses olímpicos, liderados por Zeus.
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Na mitologia grega, o mundo foi criado por um único deus, Zeus.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
+                    <label>Na mitologia grega, o mundo começou com o Caos, seguido pelos titãs, que foram sucedidos pelos deuses olímpicos, liderados por Zeus.</label>
+                </div>
                 
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta4">
@@ -163,6 +187,175 @@
             </div>
         </section>
         
+        <section id="secao-pergunta-5">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 5:</h1>
+                <p class="pergunta">Qual é a história do mito de Prometeu e por que ele é castigado por Zeus?</p>
+                <p class="dificuldade">Nível Médio</p>
+            </div>
+            <div class="alternativas">
+                <div class="radio-container">
+                    <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Prometeu não é uma figura mitológica grega.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Prometeu é recompensado por Zeus por seus serviços à humanidade.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao5" class="tamanhoInputOriginal" value="certo">
+                    <label>Prometeu rouba o fogo dos deuses para dar aos humanos, o que enfurece Zeus, levando-o a punir Prometeu de maneira terrível.</label>
+                </div>
+                
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta5">
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-pergunta-6">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 6:</h1>
+                <p class="pergunta">Quem são os principais deuses do Olimpo na mitologia grega e quais são suas áreas de domínio?</p>
+                <p class="dificuldade">Nível Médio</p>
+            </div>
+            <div class="alternativas">
+                <div class="radio-container">
+                    <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Os principais deuses do Olimpo são Hades, Poseidon e Afrodite, que governam sobre a morte, o mar e o amor, respectivamente.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>Os principais deuses do Olimpo são Zeus (deus dos céus e rei dos deuses), Hera (deusa do casamento e da família), Atena (deusa da sabedoria e da estratégia), Apolo (deus das artes e da música) e muitos outros, cada um com áreas de domínio específicas.</label>
+                </div>
+                
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta6">
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-pergunta-7">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 7:</h1>
+                <p class="pergunta">Explique a história de Ícaro na mitologia grega e como ela se relaciona com Dédalo.</p>
+                <p class="dificuldade">Nível Difícil</p>
+            </div>
+            <div class="alternativas">
+                <div class="radio-container">
+                    <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Ícaro não é uma figura mitológica grega.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Ícaro é um deus menor sem uma história relevante.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>Ícaro é o filho de Dédalo, um habilidoso artesão e inventor. Eles tentaram escapar de Creta voando com asas feitas de penas e cera, mas Ícaro voou muito perto do sol e caiu no mar.</label>
+                </div>
+                
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta7">
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-pergunta-8">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 8:</h1>
+                <p class="pergunta">Explique a história de Ícaro na mitologia grega e como ela se relaciona com Dédalo.</p>
+                <p class="dificuldade">Nível Difícil</p>
+            </div>
+            <div class="alternativas">
+                <div class="radio-container">
+                    <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>As Moiras são deusas do destino, que tecem, medem e cortam o fio da vida de cada mortal, determinando seu destino.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>As Moiras são guerreiras que protegem os mortais em batalhas.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>As Moiras são deusas do amor e da beleza na mitologia grega.</label>
+                </div>
+                
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta8">
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-pergunta-9">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 9:</h1>
+                <p class="pergunta">Explique o mito de Édipo na mitologia grega e como ele lida com seu destino trágico.</p>
+                <p class="dificuldade">Nível Difícil</p>
+            </div>
+            <div class="alternativas">
+                <div class="radio-container">
+                    <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Édipo não é uma figura mitológica grega.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Édipo é um herói que derrota monstros em várias jornadas.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>Édipo é um homem que, sem saber, mata seu pai e se casa com sua mãe, cumprindo uma terrível profecia. Quando descobre a verdade, ele se cega e se exila.</label>
+                </div>
+                
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta9">
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-pergunta-10">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 10:</h1>
+                <p class="pergunta">Quem são os Argonautas e qual é a missão lendária que realizaram na mitologia grega?</p>
+                <p class="dificuldade">Nível Difícil</p>
+            </div>
+            <div class="alternativas">
+                <div class="radio-container">
+                    <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Os Argonautas são deuses menores sem uma missão lendária.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>Os Argonautas são um grupo de heróis liderados por Jasão, que embarcaram na busca pelo Velocino de Ouro, uma missão épica repleta de desafios e aventuras.
+                    </label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Os Argonautas são monstros marinhos temidos pelos marinheiros gregos.</label>
+                </div>
+                
+                <div class="buttonResponder">
+                    <input type="button" value="Terminar" id="btnPergunta10">
+                </div>
+            </div>
+        </section>
+
+        <section id="fim">
+            <h1>Fim, obrigado por participar!</h1>
+
+            <p id="acertos"></p>
+        </section>
     </main>
 </body>
 </html>
