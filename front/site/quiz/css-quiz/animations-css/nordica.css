@@ -494,31 +494,43 @@ input[type=radio] {
     top: 50px;
     position: relative;
 }
+/*Pergunta 5*/
 #secao-pergunta-5 {
     display: none;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+/*Pergunta 6*/
 #secao-pergunta-6 {
     display: none;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+/*Pergunta 7*/
 #secao-pergunta-7 {
     display: none;
     grid-template-areas: 
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+/*Pergunta 8*/
 #secao-pergunta-8 {
     display: none;
     grid-template-areas: 
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+/*Pergunta 9*/
 #secao-pergunta-9 {
+    display: none;
+    grid-template-areas: 
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+/*Pergunta 10*/
+#secao-pergunta-10 {
     display: none;
     grid-template-areas: 
     "informacoes" "alternativas";
