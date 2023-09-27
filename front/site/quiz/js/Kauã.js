@@ -8,6 +8,7 @@ const pg7 = document.getElementById("secao-pergunta-7");
 const pg8 = document.getElementById("secao-pergunta-8");
 const pg9 = document.getElementById("secao-pergunta-9");
 const pg10 = document.getElementById("secao-pergunta-10");
+const pg
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
 
@@ -279,6 +280,33 @@ function responder9() {
         }
     }
 }
-
 document.getElementById("btnPergunta9").addEventListener("click", responder9);
+
+function responder10 (){
+    let resposta = document.getElementsByName("questao10");
+    let valorResposta = "";
+
+    for (let contador10 = 0; contador10 < resposta.length; contador10++) {
+        if (resposta[contador10].checked) {
+            valorResposta = resposta[contador10].value;
+            if (valorResposta == 'certo') {
+                pg10.style.display = 'none';
+                resCerta.style.display = 'grid';
+                setTimeout(() => {
+                    resCerta.style.display = 'none';
+                    pg_acertos.style.display = 'grid';
+                }, 2000);
+            }
+            else {
+                pg10.style.display = 'none';
+                resErrada.style.display = 'grid';
+                setTimeout(() => {
+                    resErrada.style.display = 'none';
+                    pg_acertos.style.display = 'grid';
+                }, 2000);
+            }
+        }
+    }
+}
+document.getElementById("btnPergunta10").addEventListener("click", responder10);
 
