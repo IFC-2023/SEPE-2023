@@ -513,8 +513,14 @@ input[type=radio] {
     grid-template-columns: 1fr 1fr;
 }
 #secao-pergunta-8 {
-    display: grid;
+    display: none;
     grid-template-areas: 
-    "informacoe" "alternativas";
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+#secao-pergunta-9 {
+    display: none;
+    grid-template-areas: 
+    "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
