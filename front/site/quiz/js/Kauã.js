@@ -11,6 +11,7 @@ const pg10 = document.getElementById("secao-pergunta-10");
 const pg_acertos = document.getElementById("quantidadeAcertos"); 
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
+let quantidadeacertos = 0;
 
 function comecar() {
     const introducao = document.getElementById("introducao");
@@ -37,6 +38,7 @@ function responder1() {
             if (valorResposta === "certo") {
                 pg1.style.display = "none";
                 resCerta.style.display = "grid";
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = "none";
                     pg2.style.display = "grid";
@@ -67,6 +69,7 @@ function responder2() {
             if (valorResposta === "certo") {
                 pg2.style.display = "none";
                 resCerta.style.display = "grid";
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = "none";
                     pg3.style.display = "grid";
@@ -95,6 +98,7 @@ function responder3() {
             if (valorResposta == 'certo') {
                 pg3.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg4.style.display = 'grid';
@@ -123,6 +127,7 @@ function responder4() {
             if (valorResposta == 'certo') {
                 pg4.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg5.style.display = 'grid';
@@ -151,6 +156,7 @@ function responder5() {
             if (valorResposta == 'certo') {
                 pg5.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg6.style.display = 'grid';
@@ -179,6 +185,7 @@ function responder6() {
             if (valorResposta == 'certo') {
                 pg6.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg7.style.display = 'grid';
@@ -207,6 +214,7 @@ function responder7() {
             if (valorResposta == 'certo') {
                 pg7.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg8.style.display = 'grid';
@@ -236,6 +244,7 @@ function responder8() {
             if (valorResposta == 'certo') {
                 pg8.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg9.style.display = 'grid';
@@ -264,6 +273,7 @@ function responder9() {
             if (valorResposta == 'certo') {
                 pg9.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg10.style.display = 'grid';
@@ -292,6 +302,8 @@ function responder10 (){
             if (valorResposta == 'certo') {
                 pg10.style.display = 'none';
                 resCerta.style.display = 'grid';
+                quantidadeacertos++;
+                document.write(quantidadeacertos)
                 setTimeout(() => {
                     resCerta.style.display = 'none';
                     pg_acertos.style.display = 'grid';
@@ -309,4 +321,5 @@ function responder10 (){
     }
 }
 document.getElementById("btnPergunta10").addEventListener("click", responder10);
+
 
