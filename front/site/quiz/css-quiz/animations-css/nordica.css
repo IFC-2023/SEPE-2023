@@ -355,9 +355,18 @@ ul li ul.dropdown a:hover {
 
 #quantidadeAcertos {
     display: grid;
-    grid-template-columns: "acertos";
-    color: black;
+    grid-template-columns: "acertos" "classificacao";
+    color: white;
     align-items: center;
+    text-align: center;
+}
+#acertos {
+    background-color: #1efa0b;
+    display: inline;
+}
+#classificacao {
+    display: grid;
+    display: inline;
 }
 
 .alternativas label {

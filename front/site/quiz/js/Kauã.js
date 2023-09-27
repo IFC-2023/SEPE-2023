@@ -8,7 +8,7 @@ const pg7 = document.getElementById("secao-pergunta-7");
 const pg8 = document.getElementById("secao-pergunta-8");
 const pg9 = document.getElementById("secao-pergunta-9");
 const pg10 = document.getElementById("secao-pergunta-10");
-const pg
+const pg_acertos = document.getElementById("quantidadeAcertos"); 
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
 
