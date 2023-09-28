@@ -9,13 +9,14 @@ main {
 .container {
     grid-template-columns: 10% 80% 10%;
     grid-template-areas: "h h h"
-        "aE m aD"
-        "f f f"
+                        "aE m aD"
+                        "f f f"
     ;
 }
 
 header {
     grid-area: h;
+    text-align: center;
 }
 
 #asideE {
