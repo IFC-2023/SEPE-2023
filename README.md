@@ -395,7 +395,7 @@
 
 ### *Nível Fácil:*
 
-1. Quem é o deus supremo na mitologia fenícia, muitas vezes associado ao deus grego Zeus?
+1. Quem é o deus supremo na mitologia fenícia?
    - [ ] A Apolo
    - [ ] B Hermes
    - [ ] C Astarte
