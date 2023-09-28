@@ -32,6 +32,6 @@ Cor Escura:#A61212
 Cor Clara:#FF685F
 
 ## Quiz Geral:
-Cor Escura:
-Cor Clara:
+Cor Escura:#73726F
+Cor Clara:#BFBDB8
 
