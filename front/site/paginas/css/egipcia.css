@@ -1,10 +1,10 @@
+/* AQUI SOMENTE CORES DA PÁGINA */
+
 * {
     margin: 0;
     padding: 0;
 }
 main {
-    display: flex;
-    text-align: justify;
     background-color: #DBE4ED;
 }
 aside{

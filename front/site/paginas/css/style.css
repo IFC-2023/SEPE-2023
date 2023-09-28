@@ -1,0 +1,31 @@
+/* AQUI NÃO SERÁ USADA NENHUMA COR */
+
+main {
+    display: flex;
+    text-align: justify;
+    grid-area: m;
+}
+
+.container {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: "h h h"
+        "aE m aD"
+        "f f f"
+    ;
+}
+
+header {
+    grid-area: h;
+}
+
+#asideE {
+    grid-area: aE;
+}
+
+#asideD {
+    grid-area: aD;
+}
+
+footer {
+    grid-area: f;
+}
