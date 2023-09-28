@@ -1,1 +1,10 @@
 /* AQUI SOMENTE CORES DA PÁGINA */
+
+header{
+    background-color: #73513D;
+    color: white;
+}
+
+.col{
+    background-color: #C4B0A9;
+}
