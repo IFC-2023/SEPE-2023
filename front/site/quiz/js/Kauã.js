@@ -292,7 +292,7 @@ function responder9() {
 }
 document.getElementById("btnPergunta9").addEventListener("click", responder9);
 
-function responder10 (){
+function responder10() {
     let resposta = document.getElementsByName("questao10");
     let valorResposta = "";
 
@@ -321,5 +321,4 @@ function responder10 (){
     }
 }
 document.getElementById("btnPergunta10").addEventListener("click", responder10);
-
 
