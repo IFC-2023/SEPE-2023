@@ -1,4 +1,4 @@
-# PERGUNTAS
+
 ## **Mitologia Greco-Romana:**
 
 ### *Nível Fácil:*

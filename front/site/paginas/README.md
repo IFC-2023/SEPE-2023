@@ -1,0 +1,6 @@
+# CORES
+## Aside:
+#E6E6E6
+#EBEBEB
+## Main
+#DBE4ED
