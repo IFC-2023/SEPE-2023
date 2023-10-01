@@ -19,6 +19,10 @@ Cor Clara:#6C9BD9
 Cor Escura:#BF4E4E
 Cor Clara:#F5BFCD
 
+## Mitologia Irlandesa:
+Cor Laranja: #ff883e
+Cor Verde: #169b62
+
 ## Mitologia Mesopotâmica:
 Cor Escura:#A64B29
 Cor Clara:#FFAEA3

@@ -466,7 +466,7 @@ C) Leprechaun
 D) Banshee
 Resposta: B) Pooka
 
-*Difíceis*
+*Difíceis
 
 7. Qual mito irlandês relata a batalha entre os deuses dos Tuatha Dé Danann e os seres subterrâneos conhecidos como os Fir Bolg?
 A) Lebor Gabála Érenn
