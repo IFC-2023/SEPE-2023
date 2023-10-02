@@ -291,7 +291,7 @@ ul li ul.dropdown a:hover {
     margin-top: 20px;
     border: none;
     font-size: 1.5em;
-    background-color: #061D26;
+    background-color: red;
     color: #fff;
     width: 250px;
     padding: 12px;
@@ -312,7 +312,7 @@ ul li ul.dropdown a:hover {
 
 .informacoes-questao {
     grid-area: informacoes;
-    background-color: #061D26;
+    background-color: red;
 
     color: #fff;
     height: 92vh;
@@ -384,7 +384,7 @@ ul li ul.dropdown a:hover {
 
 .buttonResponder>input[type=button] {
     border: none;
-    background-color: #061D26;
+    background-color: red;
     color: #fff;
     width: 150%;
     padding: 20px;
@@ -429,7 +429,7 @@ input[type=radio] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #061D26;
+    background-color: red;
     color: #fff;
 }
 
