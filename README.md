@@ -207,9 +207,9 @@
 
 2. Qual é o nome da rainha lendária do Egito que se casou com Marco Antônio e Júlio César?
    - [ ] A Nefertiti
-   - [ ] B Cleópatra
+   - [x] B Cleópatra
    - [ ] C Hatshepsut
-   - [x] D Ísis
+   - [ ] D Ísis
 
 3. Qual é o animal sagrado associado a Thoth, o deus da sabedoria, na mitologia egípcia?
    - [x] A Íbis
