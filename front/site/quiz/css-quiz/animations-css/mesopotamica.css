@@ -270,8 +270,8 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao {
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -504,8 +504,8 @@ label {
 }
 
 #secao-pergunta-4 {
-    display: grid;
-    /* display: none; */
+    /* display: grid; */
+    display: none;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
