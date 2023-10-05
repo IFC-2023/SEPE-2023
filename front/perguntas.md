@@ -419,3 +419,79 @@ color: rgba(216, 216, 216, 1);
 color: rgba(216, 188, 136, 1);
 color: rgba(191, 155, 110, 1);
 color: rgba(140, 104, 72, 1); 
+
+**Mitologia Irlandesa**
+
+*Fáceis*
+
+1. Quem é considerado o deus supremo da mitologia irlandesa?
+A) Cernunnos
+B) Lugh
+C) Morrigan
+D) Brigid
+Resposta: B) Lugh
+
+2. Qual criatura mítica é conhecida por guardar tesouros escondidos em potes de ouro no final do arco-íris?
+A) Banshee
+B) Pooka
+C) Leprechaun
+D) Selkie
+Resposta: C) Leprechaun
+
+3. Que deusa da mitologia irlandesa é associada à terra, à fertilidade e ao gado?
+A) Aine
+B) Danu
+C) Macha
+D) Epona
+Resposta: B) Danu
+
+*Médias*
+
+4. Qual guerreiro lendário da mitologia irlandesa é conhecido por ter derrotado um dragão?
+A) Cu Chulainn
+B) Fionn Mac Cumhaill
+C) Diarmuid Ua Duibhne
+D) Oisín
+Resposta: A) Cu Chulainn
+
+5. Quem era o grande herói que, de acordo com a lenda, fundou o Fianna, uma ordem de guerreiros na mitologia irlandesa?
+A) Lugh
+B) Cú Roí
+C) Manannán mac Lir
+D) Finn McCool
+Resposta: D) Finn McCool
+
+6. Qual ser mítico irlandês é conhecido por ser um metamorfo capaz de assumir a forma de vários animais, incluindo um cavalo, um lobo e uma águia?
+A) Selkie
+B) Pooka
+C) Leprechaun
+D) Banshee
+Resposta: B) Pooka
+
+7. Qual mito irlandês relata a batalha entre os deuses dos Tuatha Dé Danann e os seres subterrâneos conhecidos como os Fir Bolg?
+A) Lebor Gabála Érenn
+B) Táin Bó Cúailnge
+C) Cath Maige Tuired
+D) Deirdre of the Sorrows
+Resposta: C) Cath Maige Tuired
+
+8. Qual criatura lendária é muitas vezes associada à música e é conhecida por tocar melodias hipnotizantes em uma harpa mágica?
+A) Kelpie
+B) Sidhe
+C) Clurichaun
+D) Aos Sí
+Resposta: D) Aos Sí
+
+9. Qual é o nome da lendária espada de Nuada Airgetlám, o rei dos Tuatha Dé Danann?
+A) Caladbolg
+B) Fragarach
+C) Claíomh Solais
+D) Excalibur
+Resposta: A) Caladbolg
+
+10. Qual personagem da mitologia irlandesa é conhecido por possuir o caldeirão da abundância, que nunca se esvazia e é capaz de trazer os mortos de volta à vida?
+A) Brigid
+B) The Dagda
+C) Lugh
+D) Cú Chulainn
+Resposta: B) The Dagda
