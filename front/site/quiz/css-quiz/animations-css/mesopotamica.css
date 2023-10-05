@@ -438,7 +438,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ff883e;
+    background-color: #8B4513;
     color: #fff;
 }
 
@@ -480,8 +480,8 @@ label {
 }
 
 #secao-pergunta-1 {
-    display: grid;
-    /* display: none; */
+    /* display: grid; */
+    display: none;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
@@ -504,8 +504,8 @@ label {
 }
 
 #secao-pergunta-4 {
-    /* display: grid; */
-    display: none;
+    display: grid;
+    /* display: none; */
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
