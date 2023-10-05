@@ -1,5 +1,5 @@
 let egito = document.getElementById("margin-top-dropdown");
-let fenicia = document.getElementById("linkFenicia");
+let irlandesa = document.getElementById("linkIrlandesa");
 let grecia = document.getElementById("linkGrecia");
 let geral = document.getElementById("linkGeral");
 let gR = document.getElementById("linkGrecoRomana");
@@ -41,16 +41,16 @@ if (egito !== null) {
     document.getElementById("margin-top-dropdown").addEventListener("mouseleave", sairEgipcia);
 }
 
-if (fenicia !== null) {
-    function sairFenicia() {
-        let elementoFenicia = document.getElementById("linkFenicia");
-        elementoFenicia.classList.add("saiuFenicia");
+if (irlandesa !== null) {
+    function sairIrlanda() {
+        let elementoIrlandesa = document.getElementById("linkIrlandesa");
+        elementoIrlandesa.classList.add("saiuIrlandesa");
         setTimeout(() => {
-            elementoFenicia.classList.remove("saiuFenicia");
+            elementoIrlandesa.classList.remove("saiuIrlandesa");
         }, 300);
     }
 
-    document.getElementById("linkFenicia").addEventListener("mouseleave", sairFenicia);
+    document.getElementById("linkIrlandesa").addEventListener("mouseleave", sairIrlanda);
 }
 
 if (grecia !== null) {
