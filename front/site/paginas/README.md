@@ -1,0 +1,4 @@
+# CORES
+## Mitologia egipcia:
+# aside:
+

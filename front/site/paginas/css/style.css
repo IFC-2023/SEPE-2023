@@ -1,0 +1,149 @@
+/* AQUI NÃO SERÁ USADA NENHUMA COR */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    text-align: justify;
+    grid-area: m;
+    height: auto;
+}
+
+.container-main {
+    display: flex;
+    height: auto;
+}
+
+.col {
+    padding: 20px;
+    background-color: #f0f0f0;
+
+}
+
+.col:nth-child(2) {
+    flex-basis: 180%;
+    background-color: bisque;
+}
+
+.container {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: "h h h"
+        "aE m aD"
+        "f f f"
+    ;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+h1 {
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex !important;
+    justify-content: start !important;
+    padding: 30px;
+}
+
+#logo {
+    width: 160px;
+    height: 160px; 
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    text-decoration: none; 
+    padding: 30px;
+}
+
+#asideD {
+    grid-area: aD;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2px 0;
+    font-size: 16px;
+    grid-area: f;
+    width: 100%;
+    height: auto;
+}
+
+.footer-container {
+    padding: 20px;
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 180px;
+    height: 180px;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.footer-links ul {
+    list-style: none;
+    font-size: 16px;
+}
+
+.footer-links ul li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    color: #ff6600;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ff6600;
+}
+
+.footer-bottom {
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
