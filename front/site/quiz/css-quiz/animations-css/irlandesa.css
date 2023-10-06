@@ -563,6 +563,10 @@ label {
     grid-template-columns: 1fr 1fr;
 }
 
+#contador-acertos {
+    display: none;
+}
+
 #fim {
     display: none;
 }
