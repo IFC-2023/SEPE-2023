@@ -1,8 +1,10 @@
-/* AQUI NÃO SERÁ USADA NENHUMA COR */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     padding: 0;
     margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 main {
@@ -10,6 +12,7 @@ main {
     text-align: justify;
     grid-area: m;
     height: auto;
+    
 }
 
 .container-main {
@@ -20,7 +23,23 @@ main {
 .col {
     padding: 20px;
     background-color: #f0f0f0;
+}
 
+.col-6 {
+    padding: 50px;
+    letter-spacing: 0.7px;
+}
+
+li {
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+ul, li {
+    list-style: circle ;
 }
 
 .col:nth-child(2) {
@@ -39,7 +58,12 @@ main {
 header {
     display: flex;
     align-items: center;
-    height: auto;
+    height: 170px;
+}
+
+header > h1{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 10px;
 }
 
 h1 {
@@ -47,23 +71,10 @@ h1 {
   margin-right: 35%;
 }
 
-.logo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    display: flex !important;
-    justify-content: start !important;
-    padding: 30px;
-}
 
-#logo {
-    width: 160px;
-    height: 160px; 
-    display: flex;
-    align-items: center; 
-    justify-content: flex-start;
-    text-decoration: none; 
-    padding: 30px;
+
+.logo{
+    width: 200px;
 }
 
 #asideD {
@@ -100,7 +111,7 @@ footer {
     border-radius: 50%;
 }
 
-.footer-links ul {
+.footer-links > ul > li {
     list-style: none;
     font-size: 16px;
 }
@@ -120,11 +131,12 @@ footer {
     color: #ff6600;
 }
 
-.footer-social ul {
+.footer-social > ul > li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 
 .footer-social a {
     text-decoration: none;
@@ -146,4 +158,8 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+header > h1 {
+    font-size: 3em;
 }

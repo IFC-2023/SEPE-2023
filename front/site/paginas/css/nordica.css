@@ -7,3 +7,7 @@ header{
 .col{
     background-color: #6F96A6;
 }
+.row {
+    display: flex;
+    justify-content: space-between;
+  }
