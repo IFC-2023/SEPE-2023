@@ -270,8 +270,8 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao {
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -570,8 +570,8 @@ label {
 }
 
 #secao-pergunta-10 {
-    /* display: grid; */
-    display: none;
+    display: grid;
+    /* display: none; */
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
@@ -582,7 +582,45 @@ label {
 }
 
 #fim {
+    /* display: grid; */
+    grid-template-areas:
+    "acertos ranking"
+    "acertos refazer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    justify-items: center;
     display: none;
+    height: 91.9vh;
+}
+
+#congratulations {
+    display: grid;
+    grid-area: acertos;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 95%;
+}
+
+#congratulations > img {
+    border: 2px solid;
+    width: 70%;
+    height: 70vh;
+    border-radius: 30px;
+}
+
+#congratulations > p {
+    position: relative;
+    bottom: 152px;
+    background-color: rgba(255, 255, 255, 0.959);
+    width: 70%;
+    font-size: 1.5em;
+    padding-top: 8px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 #fim > h1 {

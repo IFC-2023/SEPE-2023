@@ -20,13 +20,13 @@ if (isset($_POST['submit'])) {
     }, 0);
     $totalAcertos = $contadorAcertos;
     $nome = $_POST['nome'];
-    $contadorId = "SELECT  COUNT(idGrega) AS total FROM ranking";
+    $contadorId = "SELECT COUNT(idGrega) AS total FROM ranking";
     $resultadoContador = mysqli_query($conexao, $contadorId);
 
     if ($resultadoContador) {
         $row = mysqli_fetch_assoc($resultadoContador);
         $numIdString = $row['total'];
-        $numId = (int)$numIdString + 1;
+        $numId = intval($numIdString) + 1;
 
         $inserir = mysqli_query($conexao, "INSERT INTO ranking (idGrega, usuario, pontuacao, mitologia) VALUES ('$numId', '$nome', '$totalAcertos', 'grega')");
 
@@ -403,13 +403,14 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
             </section>
+        </form>
 
             <section id="fim">
-                <h1>Fim, obrigado por participar!</h1>
-
-                <p id="acertos"></p>
+                <div id="congratulations">
+                    <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
+                    <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
+                </div>
             </section>
-        </form>
     </main>
 </body>
 

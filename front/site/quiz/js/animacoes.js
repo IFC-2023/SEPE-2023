@@ -7,6 +7,7 @@ let hindu = document.getElementById("linkHindu");
 let nordica = document.getElementById("linkNordica");
 let romana = document.getElementById("linkRomana");
 let mesopotamia = document.getElementById("link-dropdown-excessao");
+let quiz = document.getElementById("link-quiz");
 
 function mouseSair() {
     let elementoHome = document.getElementById("link-home");
@@ -136,4 +137,17 @@ if (mesopotamia !== null) {
     }
 
     document.getElementById("link-dropdown-excessao").addEventListener("mouseleave", linkMesopotamiaSair);
+}
+
+if (quiz !== null) {
+    function linkQuizSair() {
+        let elementoQuiz = document.getElementById("link-quiz");
+        elementoQuiz.classList.add("saiuQuiz");
+
+        setTimeout(() => {
+            elementoQuiz.classList.remove("saiuQuiz");
+        }, 300);
+    }
+
+    document.getElementById("link-quiz").addEventListener("mouseleave", linkQuizSair);
 }
