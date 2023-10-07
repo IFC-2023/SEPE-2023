@@ -11,3 +11,11 @@ header{
     display: flex;
     justify-content: space-between;
   }
+
+input[type=button] {
+    background-color: #061D26;
+}
+
+input[type=button]:hover {
+    box-shadow: 2px 0px 10px cadetblue;
+}

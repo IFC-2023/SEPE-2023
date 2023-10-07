@@ -4,7 +4,10 @@
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
+.row {
+    max-width: 100%;
 }
 
 main {
@@ -12,7 +15,11 @@ main {
     text-align: justify;
     grid-area: m;
     height: auto;
-    
+}
+
+.img-aside {
+    width: 100%;
+    height: auto;
 }
 
 .container-main {
@@ -42,6 +49,18 @@ ul, li {
     list-style: circle ;
 }
 
+figcaption {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .col:nth-child(2) {
     flex-basis: 180%;
     background-color: bisque;
@@ -66,12 +85,16 @@ header > h1{
     letter-spacing: 10px;
 }
 
-h1 {
+header > h1 {
   margin-left: 35%;
   margin-right: 35%;
 }
 
-
+.h1-texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .logo{
     width: 200px;
@@ -162,4 +185,21 @@ footer {
 
 header > h1 {
     font-size: 3em;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=button] {
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    color: #fff;
+    width: 250px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
 }
