@@ -266,6 +266,11 @@ ul li ul.dropdown a:hover {
     margin-left: 13%;
     margin-right: 14%;
 }
+.tamanhoInputOriginal {
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
 
 #introducao>h1 {
     font-size: 3em;
