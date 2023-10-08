@@ -491,6 +491,11 @@ input[type=radio] {
     color: #fff;
     font-size: 3em;
 }
+.marginRadio {
+    display: flex;
+    margin-top: 30px;
+    font-size: 2em;
+}
 
 #finalCerto {
     display: none;
