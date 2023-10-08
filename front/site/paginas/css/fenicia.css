@@ -8,3 +8,11 @@ header{
 .col{
     background-color: #C4B0A9;
 }
+
+input[type=button] {
+    background-color: #73513D;
+}
+
+input[type=button]:hover {
+    box-shadow: 2px 0px 10px #C4B0A9;
+}

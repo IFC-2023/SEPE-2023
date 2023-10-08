@@ -7,3 +7,10 @@ header{
 .col{
     background-color: #BEBDBF;
 }
+input[type=button] {
+    background-color: #8C837B;
+}
+
+input[type=button]:hover {
+    box-shadow: 2px 0px 10px #BEBDBF;
+}
