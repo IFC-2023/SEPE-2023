@@ -1,8 +1,8 @@
 let egito = document.getElementById("margin-top-dropdown");
 let irlandesa = document.getElementById("linkIrlandesa");
-let grecia = document.getElementById("linkGrecia");
+let grecia = document.getElementById("linkGrega");
 let geral = document.getElementById("linkGeral");
-let gR = document.getElementById("linkGrecoRomana");
+let japonesa = document.getElementById("linkJaponesa");
 let hindu = document.getElementById("linkHindu");
 let nordica = document.getElementById("linkNordica");
 let romana = document.getElementById("linkRomana");
@@ -93,16 +93,16 @@ if (geral !== null) {
     document.getElementById("linkGeral").addEventListener("mouseleave", sairGeral);
 }
 
-if (gR !== null) {
-    function sairGr() {
-        let elementoGr = document.getElementById("linkGrecoRomana");
-        elementoGr.classList.add("saiuGr");
+if (japonesa !== null) {
+    function sairJaponesa() {
+        let elementoGr = document.getElementById("linkJaponesa");
+        elementoGr.classList.add("saiuJaponesa");
         setTimeout(() => {
-            elementoGr.classList.remove("saiuGr");
+            elementoGr.classList.remove("saiuJaponesa");
         }, 300);
     }
 
-    document.getElementById("linkGrecoRomana").addEventListener("mouseleave", sairGr);
+    document.getElementById("linkJaponesa").addEventListener("mouseleave", sairJaponesa);
 }
 
 if (hindu !== null) {

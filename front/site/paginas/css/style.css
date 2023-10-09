@@ -362,7 +362,7 @@ ul li ul.dropdown a:hover {
     padding: 8px 8px;
 }
 
-#margin-top-dropdown:hover::after, #linkGrecoRomana:hover::after, #linkHindu:hover::after, #linkIrlandesa:hover::after, #linkNordica:hover::after, #linkGeral:hover::after, #linkRomana:hover::after {
+#margin-top-dropdown:hover::after, #linkJaponesa:hover::after, #linkHindu:hover::after, #linkIrlandesa:hover::after, #linkNordica:hover::after, #linkGeral:hover::after, #linkRomana:hover::after, #linkGrega:hover::after {
     content: "";
     height: 2px;
     background-color: pink;
@@ -406,7 +406,7 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.saiuEgipcia::after, .saiuGeral::after, .saiuGr::after, .saiuHindu::after,.saiuIrlandesa::after, .saiuNordica::after, .saiuRomana::after {
+.saiuEgipcia::after, .saiuGeral::after, .saiuJaponesa::after, .saiuHindu::after,.saiuIrlandesa::after, .saiuNordica::after, .saiuRomana::after {
     content: "";
     background-color: pink;
     width: 100%;
