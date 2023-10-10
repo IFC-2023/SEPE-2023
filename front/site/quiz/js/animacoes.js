@@ -20,6 +20,21 @@ function mouseSair() {
 
 document.getElementById("link-home").addEventListener("mouseleave", mouseSair);
 
+function mouseSairMitologia() {
+    let elementoGrecia = document.getElementById("link-mitologia");
+    elementoGrecia.classList.add("mouseSaiuMitologia");
+    setTimeout(() => {
+        elementoGrecia.classList.remove("mouseSaiuMitologia");
+    }, 300)
+}
+
+document.getElementById("link-mitologia").addEventListener("mouseleave", mouseSairMitologia);
+
+if (egito !== null) {
+    function sairEgipcia() {
+        let elemento = document.getElementById("margin-top-dropdown");
+        elemento.classList.add("saiuEgipcia");
+
 if (mitologia !== null) {
     function mouseSairMitologia() {
         let elementoMitologia = document.getElementById("link-mitologia");

@@ -1,0 +1,52 @@
+#241bb9
+#1efa0b
+.informacoes-questao {
+    grid-area: informacoes;
+    background-color: #241bb9;
+    color: #fff;
+    height: 91.9vh;
+    display: grid;
+    grid-template-areas:
+    "pergunta"
+    "texto"
+    "nivel";
+    grid-template-rows: 30% 60% 10%;
+}
+
+#introducao > input[type=button]:hover {
+    box-shadow: 0 0 6px blue;
+}
+
+#introducao > input[type=button] {
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    background-color: #170ceb;
+    color: #fff;
+    width: 250px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#fraseErrada {
+    grid-area: frase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fa0b0b;
+    height: 91.9vh;
+    color: #fff;
+    font-size: 3em;
+}
+
+.saiuEgipcia::after,  .saiuGeral::after, .saiuGr::after, .saiuHindu::after, .saiuIrlandesa, .saiuNordica::after, .saiuRomana::after {
+    content: "";
+    background-color: pink;
+    margin-left: 10px;
+    display: block;
+    animation-name: sair-dropdown-animations;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}

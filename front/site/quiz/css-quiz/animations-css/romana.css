@@ -95,7 +95,7 @@ ul li ul.dropdown a:hover {
 #link-home:hover::after {
     content: "";
     height: 2px;
-    background-color: pink;
+    background-color: #A61212;
     margin-left: 25px;
     display: block;
     width: 70%;
@@ -118,7 +118,7 @@ ul li ul.dropdown a:hover {
 
 .mouseSaiu::after {
     content: "";
-    background-color: pink;
+    background-color: #A61212;
     margin-left: 25px;
     display: block;
     animation-name: sair-animation;
@@ -142,7 +142,7 @@ ul li ul.dropdown a:hover {
 #link-mitologia:hover::after {
     content: "";
     height: 2px;
-    background-color: pink;
+    background-color: #A61212;
     margin-left: 25px;
     display: block;
     width: 80%;
@@ -155,7 +155,7 @@ ul li ul.dropdown a:hover {
 
 .mouseSaiuMitologia::after {
     content: "";
-    background-color: pink;
+    background-color: #A61212;
     margin-left: 25px;
     display: block;
     animation-name: sair-animation-grecia;
@@ -180,10 +180,10 @@ ul li ul.dropdown a:hover {
     padding: 8px 8px;
 }
 
-#margin-top-dropdown:hover::after,  #linkGrecia:hover::after, #linkGrecoRomana:hover::after, #linkHindu:hover::after,  #linkNordica:hover::after, #linkGeral:hover::after, #linkRomana:hover::after {
+#margin-top-dropdown:hover::after,  #linkGrecia:hover::after, #linkGrecoRomana:hover::after, #linkHindu:hover::after, #linkIrlandesa:hover::after, #linkNordica:hover::after, #linkGeral:hover::after {
     content: "";
     height: 2px;
-    background-color: pink;
+    background-color: #A61212;
     display: block;
     width: 100%;
     animation-name: dropdown-animations;
@@ -205,7 +205,7 @@ ul li ul.dropdown a:hover {
 #link-dropdown-excessao:hover::after {
     content: "";
     height: 2px;
-    background-color: pink;
+    background-color: #A61212;
     display: block;
     width: 100%;
     animation-name: dropdown-excessao-animation;
@@ -224,9 +224,9 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.saiuEgipcia::after, .saiuGrecia::after, .saiuGeral::after, .saiuGr::after, .saiuHindu::after, .saiuNordica::after, .saiuRomana::after {
+.saiuEgipcia::after, .saiuGrecia::after, .saiuGeral::after, .saiuGr::after, .saiuHindu::after, .saiuIrlandesa::after, .saiuNordica::after {
     content: "";
-    background-color: pink;
+    background-color: #A61212;
     width: 100%;
     display: block;
     animation-name: sair-dropdown-animations;
@@ -249,7 +249,7 @@ ul li ul.dropdown a:hover {
 
 .saiuMesopotamia::after {
     content: "";
-    background-color: pink;
+    background-color: #A61212;
     display: block;
     width: 100%;
     animation-name: sair-dropdown-excessao;
@@ -270,8 +270,8 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao {
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -295,20 +295,6 @@ ul li ul.dropdown a:hover {
     margin-top: 8px;
 }
 
-#introducao > label {
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-#introducao > input {
-    margin-bottom: 20px;
-    letter-spacing: .2px;
-    font-size: 1.2em;
-    padding: 3px;
-    width: 15%;
-    text-align: center;
-}
-
 #introducao > h2 {
     margin-top: 20px;
     margin-left: 5px;
@@ -318,7 +304,7 @@ ul li ul.dropdown a:hover {
     margin-top: 20px;
     border: none;
     font-size: 1.5em;
-    background-color: #170ceb;
+    background-color: #FF685F;
     color: #fff;
     width: 250px;
     padding: 12px;
@@ -327,13 +313,13 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao > input[type=button]:hover {
-    box-shadow: 0 0 6px blue;
+    box-shadow: 0 0 4px #A61212;
 }
 
 
 .informacoes-questao {
     grid-area: informacoes;
-    background-color: #241bb9;
+    background-color: #800080;
     color: #fff;
     height: 91.9vh;
     display: grid;
@@ -385,9 +371,9 @@ ul li ul.dropdown a:hover {
     font-size: 2em;
 }
 
-.buttonResponder > input[type=button], .buttonResponder > input[type=submit] {
+.buttonResponder > input[type=button] {
     border: none;
-    background-color: #241bb9;
+    background-color: #A61212;
     color: #fff;
     width: 150%;
     padding: 20px;
@@ -452,7 +438,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #241bb9;
+    background-color: #800080;
     color: #fff;
 }
 
@@ -570,57 +556,15 @@ label {
 }
 
 #secao-pergunta-10 {
-    display: grid;
-    /* display: none; */
+    /* display: grid; */
+    display: none;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
 
-#contador-acertos {
-    display: none;
-}
-
 #fim {
-    /* display: grid; */
-    grid-template-areas:
-    "acertos ranking"
-    "acertos refazer";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 90% 10%;
-    justify-items: center;
     display: none;
-    height: 91.9vh;
-}
-
-#congratulations {
-    display: grid;
-    grid-area: acertos;
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: 95%;
-}
-
-#congratulations > img {
-    border: 2px solid;
-    width: 70%;
-    height: 70vh;
-    border-radius: 30px;
-}
-
-#congratulations > p {
-    position: relative;
-    bottom: 152px;
-    background-color: rgba(255, 255, 255, 0.959);
-    width: 70%;
-    font-size: 1.5em;
-    padding-top: 8px;
-    padding-right: 3px;
-    padding-bottom: 3px;
-    padding-left: 3px;
-    text-align: center;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
 }
 
 #fim > h1 {
@@ -635,14 +579,3 @@ label {
     font-size: 1.5em;
     text-align: center;
 }
-
-@media (max-width: 1400px) {
-    #ajustePergunta6, #ajustePergunta7, #ajustePergunta8 ,#ajustePergunta10 {
-        font-size: 2.5em;
-    }
-
-    .informacoes-questao {
-        height: 87.1vh;
-    }
-}
-

@@ -43,6 +43,9 @@ Cor Clara:#6C9BD9
 Cor Escura:#BF4E4E
 Cor Clara:#F5BFCD
 
+## Mitologia Irlandesa:
+Cor Laranja: #ff883e
+Cor Verde: #169b62
 •	#BF214B
 •	#D94A98
 •	#417FA6
@@ -73,6 +76,9 @@ Cor Clara:#6F96A6
 Cor Escura:#A61212
 Cor Clara:#FF685F
 
+## Quiz Geral:
+Cor Escura:#73726F
+Cor Clara:#BFBDB8
 •	#BFB78F
 •	#A67C49
 •	#F2DCC2
@@ -82,4 +88,3 @@ Cor Clara:#FF685F
 ## Quiz Geral:
 Cor Escura:#73726F
 Cor Clara:#BFBDB8
-
