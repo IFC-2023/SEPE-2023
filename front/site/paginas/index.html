@@ -1,244 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site SEPE</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-
-
-    header {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    .d-flex>input,
-    button {
-      padding: 0;
-    }
-
-    nav>ul {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      list-style: none;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 600;
-    }
-
-    .d-flex {
-      display: flex;
-      padding: 25px;
-    }
-
-    .card {
-      padding: 6px;
-      border: none;
-      box-shadow: 0 3px 5px 0 rgba(0, 1, 1, .1);
-      height: 100%;
-    }
-
-    .card > img{
-      max-height: 300px;
-    }
-
-    .main-banner{
-      height: 350px;
-      background: rgb(3,0,57);
-      background: linear-gradient(90deg, rgba(3,0,57,1) 0%, rgba(17,17,17,1) 45%, rgba(46,100,111,1) 100%);
-      color: aliceblue;
-      text-align: center;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      margin: 0 0 50px 0
-    }
-
-    .banner-text {
-      justify-content: center;
-      display: flex;
-      align-items: center;  
-    }
-
-    .main-banner h1, .main-banner p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-
-    #pbanner {
-      padding: 10px;
-    }
-
-    main{
-      padding: 0 30px;
-    }
-
-    footer{
-      margin: 70px 0 0 0;
-      background-color: black;
-      height: 300px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="../paginas/css/index.css">
+  <title>Index | SEPE</title>
 </head>
 
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li><button type="button" class="btn btn-outline-dark">Mitologias</button></li>
-          <li><button type="button" class="btn btn-outline-dark">Sobre Nós</button></li>
-        <li><button type="button" class="btn btn-outline-dark">Contatos</button></li>
-        <li><button type="button" class="btn btn-outline-dark">Politica de Privacidade</button></li>
-      </ul>
+  <div class="container">
+    <div class="tabs">
+      <input id="egipcia" type="radio" name="slider" checked></a>
+      <input id="grega" type="radio" name="slider">
+      <input id="hindu" type="radio" name="slider">
+      <input id="irlandesa" type="radio" name="slider">
+      <input id="japonesa" type="radio" name="slider">
+      <input id="mesopotamica" type="radio" name="slider">
+      <input id="nordica" type="radio" name="slider">
+      <input id="romana" type="radio" name="slider">
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </nav>
-  </header>
 
-  <div class="main-banner">
-    <div class="banner-text">
-      <h1>MITOLOGIAS</h1> 
-    </div>
+     
+      <div class="botoes">
+        <label for="egipcia"></label>
+        <label for="grega"></label>
+        <label for="hindu"></label>
+        <label for="irlandesa"></label>
+        <label for="japonesa"></label>
+        <label for="mesopotamica"></label>
+        <label for="nordica"></label>
+        <label for="romana"></label>
 
-  </div>
 
-<main>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-africana.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">AFRICANA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia africana.</p>
+
+
+
+
+      </div>
+      <div class="conteudo">
+        <div class="caixa egipcia">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia egipcia</h2>
+            <p>A mitologia egípcia é uma antiga tradição de crenças e histórias do Egito Antigo, envolvendo deuses, rituais e uma forte influência na cultura egípcia, com ênfase na vida após a morte.</p>
+              <a href="../paginas/egipcia.html"><button>Aprender Mais</button></a>
+          </div>
+        </div>
+        <div class="caixa grega">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia grega</h2>
+            <p>A mitologia grega é um conjunto de lendas e histórias da Grécia Antiga sobre deuses, heróis e criaturas míticas que desempenharam papéis significativos na cultura e na compreensão do mundo naquela época.</p>
+              <a href="../paginas/grega.html"><button>Aprender Mais</button></a>
+          </div>
+        </div>
+        <div class="caixa hindu">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia hindu</h2>
+            <p>A mitologia hindu é um conjunto de histórias e crenças da Índia, envolvendo diversos deuses e deusas, lendas e ensinamentos espirituais que têm sido fundamentais na cultura e na religião hindu ao longo da história.</p>
+              <a href="../paginas/hindu.html"><button>Aprender Mais</button></a>
+          </div>
+        </div>
+        <div class="caixa irlandesa">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia irlandesa</h2>
+            <p>A mitologia irlandesa é um rico conjunto de mitos e lendas que fazem parte do folclore da Irlanda. Ela apresenta deuses, heróis e criaturas mágicas, e desempenhou um papel importante na cultura irlandesa ao longo da história.</p>
+              <a href="../paginas/irlandesa.html"><button>Aprender Mais</button></a>
+          </div>
+        </div>
+        <div class="caixa japonesa">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia japonesa</h2>
+            <p>A mitologia japonesa é um conjunto de crenças e lendas do Japão, envolvendo deuses, espíritos e criaturas míticas que desempenham papéis significativos na cultura e espiritualidade japonesa.</p>
+              <a href="../paginas/japonesa.html"><button>Aprender Mais</button></a>
+          </div>
+        </div>
+        <div class="caixa mesopotamica">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia mesopotamica</h2>
+            <p>A mitologia mesopotâmica é um conjunto de crenças e lendas das antigas civilizações que habitaram a região da Mesopotâmia, entre os rios Tigre e Eufrates. Ela envolve uma variedade de deuses e figuras míticas que desempenharam papéis significativos na cultura dessas civilizações.</p>
+              <a href="../paginas/mesopotamica.html"><button>Aprender Mais</button></a>
+          </div>
+        </div>
+        <div class="caixa nordica">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia nordica</h2>
+            <p>A mitologia nórdica, ou escandinava, é um conjunto de lendas e crenças das culturas da Escandinávia, incluindo deuses, heróis e criaturas míticas que desempenham papéis importantes nas histórias e na cultura desses povos.</p>
+              <a href="../paginas/nordica.html"><button>Aprender Mais</button></a>
+          </div>
+        </div>
+        <div class="caixa romana">
+          <div class="conteudocx">
+            <ion-icon name="image-outline"></ion-icon>
+            <h2>Mitologia romana</h2>
+            <p>A mitologia romana é um conjunto de crenças e lendas da Roma Antiga, envolvendo deuses, heróis e histórias que desempenharam papéis significativos na cultura e religião romanas.</p>
+              <a href="../paginas/romana.html"><button>Aprender Mais</button></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-egipcia.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">EGÍPCIA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia egípcia.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-greco-romana.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">GRECO-ROMANA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia greco-romana.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-grega.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">GREGA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia grega.</p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-hindu.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">HINDU</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia hindu.</p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-mesopotamica.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">MESOPOTÂMICA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia mesopotâmica.</p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-romana.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">ROMANA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia romana.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-nordica.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">NÓRDICA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia nórdica.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="https://wp.thecollector.com/wp-content/uploads/2020/06/giulio-romano-olympian-gods-wall-painting-1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text"></p>
-        </div>
-        
-      </div>
-      
-       
     </div>
   </div>
-</main>
-<footer>
-
-</footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 
 </html>

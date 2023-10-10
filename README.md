@@ -1,4 +1,4 @@
-# PERGUNTAS
+
 ## **Mitologia Greco-Romana:**
 
 ### *Nível Fácil:*
@@ -207,9 +207,9 @@
 
 2. Qual é o nome da rainha lendária do Egito que se casou com Marco Antônio e Júlio César?
    - [ ] A Nefertiti
-   - [ ] B Cleópatra
+   - [x] B Cleópatra
    - [ ] C Hatshepsut
-   - [x] D Ísis
+   - [ ] D Ísis
 
 3. Qual é o animal sagrado associado a Thoth, o deus da sabedoria, na mitologia egípcia?
    - [x] A Íbis
@@ -395,7 +395,7 @@
 
 ### *Nível Fácil:*
 
-1. Quem é o deus supremo na mitologia fenícia, muitas vezes associado ao deus grego Zeus?
+1. Quem é o deus supremo na mitologia fenícia?
    - [ ] A Apolo
    - [ ] B Hermes
    - [ ] C Astarte
@@ -516,3 +516,72 @@
     - [ ] B Afrodite
     - [x] C Ceres
     - [ ] D Ártemis
+
+
+## *Mitologia japonesa*
+
+**Nível Fácil:**
+
+1. Qual é o nome do deus japonês do trovão e do relâmpago?
+   - [ ] Izanagi
+   - [ ] Susanoo
+   - [x] Raijin
+   - [ ] Amaterasu
+
+2. Quem é considerada a deusa do sol na mitologia japonesa?
+   - [ ] Izanami
+   - [ ] Hachiman
+   - [x] Amaterasu
+   - [ ] Tsukuyomi
+
+3. Qual criatura mítica do folclore japonês é conhecida por ser uma raposa com habilidades mágicas?
+   - [ ] Oni
+   - [ ] Tengu
+   - [x] Kitsune
+   - [ ] Tanuki
+
+**Nível Médio:**
+
+4. Qual é o nome do lendário samurai que se tornou um dos Sete Deuses da Sorte no Japão?
+   - [ ] Oda Nobunaga
+   - [ ] Minamoto no Yoritomo
+   - [ ] Date Masamune
+   - [x] Taira no Masakado
+
+5. Que criatura marinha gigante é frequentemente associada à mitologia japonesa e pode ser comparada a um dragão?
+   - [ ] Kappa
+   - [ ] Tsuchinoko
+   - [ ] Nurarihyon
+   - [x] Ryūjin
+
+6. Qual é o nome da espada lendária que, segundo a lenda, foi usada para selar a serpente de oito cabeças, Yamata-no-Orochi?
+   - [x] Kusanagi-no-Tsurugi
+   - [ ] Muramasa
+   - [ ] Masamune
+   - [ ] Onimaru
+
+**Nível Difícil:**
+
+7. Qual é o nome do deus guardião dos caminhos e das encruzilhadas na mitologia japonesa?
+   - [ ] Susano-o
+   - [ ] Amaterasu
+   - [ ] Izanagi
+   - [x] Jizo Bosatsu
+
+8. O que é um "tsukumogami" na mitologia japonesa?
+   - [ ] Um tipo de yokai
+   - [x] Um objeto inanimado que ganha vida após 100 anos
+   - [ ] Um espírito da natureza
+   - [ ] Um deus menor
+
+9. Qual é o nome da lendária espada japonesa que supostamente pertenceu a Minamoto no Yoshitsune?
+   - [ ] Tachi
+   - [ ] Uchigatana
+   - [ ] Nodachi
+   - [x] Futsu-no-Mitama-no-Tsurugi
+
+10. Qual é o nome da criatura lendária com corpo de peixe e cabeça de cavalo na mitologia japonesa?
+    - [ ] Kappore
+    - [x] Umibozu
+    - [ ] Funayūrei
+    - [ ] Shachihoko

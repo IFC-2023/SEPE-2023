@@ -23,6 +23,7 @@ function comecar() {
 }
 
 document.getElementById("btnComecar").addEventListener("click", comecar);
+
 function responder1() {
   let resposta = document.getElementsByName("questao1");
   let valorResposta = "";
