@@ -1,6 +1,6 @@
 let egito = document.getElementById("margin-top-dropdown");
 let irlandesa = document.getElementById("linkIrlandesa");
-let grecia = document.getElementById("linkGrega");
+let grecia = document.getElementById("linkGrecia");
 let geral = document.getElementById("linkGeral");
 let japonesa = document.getElementById("linkJaponesa");
 let hindu = document.getElementById("linkHindu");
