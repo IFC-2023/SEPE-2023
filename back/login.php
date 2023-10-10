@@ -108,7 +108,7 @@ if (isset($_POST['submit-cad'])) {
         <h1>Cadastro</h1> 
          
         <p> 
-          <label for="nome_cad">Seu nome</label>
+          <label for="nome_cad">Seu apelido</label>
           <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome"/>
         </p>
          
