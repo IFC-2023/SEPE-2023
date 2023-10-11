@@ -258,7 +258,7 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -529,6 +529,10 @@ input[type=radio] {
         "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+#btnPergunta4 {
+    margin-bottom: 50px;
+    
+}
 
 #secao-pergunta-4>.alternativas>.buttonResponder>input[type=button] {
     top: 50px;
@@ -537,7 +541,7 @@ input[type=radio] {
 
 /*Pergunta 5*/
 #secao-pergunta-5 {
-    display: grid;
+    display: none;
     grid-template-areas:
         "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
