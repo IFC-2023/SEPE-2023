@@ -59,6 +59,7 @@
    - [ ] D Teseu era um filósofo grego famoso por suas ideias sobre a natureza.
 
 10. Como é retratado o mito de Édipo em tragédias gregas como a de Sófocles?
+h 
     - [ ] A Édipo era umherói que realizou muitos feitos heróicos.
     - [x] B Édipo era um rei que matou seu pai e se casou com sua mãe, trazendo desgraça à sua cidade.
     - [ ] C Édipo era um sábio filósofo cujas obras influenciaram o pensamento grego.
