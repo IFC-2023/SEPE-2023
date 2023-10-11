@@ -4,17 +4,17 @@ if (isset($_POST['submit-cad'])) {
 
   include_once('config.php');
 
-  $nome = $_POST['nome_cad'];
+  $apelido = $_POST['apelido_cad'];
   $email = mysqli_real_escape_string($conexao, $_POST['email_cad']);
   $senha = password_hash($_POST['senha_cad'], PASSWORD_DEFAULT);
 
-  $query = "SELECT * FROM informacoes WHERE email = '$email'";
+  $query = "SELECT * FROM jogador WHERE email = '$email'";
   $result = mysqli_query($conexao, $query);
 
   if (mysqli_num_rows($result) > 0) {
       echo "Este email já está cadastrado. Por favor, use outro email.";
   } else {
-      $result = mysqli_query($conexao, "INSERT INTO informacoes (nome, email, senha) VALUES ('$nome', '$email',       '$senha')");
+      $result = mysqli_query($conexao, "INSERT INTO informacoes (apelido, email, senha) VALUES ('$apelido', '$email','$senha')");
 
       $confirmResult = mysqli_query($conexao, "SELECT email FROM informacoes WHERE email = '$email'");
   
@@ -109,7 +109,7 @@ if (isset($_POST['submit-cad'])) {
          
         <p> 
           <label for="nome_cad">Seu apelido</label>
-          <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome"/>
+          <input id="nome_cad" name="apelido_cad" required="required" type="text" placeholder="nome"/>
         </p>
          
         <p> 
