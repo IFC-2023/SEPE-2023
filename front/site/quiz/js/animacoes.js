@@ -8,7 +8,6 @@ let nordica = document.getElementById("linkNordica");
 let romana = document.getElementById("linkRomana");
 let mesopotamia = document.getElementById("link-dropdown-excessao");
 let quiz = document.getElementById("link-quiz");
-let mitologia = document.getElementById("link-mitologia");
 
 function mouseSair() {
     let elementoHome = document.getElementById("link-home");
@@ -29,35 +28,6 @@ function mouseSairMitologia() {
 }
 
 document.getElementById("link-mitologia").addEventListener("mouseleave", mouseSairMitologia);
-
-if (egito !== null) {
-    function sairEgipcia() {
-        let elemento = document.getElementById("margin-top-dropdown");
-        elemento.classList.add("saiuEgipcia");
-
-if (mitologia !== null) {
-    function mouseSairMitologia() {
-        let elementoMitologia = document.getElementById("link-mitologia");
-        elementoMitologia.classList.add("mouseSaiuMitologia");
-        setTimeout(() => {
-            elementoMitologia.classList.remove("mouseSaiuMitologia");
-        }, 300)
-    }
-
-    document.getElementById("link-mitologia").addEventListener("mouseleave", mouseSairMitologia);
-}
-
-if (quiz !== null) {
-    function mouseSairQuiz() {
-        let elementoQuiz = document.getElementById("link-quiz");
-        elementoQuiz.classList.add("mouseSaiuQuiz");
-        setTimeout(() => {
-            elementoQuiz.classList.remove("mouseSaiuQuiz");
-        }, 300)
-    }
-
-    document.getElementById("link-quiz").addEventListener("mouseleave", mouseSairQuiz); 
-}
 
 if (egito !== null) {
     function sairEgipcia() {
@@ -108,16 +78,16 @@ if (geral !== null) {
     document.getElementById("linkGeral").addEventListener("mouseleave", sairGeral);
 }
 
-if (japonesa !== null) {
-    function sairJaponesa() {
-        let elementoGr = document.getElementById("linkJaponesa");
-        elementoGr.classList.add("saiuJaponesa");
+if (gR !== null) {
+    function sairGr() {
+        let elementoGr = document.getElementById("linkGrecoRomana");
+        elementoGr.classList.add("saiuGr");
         setTimeout(() => {
-            elementoGr.classList.remove("saiuJaponesa");
+            elementoGr.classList.remove("saiuGr");
         }, 300);
     }
 
-    document.getElementById("linkJaponesa").addEventListener("mouseleave", sairJaponesa);
+    document.getElementById("linkGrecoRomana").addEventListener("mouseleave", sairGr);
 }
 
 if (hindu !== null) {

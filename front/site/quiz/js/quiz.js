@@ -22,7 +22,14 @@ function comecar() {
   pg1.style.display = "grid";
 }
 
-document.getElementById("btnComecar").addEventListener("click", comecar);
+document.getElementById("btnComecar").addEventListener("click", () => {
+    const nome = document.getElementById("nomeUsuario").value;
+  if (nome !== "") {
+    comecar();
+  } else {
+    alert(`Digite um apelido no campo de apelido:`);
+  }
+});
 
 function responder1() {
   let resposta = document.getElementsByName("questao1");

@@ -420,8 +420,6 @@ color: rgba(216, 188, 136, 1);
 color: rgba(191, 155, 110, 1);
 color: rgba(140, 104, 72, 1); 
 
-**Mitologia Irlandesa**
-
 *Fáceis*
 
 1. Quem é considerado o deus supremo da mitologia irlandesa?
@@ -468,6 +466,8 @@ C) Leprechaun
 D) Banshee
 Resposta: B) Pooka
 
+*Difíceis
+
 7. Qual mito irlandês relata a batalha entre os deuses dos Tuatha Dé Danann e os seres subterrâneos conhecidos como os Fir Bolg?
 A) Lebor Gabála Érenn
 B) Táin Bó Cúailnge
@@ -494,5 +494,4 @@ A) Brigid
 B) The Dagda
 C) Lugh
 D) Cú Chulainn
-Resposta: B) The Dagda
 Resposta: B) The Dagda
