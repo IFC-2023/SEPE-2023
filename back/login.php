@@ -58,7 +58,8 @@
          
         <p> 
           <label for="email_login">Sua senha</label>
-          <input id="email_login" name="senha_login" required="required" type="password" placeholder="ex. senha" /> 
+          <input id="email_login" name="senha_login" required="required" type="password" placeholder="ex. senha" />
+          <a href=""></a>
         </p>
          
         <p> 
