@@ -20,7 +20,8 @@
       }
   
       $_SESSION['nome'] = $usuario['apelido'];
-  
+
+      
       if (password_verify($senhaLogin, $usuario['senha'])) {
           header("Location: http://localhost/SEPE/front/site/paginas/index.php");
           exit();

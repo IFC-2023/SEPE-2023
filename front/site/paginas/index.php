@@ -1,4 +1,8 @@
-<?php 
+<?php
+  if(!isset($_SESSION)) {
+    session_start();
+  }
+  
   include('../../../back/protecao.php');
 ?>
 
