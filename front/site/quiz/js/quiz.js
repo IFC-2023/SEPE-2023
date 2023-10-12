@@ -366,3 +366,31 @@ document.getElementById("btnPergunta10").addEventListener("click", () => {
     // document.getElementById("fim").scrollIntoView({ behavior: "smooth" });
 // });
 
+
+import confetti from "https://esm.run/canvas-confetti@1";
+
+  function onClick() {
+    confetti({
+      particleCount: 150,
+      spread: 60
+    });
+  };
+
+var btn = document.getElementById('btn');
+
+btn.addEventListener("click", onClick);
+
+import confetti from "https://esm.run/canvas-confetti@1";
+
+  function onClick() {
+    confetti({
+      particleCount: 150,
+      spread: 60
+    });
+  };
+
+var btn = document.getElementById('btn');
+
+btn.addEventListener("click", onClick);
+
+

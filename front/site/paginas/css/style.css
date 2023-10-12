@@ -218,10 +218,14 @@ ul.dropdown {
 ul {
     list-style: none;
 }
-
-ul li {
-    display: inline-block;
+ul li{
+    display: block;
     position: relative;
+}
+
+.footer-container ul{
+display: grid;
+grid-template-columns: 1fr 1fr;
 }
 
 ul li a {
