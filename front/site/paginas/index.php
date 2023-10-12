@@ -142,7 +142,7 @@
         <div class="card-body">
           <h5 class="card-title">AFRICANA</h5>
           <p class="card-text">Clicando aqui você aprende sobre a mitologia africana.</p>
-          <a href="../../../back/login.php"></a>
+          <a href="../paginas/"></a>
         </div>
       </div>
     </div>
