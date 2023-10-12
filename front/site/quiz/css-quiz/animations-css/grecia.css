@@ -1,0 +1,648 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+.lista-nav {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 20px 0 20px 0;
+}
+
+.lista-nav > li > a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.dropdown {
+    background-color: rgba(255, 255, 255, 0.959);
+    padding: 8px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 40px;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul li ul.dropdown a {
+    opacity: 0.5;
+}
+  
+
+ul li ul.dropdown a:hover {
+    opacity: 1;
+    color: #000;
+}
+
+.dropdown > li > a {
+    padding: 10px 50px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown > #margin-top-dropdown > a {
+    margin-top: 20px;
+}
+
+#seta-baixo {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+}
+
+#link-home > a, #link-mitologia > a {
+    padding-bottom: 8px;
+}
+
+#link-home:hover::after {
+    content: "";
+    height: 2px;
+    background-color: pink;
+    margin-left: 25px;
+    display: block;
+    width: 70%;
+    transition: .5s;
+    animation-name: hover-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes hover-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.mouseSaiu::after {
+    content: "";
+    background-color: pink;
+    margin-left: 25px;
+    display: block;
+    animation-name: sair-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-animation {
+    0% {
+        width: 70%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+#link-mitologia:hover::after {
+    content: "";
+    height: 2px;
+    background-color: pink;
+    margin-left: 25px;
+    display: block;
+    width: 80%;
+    transition: .5s;
+    animation-name: hover-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.mouseSaiuMitologia::after {
+    content: "";
+    background-color: pink;
+    margin-left: 25px;
+    display: block;
+    animation-name: sair-animation-grecia;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-animation-grecia {
+    0% {
+        width: 80%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+.dropdown > li > a {
+    padding: 8px 8px;
+}
+
+#margin-top-dropdown:hover::after,  #linkGrecia:hover::after, #linkGrecoRomana:hover::after, #linkHindu:hover::after,  #linkNordica:hover::after, #linkGeral:hover::after, #linkRomana:hover::after {
+    content: "";
+    height: 2px;
+    background-color: pink;
+    display: block;
+    width: 100%;
+    animation-name: dropdown-animations;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes dropdown-animations {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+#link-dropdown-excessao:hover::after {
+    content: "";
+    height: 2px;
+    background-color: pink;
+    display: block;
+    width: 100%;
+    animation-name: dropdown-excessao-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes dropdown-excessao-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.saiuEgipcia::after, .saiuGrecia::after, .saiuGeral::after, .saiuGr::after, .saiuHindu::after, .saiuNordica::after, .saiuRomana::after {
+    content: "";
+    background-color: pink;
+    width: 100%;
+    display: block;
+    animation-name: sair-dropdown-animations;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-dropdown-animations {
+    0% {
+        width: 100%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+.saiuMesopotamia::after {
+    content: "";
+    background-color: pink;
+    display: block;
+    width: 100%;
+    animation-name: sair-dropdown-excessao;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-dropdown-excessao {
+    0% {
+        width: 100%;
+        height: 2px;
+    }
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+#introducao {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 13%;
+    margin-right: 14%;
+}
+
+#introducao > h1 {
+    font-size: 3em;
+    margin-left: 5px;
+}
+
+#introducao > ol {
+    margin-top: 20px;
+}
+
+#introducao > ol > li {
+    font-size: 1.25em;
+    margin-left: 25px;
+    margin-top: 8px;
+}
+
+#introducao > label {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#introducao > input {
+    margin-bottom: 20px;
+    letter-spacing: .2px;
+    font-size: 1.2em;
+    padding: 3px;
+    width: 15%;
+    text-align: center;
+}
+
+#introducao > h2 {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+#introducao > input[type=button] {
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    background-color: #170ceb;
+    color: #fff;
+    width: 250px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#introducao > input[type=button]:hover {
+    box-shadow: 0 0 6px blue;
+}
+
+
+.informacoes-questao {
+    grid-area: informacoes;
+    background-color: #241bb9;
+    color: #fff;
+    height: 91.9vh;
+    display: grid;
+    grid-template-areas:
+    "pergunta"
+    "texto"
+    "nivel";
+    grid-template-rows: 30% 60% 10%;
+}
+
+.questao {
+    padding: 60px 60px;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.pergunta {
+    display: grid;
+    justify-items: center;
+    margin: 0 50px;
+    font-size: 3em;
+    text-align: left;
+}
+
+.dificuldade {
+    text-align: right;
+    margin-right: 50px;
+    font-size: 2em;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.alternativas label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marginRadio {
+    display: flex;
+    margin-top: 30px;
+    font-size: 2em;
+}
+
+.buttonResponder > input[type=button], .buttonResponder > input[type=submit] {
+    border: none;
+    background-color: #241bb9;
+    color: #fff;
+    width: 150%;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 37px;
+    cursor: pointer;
+}
+
+.radio-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.radio-container > input {
+    display: grid;
+}
+
+.radio-container > label {
+    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+label {
+    margin-left: 20px;
+    font-size: 2em;
+}
+
+.tamanhoInputOriginal {
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+
+#res-certa {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "frase" "proximo";
+    grid-template-columns: 1fr 1fr;
+}
+
+#fraseCerta {
+    grid-area: frase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1efa0b;
+    height: 91.9vh;
+    color: #fff;
+    font-size: 3em;
+}
+
+#fraseCerta > h1 {
+    font-weight: normal;
+}
+
+.proximo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #241bb9;
+    color: #fff;
+}
+
+.proximo > input[type=button] {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 4em;
+    font-weight: normal;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.proximo > span {
+    padding-left: 20px;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+#res-errada {
+    display: none;
+    grid-template-areas:
+    "frase" "proximo";
+    grid-template-columns: 1fr 1fr;
+}
+#fraseErrada {
+    grid-area: frase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fa0b0b;
+    height: 91.9vh;
+    color: #fff;
+    font-size: 3em;
+}
+
+#fraseErrada > h1 {
+    font-weight: normal;
+}
+
+#secao-pergunta-1 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-2 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-3 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-4 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+.correcaoTamanho {
+    width: 110px;
+}
+
+#secao-pergunta-5 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-6 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-7 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-8 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-9 {
+    /* display: grid; */
+    display: none;
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#secao-pergunta-10 {
+    display: grid;
+    /* display: none; */
+    grid-template-areas:
+    "informacoes" "alternativas";
+    grid-template-columns: 1fr 1fr;
+}
+
+#contador-acertos {
+    display: none;
+}
+
+#fim {
+    /* display: grid; */
+    grid-template-areas:
+    "acertos ranking"
+    "acertos refazer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90% 10%;
+    justify-items: center;
+    display: none;
+    height: 91.9vh;
+}
+
+#congratulations {
+    display: grid;
+    grid-area: acertos;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 95%;
+}
+
+#congratulations > img {
+    border: 2px solid;
+    width: 70%;
+    height: 70vh;
+    border-radius: 30px;
+}
+
+#congratulations > p {
+    position: relative;
+    bottom: 152px;
+    background-color: rgba(255, 255, 255, 0.959);
+    width: 70%;
+    font-size: 1.5em;
+    padding-top: 8px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#fim > h1 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+}
+
+#fim > p {
+    margin-top: 30px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    #ajustePergunta6, #ajustePergunta7, #ajustePergunta8 ,#ajustePergunta10 {
+        font-size: 2.5em;
+    }
+
+    .informacoes-questao {
+        height: 87.1vh;
+    }
+}
+
