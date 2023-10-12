@@ -374,30 +374,30 @@ document.getElementById("btnPergunta10").addEventListener("click", () => {
 // });
 
 
-import confetti from "https://esm.run/canvas-confetti@1";
+// import confetti from "https://esm.run/canvas-confetti@1";
 
-  function onClick() {
-    confetti({
-      particleCount: 150,
-      spread: 60
-    });
-  };
+//   function onClick() {
+//     confetti({
+//       particleCount: 150,
+//       spread: 60
+//     });
+//   };
 
-var btn = document.getElementById('btn');
+// var btn = document.getElementById('btn');
 
-btn.addEventListener("click", onClick);
+// btn.addEventListener("click", onClick);
 
-import confetti from "https://esm.run/canvas-confetti@1";
+// import confetti from "https://esm.run/canvas-confetti@1";
 
-  function onClick() {
-    confetti({
-      particleCount: 150,
-      spread: 60
-    });
-  };
+//   function onClick() {
+//     confetti({
+//       particleCount: 150,
+//       spread: 60
+//     });
+//   };
 
-var btn = document.getElementById('btn');
+// var btn = document.getElementById('btn');
 
-btn.addEventListener("click", onClick);
+// btn.addEventListener("click", onClick);
 
 
