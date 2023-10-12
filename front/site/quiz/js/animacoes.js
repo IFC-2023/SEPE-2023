@@ -78,16 +78,16 @@ if (geral !== null) {
     document.getElementById("linkGeral").addEventListener("mouseleave", sairGeral);
 }
 
-if (gR !== null) {
-    function sairGr() {
-        let elementoGr = document.getElementById("linkGrecoRomana");
-        elementoGr.classList.add("saiuGr");
+if (japonesa !== null) {
+    function sairJaponesa() {
+        let elementoJaponesa = document.getElementById("linkJaponesa");
+        elementoJaponesa.classList.add("saiuJaponesa");
         setTimeout(() => {
-            elementoGr.classList.remove("saiuGr");
+            elementoGr.classList.remove("saiuJaponesa");
         }, 300);
     }
 
-    document.getElementById("linkGrecoRomana").addEventListener("mouseleave", sairGr);
+    document.getElementById("linkJaponesa").addEventListener("mouseleave", sairJaponesa);
 }
 
 if (hindu !== null) {
