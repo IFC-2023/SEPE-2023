@@ -212,7 +212,7 @@ input[type=button] {
 }
 
 ul.dropdown {
-    background-color: rgba(255, 255, 255, 0.959);
+    background-color: rgba(1, 23, 59, 0.959);
     padding: 8px;
 }
 
@@ -232,7 +232,7 @@ grid-template-columns: 1fr 1fr;
 ul li a {
     display: block;
     padding: 10px 40px;
-    color: #000;
+    color: #fdfdfd;
     text-decoration: none;
     text-align: left;
     font-size: 16px;
@@ -261,7 +261,7 @@ ul li ul.dropdown a {
 
 ul li ul.dropdown a:hover {
     opacity: 1;
-    color: #000;
+    color: #fdfdfd;
 }
 
 .dropdown > li > a {

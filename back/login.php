@@ -6,7 +6,7 @@
     $emailLogin = $_POST['email_login'];
     $senhaLogin = $_POST['senha_login'];
 
-    $resultLogin = mysqli_query($conexao, "SELECT apelido,email,senha FROM jogador WHERE email = '$emailLogin'");
+    $resultLogin = mysqli_query($conexao, "SELECT * FROM jogador WHERE email = '$emailLogin'");
 
     if ($resultLogin && mysqli_num_rows($resultLogin) === 0) {
       echo "Email ou senha incorretos";
@@ -22,7 +22,6 @@
       $_SESSION['nome'] = $usuario['apelido'];
   
       if (password_verify($senhaLogin, $usuario['senha'])) {
-          echo "redirecionando para a página...";
           header("Location: http://localhost/SEPE/front/site/paginas/index.php");
           exit();
       } else {
