@@ -8,15 +8,15 @@ if (isset($_POST['submit-cad'])) {
   $email = mysqli_real_escape_string($conexao, $_POST['email_cad']);
   $senha = password_hash($_POST['senha_cad'], PASSWORD_DEFAULT);
 
-  $query = "SELECT * FROM informacoes WHERE email = '$email'";
+  $query = "SELECT * FROM jogador WHERE email = '$email'";
   $result = mysqli_query($conexao, $query);
 
   if (mysqli_num_rows($result) > 0) {
       echo "Este email já está cadastrado. Por favor, use outro email.";
   } else {
-      $result = mysqli_query($conexao, "INSERT INTO informacoes (nome, email, senha) VALUES ('$nome', '$email',       '$senha')");
+      $result = mysqli_query($conexao, "INSERT INTO jogador (apelido, email, senha) VALUES ('$nome', '$email',       '$senha')");
 
-      $confirmResult = mysqli_query($conexao, "SELECT email FROM informacoes WHERE email = '$email'");
+      $confirmResult = mysqli_query($conexao, "SELECT email FROM jogador WHERE email = '$email'");
   
       if ($confirmResult && mysqli_num_rows($confirmResult) === 0) {
         echo "Email não cadastrado";
@@ -32,24 +32,29 @@ if (isset($_POST['submit-cad'])) {
     $emailLogin = $_POST['email_login'];
     $senhaLogin = $_POST['senha_login'];
 
-    $resultLogin = mysqli_query($conexao, "SELECT email,senha FROM informacoes WHERE email = '$emailLogin'");
+    $resultLogin = mysqli_query($conexao, "SELECT apelido,email,senha FROM informacoes WHERE email = '$emailLogin'");
 
     if ($resultLogin && mysqli_num_rows($resultLogin) === 0) {
-        echo "Email incorreto";
-    }
-
-     else if ($resultLogin && mysqli_num_rows($resultLogin) > 0) {
-        $usuario = mysqli_fetch_assoc($resultLogin);
-
-        if(password_verify($senhaLogin, $usuario['senha'])) {
-            header("Location: http://localhost/SEPE/front/site/paginas/index.html");
-            exit();
-        }
-
-        else {
-            echo "Senha incorreta";
-        }
-    }
+      echo "Email ou senha incorretos";
+    } 
+    
+    else if ($resultLogin && mysqli_num_rows($resultLogin) > 0) {
+      $usuario = mysqli_fetch_assoc($resultLogin);
+  
+      if (!isset($_SESSION)) {
+          session_start();
+      }
+  
+      $_SESSION['nome'] = $usuario['apelido'];
+  
+      if (password_verify($senhaLogin, $usuario['senha'])) {
+          echo "redirecionando para a página...";
+          header("Location: http://localhost/SEPE/front/site/paginas/index.php");
+          exit();
+      } else {
+          echo "Senha incorreta";
+      }
+  }
 }
 
 ?>
