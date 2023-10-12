@@ -98,7 +98,7 @@ if (isset($_POST['submit-cad'])) {
          
         <p class="link">
           Ainda não tem conta?
-          <a href="#paracadastro">Cadastre-se</a>
+          <a href="cadastro.php">Cadastre-se</a>
         </p>
       </form>
     </div>
