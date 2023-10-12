@@ -1,0 +1,21 @@
+/* AQUI SOMENTE CORES DA PÁGINA */
+
+header{
+    background-color: #386273;
+}
+
+.col{
+    background-color: #6F96A6;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+input[type=button] {
+    background-color: #061D26;
+}
+
+input[type=button]:hover {
+    box-shadow: 2px 0px 10px cadetblue;
+}

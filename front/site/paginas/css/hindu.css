@@ -1,0 +1,17 @@
+/* AQUI SOMENTE CORES DA PÁGINA */
+
+header{
+    background-color: #BF4E4E;
+}
+
+.col{
+    background-color: #F5BFCD;
+}
+
+input[type=button] {
+    background-color: #BF4E4E;
+}
+
+input[type=button]:hover {
+    box-shadow: 2px 0px 10px #a12b2b;
+}
