@@ -97,7 +97,7 @@ header > h1{
 }
 
 footer {
-    background-color: #333;
+    background-color: #0f0f0f;
     color: #fff;
     padding: 2px 0;
     font-size: 16px;
@@ -142,12 +142,13 @@ footer {
 .footer-links a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s;
+    transition: color 0.2s;
     font-size: 16px;
 }
 
 .footer-links a:hover {
-    color: #ff6600;
+    color: #3479d4;
+    scale: 1.04;
 }
 
 .footer-social > ul > li {
@@ -156,16 +157,15 @@ footer {
     margin: 0;
 }
 
-
 .footer-social a {
     text-decoration: none;
     color: #fff;
     font-size: 20px;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 
 .footer-social a:hover {
-    color: #ff6600;
+    color: #3479d4;
 }
 
 .footer-bottom {
@@ -198,6 +198,11 @@ input[type=button] {
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
+    background-color: #3479d4;
+}
+
+input[type=button]:hover {
+    box-shadow: 2px 0px 10px #073c81;
 }
 
 .lista-nav {

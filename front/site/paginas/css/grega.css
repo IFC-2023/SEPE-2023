@@ -6,14 +6,6 @@
     background-color: #6C9BD9;
 }
 
-input[type=button] {
-    background-color: #6C9BD9;
-}
-
-input[type=button]:hover {
-    box-shadow: 2px 0px 10px rgb(95, 123, 160);
-}
-
 .lista-nav {
     display: flex;
     justify-content: flex-start;
