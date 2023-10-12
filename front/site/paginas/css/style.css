@@ -166,6 +166,7 @@ footer {
 
 .footer-social a:hover {
     color: #3479d4;
+    scale: 1.04;
 }
 
 .footer-bottom {
