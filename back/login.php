@@ -1,38 +1,12 @@
 <?php
 
-if (isset($_POST['submit-cad'])) {
-
-  include_once('config.php');
-
-  $nome = $_POST['nome_cad'];
-  $email = mysqli_real_escape_string($conexao, $_POST['email_cad']);
-  $senha = password_hash($_POST['senha_cad'], PASSWORD_DEFAULT);
-
-  $query = "SELECT * FROM jogador WHERE email = '$email'";
-  $result = mysqli_query($conexao, $query);
-
-  if (mysqli_num_rows($result) > 0) {
-      echo "Este email já está cadastrado. Por favor, use outro email.";
-  } else {
-      $result = mysqli_query($conexao, "INSERT INTO jogador (apelido, email, senha) VALUES ('$nome', '$email',       '$senha')");
-
-      $confirmResult = mysqli_query($conexao, "SELECT email FROM jogador WHERE email = '$email'");
-  
-      if ($confirmResult && mysqli_num_rows($confirmResult) === 0) {
-        echo "Email não cadastrado";
-      } else {
-          echo "Email cadastrado";
-      }
-    }
-  }
-
   if(isset($_POST['submit-login'])) {
     include_once('config.php');
 
     $emailLogin = $_POST['email_login'];
     $senhaLogin = $_POST['senha_login'];
 
-    $resultLogin = mysqli_query($conexao, "SELECT apelido,email,senha FROM informacoes WHERE email = '$emailLogin'");
+    $resultLogin = mysqli_query($conexao, "SELECT apelido,email,senha FROM jogador WHERE email = '$emailLogin'");
 
     if ($resultLogin && mysqli_num_rows($resultLogin) === 0) {
       echo "Email ou senha incorretos";
