@@ -1,6 +1,12 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+include_once('config_php/config-front.php');
+
+include('../../../back/protecao.php');
+
 if (isset($_POST['submit'])) {
-    include_once('config_php/config-front.php');
     $arrayContador = [];
     $q1 = $_POST['questao1'];
     $q2 = $_POST['questao2'];
@@ -18,28 +24,12 @@ if (isset($_POST['submit'])) {
             return $soma + 1;
         }
     }, 0);
+
     $totalAcertos = $contadorAcertos;
-    $nome = $_POST['nome'];
-    $contadorId = "SELECT COUNT(idGrega) AS total FROM ranking";
-    $resultadoContador = mysqli_query($conexao, $contadorId);
 
-    if ($resultadoContador) {
-        $row = mysqli_fetch_assoc($resultadoContador);
-        $numIdString = $row['total'];
-        $numId = intval($numIdString) + 1;
+    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', 1)";
 
-        $inserir = mysqli_query($conexao, "INSERT INTO ranking (idGrega, usuario, pontuacao, mitologia) VALUES ('$numId', '$nome', '$totalAcertos', 'grega')");
-
-        $verificacao = mysqli_query($conexao, "SELECT idGrega FROM ranking WHERE idGrega = '$numId'");
-
-        if ($verificacao && mysqli_num_rows($verificacao) === 0) {
-            echo "Dados não cadastrados";
-        } else {
-            echo "Dados cadastrados";
-        }
-    } else {
-        echo "Erro na consulta: " . mysqli_error($conexao);
-    }
+    $resultado = mysqli_query($conexao, $inserirDados);
 }
 
 
@@ -91,9 +81,6 @@ if (isset($_POST['submit'])) {
                     <li>Orientação: As respostas para as perguntas estarão todas nos textos da página da respectiva mitologia, então leia os textos antes de fazer o quiz!</li>
                     <li>E por último, é proibido pesquisar as respostas no google!</li>
                 </ol>
-
-                <label for="nomeUsuario">Informe seu apelido:</label>
-                <input type="text" name="nome" id="nomeUsuario" placeholder="limite 20 caracteres" required maxlength="20">
 
                 <h2>Eae, está preparado(a)? Então vamos começar!</h2>
 

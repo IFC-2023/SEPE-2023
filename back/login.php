@@ -20,6 +20,7 @@
       }
   
       $_SESSION['nome'] = $usuario['apelido'];
+      $_SESSION['idUsuario'] = $usuario['id'];
 
       
       if (password_verify($senhaLogin, $usuario['senha'])) {
