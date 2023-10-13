@@ -267,6 +267,12 @@ ul li ul.dropdown a:hover {
     margin-right: 14%;
 }
 
+.tamanhoInputOriginal {
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+
 #introducao>h1 {
     font-size: 3em;
     margin-left: 5px;
@@ -291,7 +297,7 @@ ul li ul.dropdown a:hover {
     margin-top: 20px;
     border: none;
     font-size: 1.5em;
-    background-color: red;
+    background-color: #800080;
     color: #fff;
     width: 250px;
     padding: 12px;
@@ -312,7 +318,7 @@ ul li ul.dropdown a:hover {
 
 .informacoes-questao {
     grid-area: informacoes;
-    background-color: red;
+    background-color: #800080;
 
     color: #fff;
     height: 92vh;
@@ -361,10 +367,12 @@ ul li ul.dropdown a:hover {
     text-align: center;
 
 }
+
 #acertos {
     background-color: #1efa0b;
     display: inline;
 }
+
 #classificacao {
     display: grid;
     display: inline;
@@ -384,13 +392,30 @@ ul li ul.dropdown a:hover {
 
 .buttonResponder>input[type=button] {
     border: none;
-    background-color: red;
+    background-color: #800080;
     color: #fff;
     width: 150%;
     padding: 20px;
     font-size: 18px;
     border-radius: 37px;
     cursor: pointer;
+}
+
+.radio-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.radio-container>input {
+    display: grid;
+}
+
+.radio-container>label {
+    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 label {
@@ -429,7 +454,7 @@ input[type=radio] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: #800080;
     color: #fff;
 }
 
@@ -466,6 +491,11 @@ input[type=radio] {
     color: #fff;
     font-size: 3em;
 }
+.marginRadio {
+    display: flex;
+    margin-top: 30px;
+    font-size: 2em;
+}
 
 #finalCerto {
     display: none;
@@ -496,53 +526,80 @@ input[type=radio] {
 #secao-pergunta-4 {
     display: none;
     grid-template-areas:
-    "informacoes" "alternativas";
+        "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
+}
+#btnPergunta4 {
+    margin-bottom: 50px;
+    
 }
 
 #secao-pergunta-4>.alternativas>.buttonResponder>input[type=button] {
     top: 50px;
     position: relative;
 }
+
 /*Pergunta 5*/
 #secao-pergunta-5 {
     display: none;
     grid-template-areas:
-    "informacoes" "alternativas";
+        "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+
 /*Pergunta 6*/
 #secao-pergunta-6 {
     display: none;
     grid-template-areas:
-    "informacoes" "alternativas";
+        "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+
 /*Pergunta 7*/
 #secao-pergunta-7 {
     display: none;
-    grid-template-areas: 
-    "informacoes" "alternativas";
+    grid-template-areas:
+        "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+
 /*Pergunta 8*/
 #secao-pergunta-8 {
     display: none;
-    grid-template-areas: 
-    "informacoes" "alternativas";
+    grid-template-areas:
+        "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+
 /*Pergunta 9*/
 #secao-pergunta-9 {
     display: none;
-    grid-template-areas: 
-    "informacoes" "alternativas";
+    grid-template-areas:
+        "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
+
 /*Pergunta 10*/
 #secao-pergunta-10 {
     display: none;
-    grid-template-areas: 
-    "informacoes" "alternativas";
+    grid-template-areas:
+        "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
+}
+
+#fim {
+    display: none;
+}
+
+#fim>h1 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+}
+
+#fim>p {
+    margin-top: 30px;
+    font-size: 1.5em;
+    text-align: center;
 }
