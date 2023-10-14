@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
  .container{
     position: relative;
@@ -48,7 +50,9 @@
 .tabs input:nth-of-type(5):checked ~ .botoes label:nth-of-type(5),
 .tabs input:nth-of-type(6):checked ~ .botoes label:nth-of-type(6),
 .tabs input:nth-of-type(7):checked ~ .botoes label:nth-of-type(7),
-.tabs input:nth-of-type(8):checked ~ .botoes label:nth-of-type(8)
+.tabs input:nth-of-type(8):checked ~ .botoes label:nth-of-type(8),
+.tabs input:nth-of-type(9):checked ~ .botoes label:nth-of-type(9)
+
 
 
 {
@@ -59,7 +63,7 @@
 
 .conteudo{
     position: relative;
-    width: 800vw;
+    width: 900vw;
     display: flex;
     transition: .5s;
 }
@@ -71,7 +75,7 @@
     justify-content: center;
     align-items: center;
     user-select: none;
-    padding: 40px;
+ 
 
 
 }
@@ -80,13 +84,9 @@
 .conteudo .caixa:nth-of-type(1){
     background: #BF8C60;
 }
-
-
 .conteudo .caixa:nth-of-type(2){
     background: #6C9BD9;
 }
-
-
 .conteudo .caixa:nth-of-type(3){
     background: #BF4E4E;
 }
@@ -105,7 +105,9 @@
 .conteudo .caixa:nth-of-type(8){
     background:#A61212;
 }
-
+.conteudo .caixa:nth-of-type(9){
+    background:#73726F;
+}
 
 
 
@@ -114,13 +116,9 @@
 .tabs input:nth-of-type(1):checked ~ .conteudo{
     left: 0;
 }
-
-
 .tabs input:nth-of-type(2):checked ~ .conteudo{
     left: -100vw;
 }
-
-
 .tabs input:nth-of-type(3):checked ~ .conteudo{
     left: -200vw;
 }
@@ -138,6 +136,9 @@
 }
 .tabs input:nth-of-type(8):checked ~ .conteudo{
     left: -700vw;
+}
+.tabs input:nth-of-type(9):checked ~ .conteudo{
+    left: -800vw;
 }
 
 
@@ -191,4 +192,51 @@
 .conteudo .caixa .conteudocx button:hover{
     letter-spacing: .2em;
    
+}
+
+.aba{
+    background-color: white;
+    width: 50vw;
+    height: 100vh;
+    display: none;
+    text-align: left;
+    justify-content: center;
+}
+
+.aba>p{
+    margin: 40px;
+}
+
+.aba>h1{
+ text-align: center;
+ margin: 40px;
+}
+
+.aba>ul, li{
+    margin: 40px;
+}
+.aba>button{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 15px 15px;
+    background: #01173b;
+    border: none;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+    color:white;
+    justify-content: center;
+    margin: 45px;
+}
+
+.aba>button:hover{
+    letter-spacing: .2em;
+}
+
+hr{
+    margin: 40px;
+    border: 1px solid;
 }
