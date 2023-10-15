@@ -45,7 +45,7 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia egipcia</h2>
             <p>A mitologia egípcia é uma antiga tradição de crenças e histórias do Egito Antigo, envolvendo deuses, rituais e uma forte influência na cultura egípcia, com ênfase na vida após a morte.</p>
-            <button class="alternar-aba" data-target="egipcia">Aprender Mais</button>
+            <button class="alternar-aba" data-target="egipcia">Ver Mais</button>
           </div>
           <div class="aba">
             <h1>Tópicos da pagina</h1>
@@ -56,7 +56,7 @@ include('../../../back/protecao.php');
               <li>Neterus da Primeira Geração</li>
               <li>Neterus da Segunda Geração</li>
             </ul>
-            <button>Ir para a pagina</button>
+            <a href="../paginas/egipcia.html"><button>Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa grega">
@@ -64,12 +64,18 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia grega</h2>
             <p>A mitologia grega é um conjunto de lendas e histórias da Grécia Antiga sobre deuses, heróis e criaturas míticas que desempenharam papéis significativos na cultura e na compreensão do mundo naquela época.</p>
-            <button class="alternar-aba" data-target="grega">Aprender Mais</button>
+            <button class="alternar-aba" data-target="grega">Ver Mais</button>
           </div>
-          <div class ="aba">
-            <h2>Tópicos da pagina</h2>
+          <div class="aba">
+            <h1>Tópicos da pagina</h1>
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <ul>
+              <li>Seres Mitológicos</li>
+              <li>Deuses Gregos</li>
+              <li>Principais Deuses da Mitologia Grega</li>
+              <li>Mitos</li>
+            </ul>
+            <a href="../paginas/grega.html"><button>Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa hindu">
@@ -77,11 +83,18 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia hindu</h2>
             <p>A mitologia hindu é um conjunto de histórias e crenças da Índia, envolvendo diversos deuses e deusas, lendas e ensinamentos espirituais que têm sido fundamentais na cultura e na religião hindu ao longo da história.</p>
-            <button class="alternar-aba" data-target="hindu">Aprender Mais</button>
+            <button class="alternar-aba" data-target="hindu">Ver Mais</button>
           </div>
           <div class="aba">
-            <h2>Tópicos da pagina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <h1>Tópicos da pagina</h1>
+            <hr>
+            <ul>
+              <li>Vaca Sagrada</li>
+              <li>Rama</li>
+              <li>Hanuman</li>
+              <li>Devoção A Hanuman</li>
+            </ul>
+            <a href="../paginas/hindu.html"><button>Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa irlandesa">
@@ -89,11 +102,19 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia irlandesa</h2>
             <p>A mitologia irlandesa é um rico conjunto de mitos e lendas que fazem parte do folclore da Irlanda. Ela apresenta deuses, heróis e criaturas mágicas, e desempenhou um papel importante na cultura irlandesa ao longo da história.</p>
-            <button class="alternar-aba" data-target="irlandesa">Aprender Mais</button>
+            <button class="alternar-aba" data-target="irlandesa">Ver Mais</button>
           </div>
           <div class="aba">
-            <h2>Tópicos da pagina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <h1>Tópicos da pagina</h1>
+            <hr>
+            <ul>
+              <li>Ciclos da mitologia irlandesa</li>
+              <li>Panteão Irlandês</li>
+              <li>Elementos Folclóricos</li>
+              <li>The Leprechauns</li>
+              
+            </ul>
+            <a href="../paginas/irlandesa.html"><button class="irlandesa">Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa japonesa">
@@ -101,11 +122,18 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia japonesa</h2>
             <p>A mitologia japonesa é um conjunto de crenças e lendas do Japão, envolvendo deuses, espíritos e criaturas míticas que desempenham papéis significativos na cultura e espiritualidade japonesa.</p>
-            <button class="alternar-aba" data-target="japonesa">Aprender Mais</button>
+            <button class="alternar-aba" data-target="japonesa">Ver Mais</button>
           </div>
           <div class="aba">
-            <h2>Tópicos da pagina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <h1>Tópicos da pagina</h1>
+            <hr>
+            <ul>
+              <li>Origem</li>
+              <li>Religião Base</li>
+              <li>Deuses</li>
+              <li>Lendas</li>
+            </ul>
+            <a href="../paginas/japonesa.html"><button>Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa mesopotamica">
@@ -113,11 +141,18 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia mesopotamica</h2>
             <p>A mitologia mesopotâmica é um conjunto de crenças e lendas das antigas civilizações que habitaram a região da Mesopotâmia, entre os rios Tigre e Eufrates. Ela envolve uma variedade de deuses e figuras míticas que desempenharam papéis significativos na cultura dessas civilizações.</p>
-            <button class="alternar-aba" data-target="mesopotamica">Aprender Mais</button>
+            <button class="alternar-aba" data-target="mesopotamica">Ver Mais</button>
           </div>
           <div class="aba">
-            <h2>Tópicos da pagina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <h1>Tópicos da pagina</h1>
+            <hr>
+            <ul>
+              <li>O mito da criação</li>
+              <li>O dilúvio</li>
+              <li>Gilgamesh</li>
+              <li>A Epopeia</li>
+            </ul>
+            <a href="../paginas/mesopotamica.html"><button>Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa nordica">
@@ -125,11 +160,18 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia nordica</h2>
             <p>A mitologia nórdica, ou escandinava, é um conjunto de lendas e crenças das culturas da Escandinávia, incluindo deuses, heróis e criaturas míticas que desempenham papéis importantes nas histórias e na cultura desses povos.</p>
-            <button class="alternar-aba" data-target="nordica">Aprender Mais</button>
+            <button class="alternar-aba" data-target="nordica">Ver Mais</button>
           </div>
           <div class="aba">
-            <h2>Tópicos da pagina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <h1>Tópicos da pagina</h1>
+            <hr>
+            <ul>
+              <li>Reinos</li>
+              <li>Deuses</li>
+              <li>As Criaturas Nórdicas</li>
+              <li>Os Mitos Mais Conhecidos</li>
+            </ul>
+            <a href="../paginas/nordica.html"><button>Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa romana">
@@ -137,23 +179,26 @@ include('../../../back/protecao.php');
             <ion-icon name="image-outline"></ion-icon>
             <h2>Mitologia romana</h2>
             <p>A mitologia romana é um conjunto de crenças e lendas da Roma Antiga, envolvendo deuses, heróis e histórias que desempenharam papéis significativos na cultura e religião romanas.</p>
-            <button class="alternar-aba" data-target="romana">Aprender Mais</button>
+            <button class="alternar-aba" data-target="romana">Ver Mais</button>
           </div>
           <div class="aba">
-            <h2>Tópicos da pagina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <h1>Tópicos da pagina</h1>
+            <hr>
+            <ul>
+              <li>Deuses</li>
+              <li>Mitos</li>
+              <li>História de Enéias</li>
+              <li>influencia dos gregos</li>
+            </ul>
+            <a href="../paginas/romana.html"><button>Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa quiz">
           <div class="conteudocx">
             <ion-icon name="image-outline"></ion-icon>
             <h2>Quiz geral</h2>
-            <p>quiz Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro veritatis corporis voluptatibus? Nemo, quod beatae accusantium pariatur minus odit, iusto deleniti incidunt nostrum nulla explicabo officia quibusdam natus doloribus!</p>
-            <button class="alternar-aba" data-target="quiz">Aprender Mais</button>
-          </div>
-          <div class="aba">
-            <h2>Tópicos da pagina</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequuntur repudiandae voluptate dolorum nesciunt dolore iure, dolores, quis tempora explicabo, tenetur id exercitationem. Eos reprehenderit dolores, totam est quasi dolorem.</p>
+            <p>Agora que você já leu tudo sobre as mitologias, que tal jogar um quiz para testar os seus conhecimentos?</p>            
+            <a href="../quiz/geral.html"><button>Jogue Agora!</button></a>
           </div>
         </div>
       </div>
