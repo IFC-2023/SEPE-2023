@@ -76,12 +76,13 @@ if (isset($_POST['submit'])) {
                     </ul>
                 </li>
                 <li id="link-mitologia"><a href="../paginas/grega.html">MITOLOGIA GREGA</a></li>
+                <li><a href="../../../back/logout.php">SAIR</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form action="grega.php" method="post">
+        <form action="grega.php" method="post" id="formulario_quiz">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
 
@@ -95,57 +96,6 @@ if (isset($_POST['submit'])) {
                 <h2>Eae, está preparado(a)? Então vamos começar!</h2>
 
                 <input type="button" value="COMEÇAR" id="btnComecar">
-
-                <?php
-                if(isset($_POST['submit'])) {
-                    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
-                    $result = mysqli_query($conexao, $recebendoId);
-                    $objetosPartida = [];
-                
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $objetosPartida[] = array(
-                            "id" => $row['id'],
-                            "pontuacao" => $row['pontuacao'],
-                            "idJogador" => $row['jogador_id']
-                        );
-                    }
-                
-                    function compararDecrescente($a, $b) {
-                        if ($a['pontuacao'] == $b['pontuacao']) {
-                            return 0;
-                        }
-                        return ($a['pontuacao'] < $b['pontuacao']) ? 1 : -1;
-                    }
-                
-                    usort($objetosPartida, 'compararDecrescente');
-                
-                    $idUsuario = '';
-                    $qtdAcertos = '';
-                
-                    echo "<table id='tabela'>";
-                    echo "<thead>";
-                    echo "<th>Colocação</th>";
-                    echo "<th>Nome</th>";
-                    echo "<th>Pontuação</th>";
-                    echo "</thead>";
-                    for ($c = 0; $c < count($objetosPartida); $c++) {
-                        $idNum = intval($objetosPartida[$c]['idJogador']);
-                        $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
-                        $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
-                        if (!$resultadoNome) {
-                            die ("Erro: " . mysqli_error($conexao));
-                        }
-                        $rowNome = mysqli_fetch_assoc($resultadoNome);
-                        $nome = $rowNome['apelido'];
-                        echo "<tr>";
-                        echo "<td>" . $c + 1 . "</td>";
-                        echo "<td>" . $nome . "</td>";
-                        echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
-                        echo "</tr>";
-                    }
-                    echo "</table>";
-                }
-                ?>
             </section>
 
             <section id="secao-pergunta-1">
@@ -457,6 +407,57 @@ if (isset($_POST['submit'])) {
                 <div id="congratulations">
                     <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
                     <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
+
+                    <?php
+                if(isset($_POST['submit'])) {
+                    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
+                    $result = mysqli_query($conexao, $recebendoId);
+                    $objetosPartida = [];
+                
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $objetosPartida[] = array(
+                            "id" => $row['id'],
+                            "pontuacao" => $row['pontuacao'],
+                            "idJogador" => $row['jogador_id']
+                        );
+                    }
+                
+                    function compararDecrescente($a, $b) {
+                        if ($a['pontuacao'] == $b['pontuacao']) {
+                            return 0;
+                        }
+                        return ($a['pontuacao'] < $b['pontuacao']) ? 1 : -1;
+                    }
+                
+                    usort($objetosPartida, 'compararDecrescente');
+                
+                    $idUsuario = '';
+                    $qtdAcertos = '';
+                
+                    echo "<table id='tabela'>";
+                    echo "<thead>";
+                    echo "<th>Colocação</th>";
+                    echo "<th>Nome</th>";
+                    echo "<th>Pontuação</th>";
+                    echo "</thead>";
+                    for ($c = 0; $c < count($objetosPartida); $c++) {
+                        $idNum = intval($objetosPartida[$c]['idJogador']);
+                        $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
+                        $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
+                        if (!$resultadoNome) {
+                            die ("Erro: " . mysqli_error($conexao));
+                        }
+                        $rowNome = mysqli_fetch_assoc($resultadoNome);
+                        $nome = $rowNome['apelido'];
+                        echo "<tr>";
+                        echo "<td>" . $c + 1 . "</td>";
+                        echo "<td>" . $nome . "</td>";
+                        echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                }
+                ?>
                 </div>
             </section>
     </main>

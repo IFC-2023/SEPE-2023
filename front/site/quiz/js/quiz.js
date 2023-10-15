@@ -1,3 +1,8 @@
+const form = document.getElementById('formulario_quiz')
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    console.log('Deu certo');
+})
 const main = document.getElementsByTagName("main");
 const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
@@ -352,9 +357,8 @@ function verificarContador() {
     }
 }
 
-document.getElementById("btnPergunta10").addEventListener("click", responder10);
-
 document.getElementById("btnPergunta10").addEventListener("click", () => {
+    responder10();
     verificarContador();
 });
 
