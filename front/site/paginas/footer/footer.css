@@ -1,61 +1,58 @@
 
-.portfolio-card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 20px;
-    padding: 50px;
-    text-align: center;
-    width: 300px;
-    height: auto;
-    transition: transform 0.2s;
-}
 
-.superior {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.portfolio-card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 20px;
-    padding: 50px;
-    text-align: center;
-    height: auto;
-    transition: transform 0.2s;
-}
-
-.inferior {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio-card > img {
-    width: 100%;
-    height: 270px;
-    border-radius: 180px;
-}
-
-.portfolio-card h2 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-.portfolio-card p {
-    font-size: 1rem;
-}
-
-/* Estilo opcional: centralizar os cartões horizontalmente no main */
 main {
     display: flex;
     justify-content: center;
 }
+
+.card {
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin: 30px;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+  }
+  
+  .name {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #666;
+  }
+  .portifolio{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly ;
+  }
+
+  .language-icon img{
+    width: 25px;
+  }
+
+  .language-icon{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
