@@ -77,15 +77,12 @@ header {
     color: #FDFDFD;
 }
 
-header > h1{
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 10px;
-}
-
 .h1-texto {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 10px;
 }
 
 .logo{
@@ -97,7 +94,7 @@ header > h1{
 }
 
 footer {
-    background-color: #0f0f0f;
+    background-color: #000000;
     color: #fff;
     padding: 2px 0;
     font-size: 16px;
@@ -112,11 +109,10 @@ footer {
 
 .footer-container {
     padding: 20px;
-    max-width: 1500px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-
+    background-color: #001836;
 }
 
 .footer-logo {
@@ -130,6 +126,11 @@ footer {
     border-radius: 50%;
 }
 
+.footer-links{
+    display: block;
+    margin: auto;
+}
+
 .footer-links > ul > li {
     list-style: none;
     font-size: 16px;
@@ -139,35 +140,37 @@ footer {
     margin-bottom: 6px;
 }
 
-.footer-links a {
+.footer-links a, .footer-sociais a {
     text-decoration: none;
     color: #fff;
     transition: color 0.2s;
     font-size: 16px;
 }
 
-.footer-links a:hover {
+.footer-links a:hover, .footer-sociais a:hover() {
     color: #3479d4;
     scale: 1.04;
 }
 
-.footer-social > ul > li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-sociais a{
+    margin: 0 20px;
 }
 
-.footer-social a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.2s;
+
+
+.footer-sociais{
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.footer-social a:hover {
-    color: #3479d4;
-    scale: 1.04;
+.footer-sociais img{
+    width: 150px;
 }
+
 
 .footer-bottom {
     font-size: 18px;
@@ -234,7 +237,7 @@ ul li{
 
 .footer-container ul{
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
 }
 
 ul li a {
