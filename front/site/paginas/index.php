@@ -28,31 +28,6 @@ include('../../../back/protecao.php');
       <input id="romana" type="radio" name="slider">
       <input id="quiz" type="radio" name="slider">
 
-<<<<<<< HEAD
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </nav>
-  </header>
-
-  <div class="main-banner">
-    <div class="banner-text">
-      <h1>MITOLOGIAS</h1> 
-    </div>
-
-  </div>
-
-<main>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="../../../back/imagens/mitologia-africana.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">AFRICANA</h5>
-          <p class="card-text">Clicando aqui você aprende sobre a mitologia africana.</p>
-          <a href="../paginas/"></a>
-=======
       <div class="botoes">
         <label for="egipcia"></label>
         <label for="grega"></label>
@@ -225,7 +200,6 @@ include('../../../back/protecao.php');
             <p>Agora que você já leu tudo sobre as mitologias, que tal jogar um quiz para testar os seus conhecimentos?</p>            
             <a href="../quiz/geral.html"><button>Jogue Agora!</button></a>
           </div>
->>>>>>> e79f303458286800c85e3dc5a09f257a9394eb3e
         </div>
       </div>
     </div>
