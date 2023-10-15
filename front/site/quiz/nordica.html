@@ -38,7 +38,7 @@
             <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
 
             <ol>
-                <li>O quiz terá 10 perguntas, essas perguntas serão separadas em 3 niveis: fácil, intermediário e
+                <li>O quiz terá 10 perguntas, onde essas perguntas serão separadas em 3 niveis: fácil, intermediário e
                     díficil. Serão 3 perguntas fáceis, 3 perguntas intermediárias e 4 perguntas difíceis.</li>
                 <li>Cada pergunta terá 4 alternativas: A, B, C e D</li>
                 <li>Orientação: As respostas para as perguntas estarão todas nos textos da página da respectiva
@@ -51,29 +51,18 @@
             <input type="button" value="COMEÇAR" id="btnComecar">
         </section>
 
-        <section id="secao-pergunta-1">
+        <section id="secao-pergunta-1" class="secao-pergunta">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 1:</h1>
                 <p class="pergunta">Quem é o deus do trovão na mitologia nórdica?</p>
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao1" id="" value="errado"> A - Odin
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="errado"> B - Loki
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="certo"> C - Thor
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="errado"> D - Freyja
-                </label>
-
-                <div class="buttonResponder">
-                    <input type="button" value="Responder" id="btnPergunta1">
-                </div>
+                <input type="radio" name="questao1" id="" value="errado"><label>A - Odin</label>
+                <input type="radio" name="questao1" id="" value="errado"><label> B - Loki</label>
+                <input type="radio" name="questao1" id="" value="certo"><label> C - Thor</label>
+                <input type="radio" name="questao1" id="" value="errado"><label>D - Freyja</label>
+                <div class="buttonResponder"><input type="button" value="Responder" id="btnPergunta1"></div>
             </div>
         </section>
 
@@ -99,74 +88,239 @@
                 <h1>Resposta correta!</h1>
             </div>
         </section>
-        <section id="secao-pergunta-2">
+        <section id="quantidaAcertos">
+            <h1 id="Acertos"></h1>
+            <p id="classificacao"></p>
+        </section>
+        <section id="secao-pergunta-2" class="secao-pergunta">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 2:</h1>
+                <p class="pergunta">Qual é o nome do lobo gigante que desempenha um papel importante no fim do mundo
+                    nórdico?</p>
                 <p class="pergunta">Qual é o nome do lobo gigante que desempenha um papel importante no fim do mundo
                     nórdico?</p>
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao2" id="" value="certo"> A - Fenrir
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="errado"> B - Sleipnir
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="errado"> C - Jormungandr
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="errado"> D - Skoll
-                </label>
 
+                <input type="radio" name="questao2" class="tamanhoInputOriginal" value="errado">
+                <label> A - Fenrir</label>
+                <input type="radio" name="questao2" class="tamanhoInputOriginal" value="errado">
+                <label> B - Sleipnir</label>
+                <input type="radio" name="questao2" class="tamanhoInputOriginal" value="errado">
+                <label>C - Jormungandr</label>
+                <input type="radio" name="questao2" class="tamanhoInputOriginal" value="certo">
+                <label>D - Skoll</label>
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta2">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-3">
+        <section id="secao-pergunta-3" class="secao-pergunta">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 3</h1>
                 <p class="pergunta">Qual é a morada dos deuses na mitologia nórdica?</p>
                 <p class="dificuldade">Nível fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao3" id="" value="errado"> A - Valhalla
-                </label>
-                <label for="">
-                    <input type="radio" name="questao3" id="" value="errado"> B - Helheim
-                </label>
-                <label for="">
-                    <input type="radio" name="questao3" id="" value="errado"> C - Midgard
-                </label>
-                <label for="">
-                    <input type="radio" name="questao3" id="" value="certo"> D - Asgard
-                </label>
+
+                <input type="radio" name="questao3" class="tamanhoInputOriginal" value="errado">
+                <label>A - Valhalla</label>
+                <input type="radio" name="questao3" class="tamanhoInputOriginal" value="errado">
+                <label>B - Helheim</label>
+                <input type="radio" name="questao3" class="tamanhoInputOriginal" value="errado">
+                <label>C - Midgard</label>
+                <input type="radio" name="questao3" class="tamanhoInputOriginal" value="certo">
+                <label>D - Asgard</label>
+
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta3">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-4">
+        <section id="secao-pergunta-4" class="secao-pergunta">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 4</h1>
                 <p class="pergunta">Quem são os três deuses mais importantes da mitologia nórdica e quais são suas
                     características distintas?</p>
+                <p class="pergunta">Quem são os três deuses mais importantes da mitologia nórdica e quais são suas
+                    características distintas?</p>
                 <p class="dificuldade">Nível médio</p>
             </div>
-            <label class="marginRadio">
-                <input type="radio" name="questao4" id="" value="errado"> A - Odin (sabedoria), Thor (força), Freyja
-                (amor)
-            </label>
-            <label>
-                <input type="radio" name="questao4" id="" value="errado"> B - Loki (trapaça), Balder (beleza), Freyr
-                (fertilidade)
-            </label>
-            <div class="buttonResponder">
-                <input type="button" value="Responder" id="btnPergunta3">
+            <div class="alternativas">
+                <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
+                <label>A - Odin (sabedoria), Thor (força), Freyja(amor)</label>
+                <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                <label>B - Loki(trapaça), Balder(beleza), Freyr(fertilidade)</label>
+                <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                <label>C - Freyja (amor), Tyr(coragem), Heimdall(vigilância)</label>
+                <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                <label>D - Odin(sabedoria), Freyja(amor), Thor(trovão)</label>
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta4">
+                </div>
             </div>
+        </section>
+
+        <section id="secao-pergunta-5" class="secao-pergunta">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 5:</h1>
+                <p class="pergunta">O que é o Yggdrasil e qual é o seu significado na mitologia nórdica?</p>
+                <p class="dificuldade">Nível médio</p>
+            </div>
+            <div class="alternativas">
+
+                <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                <label> A - Uma espada mágica: Representa o poder dos deuses</label>
+
+                <input type="radio" name="questao5" class="tamanhoInputOriginal" value="certo">
+                <label>B - Uma árvore cósmica que conecta os Nove Mundos; simboliza a ordem do universo</label>
+
+                <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                <label> C - Uma serpente gigante que envolve o mundo; representa a destruição iminente</label>
+                <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                <label>D - Um pássaro mágico</label>
+
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta5">
+                </div>
+            </div>
+        </section>
+        <section id="secao-pergunta-6" class="secao-pergunta">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 6:</h1>
+                <p class="pergunta">Qual é a história do Martelo Mjölnir, arma de Thor, e por que é tão famoso?</p>
+                <p class="dificuldade">Nível médio</p>
+            </div>
+            <div class="alternativas">
+
+                <input type="radio" name="questao6" class="tamanhoInputOriginal" value="errado">
+                <label>A - Mjölnir foi forjado por Loki e usado para criar trovões e relâmpagos</label>
+
+                <input type="radio" name="questao6" class="tamanhoInputOriginal" value="errado">
+                <label>B - Mjölnir foi roubado por um gigante e Thor teve que buscá-lo em uma jornada épica.</label>
+
+                <input type="radio" name="questao6" class="tamanhoInputOriginal" value="certo">
+                <label>C - Mjölnir foi presenteado a Thor por Odin e é capaz de derrotar os inimigos dos deuses.</label>
+
+                <input type="radio" name="questao6" class="tamanhoInputOriginal" value="errado">
+                <label> D -Mjölnir é uma arma lendária, mas não desempenha um papel importante na mitologia
+                    nórdica.</label>
+
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta6">
+                </div>
+            </div>
+        </section>
+        <section id="secao-pergunta-7" class="secao-pergunta">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 7:</h1>
+                <p class="pergunta"> Quais são os eventos principais que ocorrem durante o Ragnarök na mitologia
+                    nórdica?</p>
+                <p class="dificuldade">Nível difícil</p>
+            </div>
+            <div class="alternativas">
+
+                <input type="radio" name="questao7" class="tamanhoInputOriginal" value="errado">
+                <label>A - Uma grande festa dos deuses antes do fim do mundo.</label>
+
+                <input type="radio" name="questao7" class="tamanhoInputOriginal" value="errado">
+                <label> B - Uma jornada de Thor para resgatar seu martelo Mjölnir do submundo.</label>
+
+                <input type="radio" name="questao7" class="tamanhoInputOriginal" value="certo">
+                <label> C - Uma batalha final entre os deuses e as forças do caos, resultando na destruição do
+                    mundo.</label>
+
+                <input type="radio" name="questao7" class="tamanhoInputOriginal" value="errado">
+                <label>D - A ascensão de um novo deus supremo para governar os Nove Mundos.</label>
+
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta7">
+                </div>
+            </div>
+        </section>
+        <section id="secao-pergunta-8" class="secao-pergunta">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 8:</h1>
+                <p class="pergunta">Explique o mito de Baldur e como sua morte afetou os deuses nórdicos</p>
+                <p class="dificuldade">Nível difícil</p>
+            </div>
+            <div class="alternativas">
+
+                <input type="radio" name="questao8" class="tamanhoInputOriginal" value="errado">
+                <label>A - Baldur era um deus da guerra que morreu em batalha, enfraquecendo os deuses</label>
+
+                <input type="radio" name="questao8" class="tamanhoInputOriginal" value="errado">
+                <label> B - Baldur era um deus da beleza que se apaixonou por uma mortal e morreu de tristeza</label>
+
+                <input type="radio" name="questao8" class="tamanhoInputOriginal" value="certo">
+                <label> C - Baldur era imortal, e sua morte foi uma surpresa para os deuses, que ficaram
+                    abalados</label>
+
+                <input type="radio" name="questao8" class="tamanhoInputOriginal" value="errado">
+                <label>D - Baldur era um deus amado cuja morte levou a uma série de eventos que levaram ao
+                    Ragnarök</label>
+
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta8">
+                </div>
+            </div>
+        </section>
+        <section id="secao-pergunta-9" class="secao-pergunta">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 9:</h1>
+                <p class="pergunta">Quem é a valquíria mais famosa da mitologia nórdica e qual é o seu papel nas
+                    histórias?</p>
+                <p class="dificuldade">Nível difícil</p>
+            </div>
+            <div class="alternativas">
+
+                <input type="radio" name="questao9" class="tamanhoInputOriginal" value="errado">
+                <label>A - A Hela, a deusa da morte, que conduz as almas para o Valhalla</label>
+
+                <input type="radio" name="questao9" class="tamanhoInputOriginal" value="errado">
+                <label>B - Freyja, a deusa do amor, que traz felicidade aos guerreiros caídos</label>
+
+                <input type="radio" name="questao9" class="tamanhoInputOriginal" value="certo">
+                <label>C - Sigrdrífa, a valquíria que desperta o herói Sigurd e o ajuda em suas aventuras</label>
+
+                <input type="radio" name="questao9" class="tamanhoInputOriginal" value="errado">
+                <label>D - Brynhild, a valquíria que cai em desgraça e é aprisionada em uma torre de fogo</label>
+
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta9">
+                </div>
+            </div>
+        </section>
+        <section id="secao-pergunta-10" class="secao-pergunta">
+            <div class="informacoes-questao">
+                <h1 class="questao">Pergunta 10:</h1>
+                <p class="pergunta">Como a mitologia nórdica influenciou a cultura viking e suas crenças religiosas?</p>
+                <p class="dificuldade">Nível difícil</p>
+            </div>
+            <div class="alternativas">
+
+                <input type="radio" name="questao10" class="tamanhoInputOriginal" value="errado">
+                <label>A - Os vikings rejeitaram completamente a mitologia nórdica em favor de outras crenças</label>
+                <input type="radio" name="questao10" class="tamanhoInputOriginal" value="errado">
+                <label>B - Os vikings abandonaram suas própriascrenças em favor do cristianismo e não foram
+                    influenciados pela mitologia</label>
+                <input type="radio" name="questao10" class="tamanhoInputOriginal" value="certo">
+                <label>C - A mitologia nórdica inspirou a arte, a poesia e as sagas vikings, refletindo valores e
+                    crenças culturais</label>
+                <input type="radio" name="questao10" class="tamanhoInputOriginal" value="errado">
+                <label>D - A mitologia nórdica não teve um impacto significativo na cultura viking; eles eram mais
+                    pragmáticos e guerreiros do que preocupados com a mitologia</label>
+                <div class="buttonResponder">
+                    <input type="button" value="Responder" id="btnPergunta10">
+                </div>
+            </div>
+        </section>
+
+        <section id="fim">
+            <h1>Fim, obrigado por participar!</h1>
+
+            <p id="acertos"></p>
         </section>
     </main>
 </body>
