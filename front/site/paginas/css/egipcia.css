@@ -12,18 +12,11 @@ aside{
     background-color:#E6E6E6;
 }
 
-header{
-    background-color: #BF8C60;
+header  {
+    background-color: #01173b;
+    color: #FDFDFD;
 }
 
 .col{
     background-color: #E5CEB2;
-}
-
-input[type=button] {
-    background-color: #BF8C60;
-}
-
-input[type=button]:hover {
-    box-shadow: 2px 0px 10px #BF8C60;
 }

@@ -1,3 +1,8 @@
+const form = document.getElementById('formulario_quiz')
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    console.log('Deu certo');
+})
 const main = document.getElementsByTagName("main");
 const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
@@ -22,14 +27,7 @@ function comecar() {
   pg1.style.display = "grid";
 }
 
-document.getElementById("btnComecar").addEventListener("click", () => {
-    const nome = document.getElementById("nomeUsuario").value;
-  if (nome !== "") {
-    comecar();
-  } else {
-    alert(`Digite um apelido no campo de apelido:`);
-  }
-});
+document.getElementById("btnComecar").addEventListener("click", comecar);
 
 function responder1() {
   let resposta = document.getElementsByName("questao1");
@@ -359,9 +357,8 @@ function verificarContador() {
     }
 }
 
-document.getElementById("btnPergunta10").addEventListener("click", responder10);
-
 document.getElementById("btnPergunta10").addEventListener("click", () => {
+    responder10();
     verificarContador();
 });
 
@@ -372,4 +369,32 @@ document.getElementById("btnPergunta10").addEventListener("click", () => {
     // Redirecionar para a seção "fim" (você pode usar métodos JavaScript para rolar suavemente)
     // document.getElementById("fim").scrollIntoView({ behavior: "smooth" });
 // });
+
+
+// import confetti from "https://esm.run/canvas-confetti@1";
+
+//   function onClick() {
+//     confetti({
+//       particleCount: 150,
+//       spread: 60
+//     });
+//   };
+
+// var btn = document.getElementById('btn');
+
+// btn.addEventListener("click", onClick);
+
+// import confetti from "https://esm.run/canvas-confetti@1";
+
+//   function onClick() {
+//     confetti({
+//       particleCount: 150,
+//       spread: 60
+//     });
+//   };
+
+// var btn = document.getElementById('btn');
+
+// btn.addEventListener("click", onClick);
+
 

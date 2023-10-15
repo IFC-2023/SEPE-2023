@@ -1,17 +1,7 @@
 /* AQUI SOMENTE CORES DA PÁGINA */
 
-header{
-    background-color: #A61212;
-    color: white;
-}
+
 
 .col{
     background-color: #FF685F;
-}
-input[type=button] {
-    background-color: #A61212;
-}
-
-input[type=button]:hover {
-    box-shadow: 2px 0px 10px #FF685F;
 }
