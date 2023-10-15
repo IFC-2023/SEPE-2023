@@ -20,7 +20,7 @@ header::after {
     padding: 20px 0 20px 0;
 }
 
-.lista-nav>li>a {
+.lista-nav > li > a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -61,19 +61,19 @@ ul li:hover ul.dropdown {
 ul li ul.dropdown a {
     opacity: 0.5;
 }
-
+  
 
 ul li ul.dropdown a:hover {
     opacity: 1;
     color: #fff;
 }
 
-.dropdown>li>a {
+.dropdown > li > a {
     padding: 10px 50px 10px 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.dropdown>#margin-top-dropdown>a {
+.dropdown > #margin-top-dropdown > a {
     margin-top: 20px;
 }
 
@@ -83,8 +83,7 @@ ul li ul.dropdown a:hover {
     bottom: 2px;
 }
 
-#link-home>a,
-#link-grecia>a {
+#link-home > a, #link-grecia > a {
     padding-bottom: 8px;
 }
 
@@ -172,17 +171,11 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.dropdown>li>a {
+.dropdown > li > a {
     padding: 8px 8px;
 }
 
-#margin-top-dropdown:hover::after,
-#linkFenicia:hover::after,
-#linkGrecoRomana:hover::after,
-#linkHindu:hover::after,
-#linkNordica:hover::after,
-#linkRomana:hover::after,
-#linkGeral:hover::after {
+#margin-top-dropdown:hover::after, #linkFenicia:hover::after, #linkGrecoRomana:hover::after, #linkHindu:hover::after, #linkNordica:hover::after, #linkRomana:hover::after, #linkGeral:hover::after {
     content: "";
     height: 2px;
     background-color: pink;
@@ -228,13 +221,7 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.saiuEgipcia::after,
-.saiuFenicia::after,
-.saiuGeral::after,
-.saiuGr::after,
-.saiuHindu::after,
-.saiuNordica::after,
-.saiuRomana::after {
+.saiuEgipcia::after, .saiuFenicia::after, .saiuGeral::after, .saiuGr::after, .saiuHindu::after, .saiuNordica::after, .saiuRomana::after {
     content: "";
     background-color: pink;
     margin-left: 10px;
@@ -273,31 +260,31 @@ ul li ul.dropdown a:hover {
     cursor: pointer;
 }
 
-#introducao>h1 {
+#introducao > h1 {
     font-size: 3em;
     margin-left: 5px;
 }
 
-#introducao>ol {
+#introducao > ol {
     margin-top: 20px;
 }
 
-#introducao>ol>li {
+#introducao > ol > li {
     font-size: 1.25em;
     margin-left: 25px;
     margin-top: 8px;
 }
 
-#introducao>h2 {
+#introducao > h2 {
     margin-top: 20px;
     margin-left: 5px;
 }
 
-#introducao>input[type=button] {
+#introducao > input[type=button] {
     margin-top: 20px;
     border: none;
     font-size: 1.5em;
-    background-color: #061D26;
+    background-color: #170ceb;
     color: #fff;
     width: 250px;
     padding: 12px;
@@ -305,28 +292,27 @@ ul li ul.dropdown a:hover {
     cursor: pointer;
 }
 
-#introducao>input[type=button]:hover {
-    box-shadow: 2px 0px 10px cadetblue;
+#introducao > input[type=button]:hover {
+    box-shadow: 0 0 6px blue;
 }
 
 #secao-pergunta-1 {
     display: none;
     grid-template-areas:
-        "informacoes" "alternativas";
+    "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
 
 .informacoes-questao {
     grid-area: informacoes;
-    background-color: #061D26;
-
+    background-color: #241bb9;
     color: #fff;
     height: 92vh;
     display: grid;
     grid-template-areas:
-        "pergunta"
-        "texto"
-        "nivel";
+    "pergunta"
+    "texto"
+    "nivel";
     grid-template-rows: 30% 60% 10%;
 }
 
@@ -358,7 +344,6 @@ ul li ul.dropdown a:hover {
     gap: 10px;
     margin-left: 100px;
 }
-
 #quantidadeAcertos {
     display: grid;
     grid-template-columns: "acertos" "classificacao";
@@ -390,9 +375,9 @@ ul li ul.dropdown a:hover {
     font-size: 2em;
 }
 
-.buttonResponder>input[type=button] {
+.buttonResponder > input[type=button] {
     border: none;
-    background-color: #061D26;
+    background-color: #241bb9;
     color: #fff;
     width: 150%;
     padding: 20px;
@@ -431,7 +416,7 @@ input[type=radio] {
     /* display: grid; */
     display: none;
     grid-template-areas:
-        "frase" "proximo";
+    "frase" "proximo";
     grid-template-columns: 1fr 1fr;
 }
 
@@ -446,7 +431,7 @@ input[type=radio] {
     font-size: 3em;
 }
 
-#fraseCerta>h1 {
+#fraseCerta > h1 {
     font-weight: normal;
 }
 
@@ -454,11 +439,11 @@ input[type=radio] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #061D26;
+    background-color: #241bb9;
     color: #fff;
 }
 
-.proximo>input[type=button] {
+.proximo > input[type=button] {
     border: none;
     background: none;
     color: #fff;
@@ -468,7 +453,7 @@ input[type=radio] {
     cursor: pointer;
 }
 
-.proximo>span {
+.proximo > span {
     padding-left: 20px;
     font-size: 4em;
     font-weight: normal;
@@ -477,7 +462,7 @@ input[type=radio] {
 #res-errada {
     display: none;
     grid-template-areas:
-        "frase" "proximo";
+    "frase" "proximo";
     grid-template-columns: 1fr 1fr;
 }
 
@@ -503,26 +488,22 @@ input[type=radio] {
     grid-template-columns: 1fr;
 }
 
-#fraseErrada>h1 {
+#fraseErrada > h1 {
     font-weight: normal;
 }
 
 #secao-pergunta-2 {
-    /* display: grid; */
     display: none;
     grid-template-areas:
-        "informacoes" "alternativas";
+    "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
-
 #secao-pergunta-3 {
     display: none;
-    grid-template-areas:
-        "informacoes" "alternativas";
+    grid-template-areas: 
+    "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;
 }
-
-/*Pergunta 4*/
 #secao-pergunta-4 {
     display: none;
     grid-template-areas:

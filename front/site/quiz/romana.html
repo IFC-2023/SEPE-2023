@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css-quiz/animations-css/romana.css">
-    <script src="js/animacoes.js" defer></script>
-    <script src="js/Kauã.js" defer></script>
-    <title>Quiz Romana</title>
+    <script src="js/quiz.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+    <title>Quiz Roma</title>
 </head>
-
 <body>
     <header>
         <nav>
@@ -19,16 +17,16 @@
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
                         <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
-                        <li class="link-dropdown" id="linkFenicia"><a href="fenicia.html">Fenícia</a></li>
-                        <li class="link-dropdown" id="linkGrecoRomana"><a href="greco-romana.html">Greco-Romana</a></li>
-                        <li class="link-dropdown" id="linkHindu"><a href="hindu.html">Hindu</a></li>
+                        <li class="link-dropdown" id="linkGrecia"><a href="grega.html">Grécia</a></li>
+                        <li class="link-dropdown"id="linkHindu"><a href="hindu.html">Hindu</a></li>
+                        <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkGrecoRomana"><a href="japonesa.html">Japonesa</a></li>
                         <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
                         <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
-                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
                         <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
                     </ul>
                 </li>
-                <li id="linkRomana"><a href="romana.html">MITOLOGIA ROMANA</a></li>
+                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA ROMANA</a></li>
             </ul>
         </nav>
     </header>
@@ -38,11 +36,9 @@
             <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
 
             <ol>
-                <li>O quiz terá 10 perguntas, onde essas perguntas serão separadas em 3 niveis: fácil, intermediário e
-                    díficil. Serão 3 perguntas fáceis, 3 perguntas intermediárias e 4 perguntas difíceis.</li>
+                <li>O quiz terá 10 perguntas, essas perguntas serão separadas em 3 niveis: fácil, intermediário e díficil. Serão 3 perguntas fáceis, 3 perguntas intermediárias e 4 perguntas difíceis.</li>
                 <li>Cada pergunta terá 4 alternativas: A, B, C e D</li>
-                <li>Orientação: As respostas para as perguntas estarão todas nos textos da página da respectiva
-                    mitologia, então leia os textos antes de fazer o quiz!</li>
+                <li>Orientação: As respostas para as perguntas estarão todas nos textos da página da respectiva mitologia, então leia os textos antes de fazer o quiz!</li>
                 <li>E por último, é proibido pesquisar as respostas no google!</li>
             </ol>
 
@@ -51,25 +47,32 @@
             <input type="button" value="COMEÇAR" id="btnComecar">
         </section>
 
-        <section id="secao-pergunta-1" class="secao-pergunta">
+        <section id="secao-pergunta-1">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 1:</h1>
-                <p class="pergunta">Qual é o equivalente romano do deus grego Zeus</p>
+                <p class="pergunta">Qual é o equivalente romano do deus grego Zeus?</p>
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao1" id="" value="errado"> A - Apolo
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="errado"> B - Hades
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="certo"> C - Júpiter
-                </label>
-                <label>
-                    <input type="radio" name="questao1" id="" value="errado"> D - Hermes
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A - Apolo</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>B - Júpiter</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>C - Hades</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>D -Hermes</label>
+                </div>
 
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta1">
@@ -94,219 +97,309 @@
                 <input type="button" value="Próximo" id="btnErrada1"><span>&rarr;</span>
             </div>
         </section>
-        <section id="finalCerto">
-            <div id="fraseCerta">
-                <h1>Resposta correta!</h1>
-            </div>
-        </section>
-        <section id="quantidaAcertos">
-            <h1 id="Acertos"></h1>
-            <p id="classificacao"></p>
-        </section>
-        <section id="secao-pergunta-2" class="secao-pergunta">
+
+        <section id="secao-pergunta-2">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 2:</h1>
                 <p class="pergunta">Quem é a deusa romana do amor e da beleza, equivalente à Afrodite grega?</p>
                 <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao2" id="" value="errado"> A - Hera
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="errado"> B - Deméter
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="certo"> C - Vênus
-                </label>
-                <label>
-                    <input type="radio" name="questao2" id="" value="errado"> D - Atena
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A - Ceres</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>B - Cibele</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>C - Vênus</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>D - Diana</label>
+                </div>
+
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta2">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-3" class="secao-pergunta">
+
+        <section id="secao-pergunta-3">
             <div class="informacoes-questao">
-                <h1 class="questao">Pergunta 3</h1>
+                <h1 class="questao">Pergunta 3:</h1>
                 <p class="pergunta">Quem é o deus romano dos mares, equivalente a Poseidon na mitologia grega?</p>
-                <p class="dificuldade">Nível fácil</p>
+                <p class="dificuldade">Nível Fácil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao3" id="" value="errado"> A - Hades
-                </label>
-                <label for="">
-                    <input type="radio" name="questao3" id="" value="errado"> B - Ares
-                </label>
-                <label for="">
-                    <input type="radio" name="questao3" id="" value="certo"> C - Netuno
-                </label>
-                <label for="">
-                    <input type="radio" name="questao3" id="" value="certo"> D - Dionísio
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A - Aegir</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>B - Urano</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>C - Mercúrio</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="certo">
+                    <label> D - Netuno</label>
+                </div>
+
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta3">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-4" class="secao-pergunta">
+
+        <section id="secao-pergunta-4">
             <div class="informacoes-questao">
-                <h1 class="questao">Pergunta 4</h1>
-                <p class="pergunta">Explique como a mitologia romana absorveu elementos da mitologia grega e quais deuses romanos correspondem aos deuses gregos mais importantes</p>
-                <p class="dificuldade">Nível médio</p>
+                <h1 class="questao">Pergunta 4:</h1>
+                <p class="pergunta">Explique como a mitologia romana absorveu elementos da mitologia grega e quais deuses romanos correspondem aos deuses gregos mais importantes.</p>
+                <p class="dificuldade">Nível Médio</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao4" id="" value="errado"> A - A Mitologia romana não tem conexões com a grega
-                </label>
-                <label>
-                    <input type="radio" name="questao4" id="" value="errado"> B - A mitologia grega absorveu elementos da mitologia romana.
-                </label>
-                <label
-                    <input type="radio" name="questao4" id="" value="certo"> C - A mitologia romana é em grande parte uma adaptação da mitologia grega, com deuses romanos equivalentes, como Júpiter (Zeus), Vênus (Afrodite) e Netuno (Poseidon)
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A mitologia romana é uma fusão sutil de elementos próprios com influências da mitologia grega, incorporando deuses romanos correspondentes aos gregos.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
+                    <label>A mitologia romana foi influenciada e enriquecida pela mitologia grega, incorporando divindades romanas equivalentes às divindades gregas mais importantes.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                    <label>A mitologia romana evoluiu a partir da interação cultural com a mitologia grega, resultando na criação de deuses romanos que têm paralelos notáveis com os deuses gregos.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                    <label>A mitologia romana desenvolveu uma sinergia com a mitologia grega, produzindo deidades romanas que compartilham características e atributos com os deuses gregos mais proeminentes.</label>
+                </div>
+                
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta4">
                 </div>
             </div>
         </section>
-
-        <section id="secao-pergunta-5" class="secao-pergunta">
+        
+        <section id="secao-pergunta-5">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 5:</h1>
                 <p class="pergunta">Qual é a lenda da fundação de Roma e quem são os irmãos gêmeos envolvidos nela?</p>
-                <p class="dificuldade">Nível médio</p>
+                <p class="dificuldade">Nível Médio</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao5" id="" value="errado"> A - A Roma foi fundada por um único herói sem irmãos
-                </label>
-                <label>
-                    <input type="radio" name="questao5" id="" value="errado> B - Os irmãos gêmeos na lenda de fundação de Roma são Castor e Pólux
-                </label>
-                <label>
-                    <input type="radio" name="questao5" id="" value="certo"> C - A lenda de fundação de Roma envolve os irmãos gêmeos Rômulo e Remo, criados por uma loba e destinados a fundar a cidade 
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="certo">
+                    <label> A - Os irmãos gêmeos são Rômulo e Remo, que foram criados por uma loba, e a história envolve sua rivalidade na escolha do local para fundar a cidade de Roma.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
+                    <label> B - A fundação de Roma é atribuída a um grupo de três irmãos, cada um com habilidades mágicas, que juntos conjuraram a cidade a partir do nada.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                    <label> C - Os irmãos gêmeos na lenda de fundação de Roma são Castor e Pólux, que tiveram uma disputa lendária que levou à criação da cidade.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                    <label> D - Na lenda da fundação de Roma, os irmãos gêmeos são Cástor e Pólux, associados à constelação de Gêmeos, que, através de uma jornada heroica, unem forças para estabelecer a cidade de Roma, simbolizando a harmonia e o heroísmo como fundamentos da civilização romana</label>
+                </div>
+                
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta5">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-6" class="secao-pergunta">
+
+        <section id="secao-pergunta-6">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 6:</h1>
-                <p class="pergunta">Quem é o deus romano dos mensageiros, das estradas e dos viajantes, equivalente a Hermes na mitologia grega</p>
-                <p class="dificuldade">Nível médio</p>
+                <p class="pergunta">Quem é o deus romano dos mensageiros, das estradas e dos viajantes, equivalente a Hermes na mitologia grega?</p>
+                <p class="dificuldade">Nível Médio</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao6" id="" value="errado"> A - Hades
-                </label>
-                <label>
-                    <input type="radio" name="questao6" id="" value="errado"> B - Marte
-                </label>
-                <label>
-                    <input type="radio" name="questao6" id="" value="certo"> C - Mercúrio
-                </label>
-                <label>
-                    <input type="radio" name="questao6" id="" value="errado"> D - Plutão
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Jano</label>
+                </div>
 
+                <div class="radio-container">
+                    <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Marte</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>Mercúrio</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>Plutão</label>
+                </div>
+                
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta6">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-7" class="secao-pergunta">
+
+        <section id="secao-pergunta-7">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 7:</h1>
-                <p class="pergunta">Explique o papel e a importância do deus Jano na mitologia romana</p>
-                <p class="dificuldade">Nível difícil</p>
+                <p class="pergunta">Explique o papel e a importância do deus Jano na mitologia romana.</p>
+                <p class="dificuldade">Nível Difícil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao7" id="" value="errado"> A - Jano não é uma figura importante na mitologia romana
-                </label>
-                <label>
-                    <input type="radio" name="questao7" id="" value="errado"> B - Jano é um deus guerreiro que liderou as legiões romanas
-                </label>
-                <label>
-                    <input type="radio" name="questao7" id="" value="certo"> C - Jano é o deus romano das portas, entradas, começos e fins, frequentemente representado com duas faces, uma olhando para frente e outra para trás, simbolizando a transição
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                    <label> A - Jano é amplamente conhecido como o deus romano das festas e celebrações, presidindo a alegria e a diversão nas festividades romanas.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                    <label> B - Jano é um deus guerreiro que liderou as legiões romanas em batalhas importantes.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="certo">
+                    <label> C - Jano é o deus romano das portas, entradas e transições, frequentemente representado com duas faces, uma olhando para frente e outra para trás, simbolizando sua conexão com começos e fins.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                    <label> D - Na mitologia romana, Jano é venerado como o deus das portas, entradas e transições. Ele é frequentemente representado com duas faces, uma voltada para a frente e outra para trás, simbolizando sua ligação com os começos e fins, tornando-o um guardião e protetor dos limiares e das mudanças na vida.</label>
+                </div>
+                
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta7">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-8" class="secao-pergunta">
+
+        <section id="secao-pergunta-8">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 8:</h1>
                 <p class="pergunta">Qual é a história do mito de Rômulo e Remo e como ela se relaciona com a fundação de Roma?</p>
-                <p class="dificuldade">Nível difícil</p>
+                <p class="dificuldade">Nível Difícil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao8" id="" value="errado"> A - Rômulo e Remo não têm relação com a fundação de Roma
-                </label>
-                <label>
-                    <input type="radio" name="questao8" id="" value="errado"> B - Rômulo e Remo eram inimigos mortais que nunca colaboraram
-                </label>
-                <label>
-                    <input type="radio" name="questao8" id="" value="certo"> C - Rômulo e Remo são irmãos gêmeos que foram abandonados e criados por uma loba. Eles cresceram e fundaram a cidade de Roma, mas Rômulo matou Remo em uma disputa, tornando-se o primeiro rei de Roma
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
+                    <label> A - Qual é a história do mito de Rômulo e Remo e como ela se relaciona com a fundação de Roma?</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
+                    <label> B - Rômulo e Remo inicialmente aliados, mas divergências políticas levaram a um conflito mortal, representando rivalidades políticas.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="certo">
+                    <label> C - O mito de Rômulo e Remo não está diretamente ligado à fundação de Roma, mas representa temas culturais romanos.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
+                    <label> D - Rômulo e Remo são fundadores míticos, simbolizando lutas pelo poder e a complexidade da história de Roma.</label>
+                </div>
+                
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta8">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-9" class="secao-pergunta">
+
+        <section id="secao-pergunta-9">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 9:</h1>
                 <p class="pergunta">Qual é o papel de Mercúrio na mitologia romana, além de ser o mensageiro dos deuses?</p>
-                <p class="dificuldade">Nível difícil</p>
+                <p class="dificuldade">Nível Difícil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao9" id="" value="errado"> A - Mercúrio não tem outro papel além de mensageiro.
-                </label>
-                <label>
-                    <input type="radio" name="questao9" id="" value="errado"> B - Mercúrio é o deus do amor na mitologia romana
-                </label>
-                <label>
-                    <input type="radio" name="questao9" id="" value="certo"> C - Mercúrio é também o deus do comércio, dos viajantes, dos ladrões e da eloquência
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>A - Mercúrio é uma divindade multifacetada que desempenha papéis além de ser mensageiro, incluindo a proteção dos viajantes e o domínio sobre as artes e a magia.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>B - Mercúrio é, de fato, o deus do amor na mitologia romana, governando sobre os aspectos emocionais e românticos da vida.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>C - Mercúrio é também associado à medicina e à cura, sendo reverenciado como o deus da saúde e da regeneração, desempenhando um papel fundamental na restauração da vitalidade dos enfermos na mitologia romana.</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>D - Além de ser o mensageiro dos deuses, Mercúrio desempenha um papel significativo como o deus do comércio, dos viajantes, dos ladrões e da eloquência, refletindo uma variedade de aspectos da sociedade e da cultura romana.</label>
+                </div>
+                
                 <div class="buttonResponder">
                     <input type="button" value="Responder" id="btnPergunta9">
                 </div>
             </div>
         </section>
-        <section id="secao-pergunta-10" class="secao-pergunta">
+
+        <section id="secao-pergunta-10">
             <div class="informacoes-questao">
                 <h1 class="questao">Pergunta 10:</h1>
                 <p class="pergunta">Quem é a deusa romana da agricultura e da fertilidade, equivalente à Deméter na mitologia grega?</p>
-                <p class="dificuldade">Nível difícil</p>
+                <p class="dificuldade">Nível Difícil</p>
             </div>
             <div class="alternativas">
-                <label class="marginRadio">
-                    <input type="radio" name="questao10" id="" value="errado"> A - Hera
-                </label>
-                <label>
-                    <input type="radio" name="questao10" id="" value="errado"> B - Afrodite
-                </label>
-                <label>
-                    <input type="radio" name="questao10" id="" value="certo"> C - Ceres
-                </label>
-                <label>
-                    <input type="radio" name="questao10" id="" value="errado"> D - Ártemis
-                </label>
+                <div class="radio-container">
+                    <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
+                    <label>A - Ceres</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>B - Pomona</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>C - Flora</label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                    <label>D - Cibele</label>
+                </div>
+                
                 <div class="buttonResponder">
-                    <input type="button" value="Responder" id="btnPergunta10">
+                    <input type="button" value="Terminar" id="btnPergunta10">
                 </div>
             </div>
         </section>
+
+        <section id="fim">
+            <h1>Fim, obrigado por participar!</h1>
+
+            <p id="acertos"></p>
+        </section>
     </main>
 </body>
-
 </html>

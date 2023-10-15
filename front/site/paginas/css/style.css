@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.row {
+    max-width: 100%;
+}
+
+.img-aside {
+    width: 100%;
+    height: auto;
+}
+
+.container-main {
+    display: flex;
+    height: auto;
+}
+
+.col {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.col-6 {
+    padding: 50px;
+    letter-spacing: 0.7px;
+}
+
+li {
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+ul, li {
+    list-style: circle ;
+}
+
+figcaption {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col:nth-child(2) {
+    flex-basis: 180%;
+    background-color: bisque;
+}
+
+.container {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: "h h h"
+        "aE m aD"
+        "f f f"
+    ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 170px;
+    background-color: #01173b;
+    color: #FDFDFD;
+}
+
+header > h1{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 10px;
+}
+
+.h1-texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 200px;
+}
+
+#asideD {
+    grid-area: aD;
+}
+
+footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 2px 0;
+    font-size: 16px;
+    grid-area: f;
+    width: 100%;
+    height: auto;
+}
+
+.ul-footer > ul, .ul-footer > li {
+    display: block !important;
+}
+
+.footer-container {
+    padding: 20px;
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-logo {
+    width: 180px;
+    height: 180px;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.footer-links > ul > li {
+    list-style: none;
+    font-size: 16px;
+}
+
+.footer-links ul li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    color: #3479d4;
+    scale: 1.04;
+}
+
+.footer-social > ul > li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover {
+    color: #3479d4;
+    scale: 1.04;
+}
+
+.footer-bottom {
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+header > h1 {
+    font-size: 3em;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=button] {
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    color: #fff;
+    width: 250px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3479d4;
+}
+
+input[type=button]:hover {
+    box-shadow: 2px 0px 10px #073c81;
+}
+
+.lista-nav {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 20px 0 20px 0;
+}
+
+.lista-nav > li > a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FDFDFD;
+}
+
+ul.dropdown {
+    background-color: rgba(1, 23, 59, 0.959);
+    padding: 8px;
+}
+
+ul {
+    list-style: none;
+}
+ul li{
+    display: block;
+    position: relative;
+}
+
+.footer-container ul{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 40px;
+    color: #fdfdfd;
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 80%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    margin-left: 30px;
+    background-color: #01173b;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul li ul.dropdown a {
+    opacity: 0.5;
+}
+  
+
+ul li ul.dropdown a:hover {
+    opacity: 1;
+    color: #fdfdfd;
+}
+
+.dropdown > li > a {
+    padding: 10px 50px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown > #margin-top-dropdown > a {
+    margin-top: 20px;
+}
+
+#seta-baixo {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+}
+
+#link-home > a, #link-quiz > a {
+    padding-bottom: 8px;
+}
+
+#link-home:hover::after {
+    content: "";
+    height: 2px;
+    background-color: rgb(20, 18, 126);
+    margin-left: 25px;
+    display: block;
+    width: 70%;
+    transition: .5s;
+    animation-name: hover-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes hover-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.mouseSaiu::after {
+    content: "";
+    background-color: pink;
+    margin-left: 25px;
+    display: block;
+    animation-name: sair-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-animation {
+    0% {
+        width: 70%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+#link-quiz:hover::after {
+    content: "";
+    height: 2px;
+    background-color: rgb(20, 18, 126);
+    margin-left: 25px;
+    display: block;
+    width: 80%;
+    transition: .5s;
+    animation-name: hover-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.mouseSaiuQuiz::after {
+    content: "";
+    background-color: pink;
+    margin-left: 25px;
+    display: block;
+    animation-name: sair-animation-quiz;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-animation-quiz {
+    0% {
+        width: 80%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+.dropdown > li > a {
+    padding: 8px 8px;
+}
+
+#margin-top-dropdown:hover::after, #linkJaponesa:hover::after, #linkHindu:hover::after, #linkIrlandesa:hover::after, #linkNordica:hover::after, #linkGeral:hover::after, #linkRomana:hover::after, #linkGrecia:hover::after {
+    content: "";
+    height: 2px;
+    background-color: rgb(20, 18, 126);
+    display: block;
+    width: 100%;
+    animation-name: dropdown-animations;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes dropdown-animations {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+#link-dropdown-excessao:hover::after {
+    content: "";
+    height: 2px;
+    background-color: rgb(20, 18, 126);
+    display: block;
+    width: 100%;
+    animation-name: dropdown-excessao-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes dropdown-excessao-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.saiuEgipcia::after, .saiuGeral::after, .saiuJaponesa::after, .saiuHindu::after,.saiuIrlandesa::after, .saiuNordica::after, .saiuRomana::after {
+    content: "";
+    background-color: rgb(20, 18, 126);
+    width: 100%;
+    display: block;
+    animation-name: sair-dropdown-animations;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-dropdown-animations {
+    0% {
+        width: 100%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+.saiuMesopotamia::after {
+    content: "";
+    background-color: pink;
+    display: block;
+    width: 100%;
+    animation-name: sair-dropdown-excessao;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-dropdown-excessao {
+    0% {
+        width: 100%;
+        height: 2px;
+    }
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+header  {
+    background-color: #01173b;
+    color: #FDFDFD;
+}
