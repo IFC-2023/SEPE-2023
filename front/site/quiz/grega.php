@@ -1,40 +1,3 @@
-<?php
-if (!isset($_SESSION)) {
-    session_start();
-}
-include_once('config_php/config-front.php');
-
-include('../../../back/protecao.php');
-
-if (isset($_POST['submit'])) {
-    $arrayContador = [];
-    $q1 = $_POST['questao1'];
-    $q2 = $_POST['questao2'];
-    $q3 = $_POST['questao3'];
-    $q4 = $_POST['questao4'];
-    $q5 = $_POST['questao5'];
-    $q6 = $_POST['questao6'];
-    $q7 = $_POST['questao7'];
-    $q8 = $_POST['questao8'];
-    $q9 = $_POST['questao9'];
-    $q10 = $_POST['questao10'];
-    array_push($arrayContador, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10);
-    $contadorAcertos = array_reduce($arrayContador, function ($soma, $valor) {
-        if ($valor === "certo") {
-            return $soma + 1;
-        }
-    }, 0);
-
-    $totalAcertos = $contadorAcertos;
-
-    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', 1)";
-
-    $resultado = mysqli_query($conexao, $inserirDados);
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -45,12 +8,15 @@ if (isset($_POST['submit'])) {
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
     <style>
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid black;
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             padding: 5px;
         }
     </style>
@@ -85,6 +51,8 @@ if (isset($_POST['submit'])) {
         <form action="grega.php" method="post" id="formulario_quiz">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
+
+                <input type="text" name="tipo_quiz" id="" disabled value="grega">
 
                 <ol>
                     <li>O quiz terá 10 perguntas, essas perguntas serão separadas em 3 niveis: fácil, intermediário e díficil. Serão 3 perguntas fáceis, 3 perguntas intermediárias e 4 perguntas difíceis.</li>
@@ -403,64 +371,43 @@ if (isset($_POST['submit'])) {
             </section>
         </form>
 
-            <section id="fim">
-                <div id="congratulations">
-                    <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
-                    <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
-
-                    <?php
-                if(isset($_POST['submit'])) {
-                    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
-                    $result = mysqli_query($conexao, $recebendoId);
-                    $objetosPartida = [];
-                
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $objetosPartida[] = array(
-                            "id" => $row['id'],
-                            "pontuacao" => $row['pontuacao'],
-                            "idJogador" => $row['jogador_id']
-                        );
-                    }
-                
-                    function compararDecrescente($a, $b) {
-                        if ($a['pontuacao'] == $b['pontuacao']) {
-                            return 0;
-                        }
-                        return ($a['pontuacao'] < $b['pontuacao']) ? 1 : -1;
-                    }
-                
-                    usort($objetosPartida, 'compararDecrescente');
-                
-                    $idUsuario = '';
-                    $qtdAcertos = '';
-                
-                    echo "<table id='tabela'>";
-                    echo "<thead>";
-                    echo "<th>Colocação</th>";
-                    echo "<th>Nome</th>";
-                    echo "<th>Pontuação</th>";
-                    echo "</thead>";
-                    for ($c = 0; $c < count($objetosPartida); $c++) {
-                        $idNum = intval($objetosPartida[$c]['idJogador']);
-                        $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
-                        $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
-                        if (!$resultadoNome) {
-                            die ("Erro: " . mysqli_error($conexao));
-                        }
-                        $rowNome = mysqli_fetch_assoc($resultadoNome);
-                        $nome = $rowNome['apelido'];
-                        echo "<tr>";
-                        echo "<td>" . $c + 1 . "</td>";
-                        echo "<td>" . $nome . "</td>";
-                        echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
-                        echo "</tr>";
-                    }
-                    echo "</table>";
-                }
-                ?>
-                </div>
-            </section>
+        <section id="fim">
+            <div id="congratulations">
+                <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
+                <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
+            </div>
+        </section>
     </main>
+
+    <script>
+        document.getElementById('formulario_quiz').addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o envio padrão do formulário.
+
+            // Coleta os dados do formulário.
+            var formData = new FormData(this);
+
+            // Crie uma instância do objeto XMLHttpRequest para fazer a solicitação AJAX.
+            var xhr = new XMLHttpRequest();
+
+            // Configure a solicitação AJAX.
+            xhr.open('POST', 'http://localhost/SEPE/back/tabela.php', true);
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+            // Defina uma função a ser executada quando a solicitação estiver concluída.
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // A solicitação foi bem-sucedida. Você pode tratar a resposta do servidor aqui, se necessário.
+                    console.log('Solicitação bem-sucedida');
+                } else {
+                    // A solicitação falhou. Trate o erro aqui, se necessário.
+                    console.log('Erro na solicitação');
+                }
+            };
+
+            // Envie a solicitação com os dados do formulário.
+            xhr.send(formData);
+        });
+    </script>
 </body>
 
 </html>
