@@ -55,7 +55,7 @@
         </div>
         <div class="caixa grega">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+            <ion-icon name="flash-outline"></ion-icon>
             <h2>Mitologia grega</h2>
             <p>A mitologia grega é um conjunto de lendas e histórias da Grécia Antiga sobre deuses, heróis e criaturas míticas que desempenharam papéis significativos na cultura e na compreensão do mundo naquela época.</p>
             <button class="alternar-aba" data-target="grega">Ver Mais</button>
@@ -170,7 +170,7 @@
         </div>
         <div class="caixa romana">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+            <ion-icon name="male-outline"></ion-icon>
             <h2>Mitologia romana</h2>
             <p>A mitologia romana é um conjunto de crenças e lendas da Roma Antiga, envolvendo deuses, heróis e histórias que desempenharam papéis significativos na cultura e religião romanas.</p>
             <button class="alternar-aba" data-target="romana">Ver Mais</button>
@@ -212,11 +212,19 @@
           this.textContent = 'Voltar';
           document.querySelector(`.${targetId} .conteudocx`).style.width = `50vw`;
           document.querySelector(`.${targetId} .botoes`).display =`none`;
+          let botoes = document.getElementsByClassName("botoes");
+          for (let c = 0; c < botoes; c++) {
+            botoes[c].style.display = 'flex';
+          }
         } else {
           aba.style.display = 'none';
           this.textContent = 'Ver Mais';
           document.querySelector(`.${targetId} .conteudocx`).style.width = `100vw`;
           document.querySelector(`.${targetId} .botoes`).style.display =`flex`;
+          let botoes = document.getElementsByClassName("botoes");
+          for (let c = 0; c < botoes; c++) {
+            botoes[c].style.display = 'none';
+          }
         }
       });
     });
