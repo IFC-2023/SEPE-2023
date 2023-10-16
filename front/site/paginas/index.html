@@ -1,10 +1,4 @@
-<?php
-if(!isset($_SESSION)) {
-  session_start();
-}
 
-include('../../../back/protecao.php');
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -212,12 +206,17 @@ include('../../../back/protecao.php');
       button.addEventListener('click', function() {
         const targetId = this.getAttribute('data-target');
         const aba = document.querySelector(`.${targetId} .aba`);
+        
         if (aba.style.display === 'none' || aba.style.display === '') {
           aba.style.display = 'block';
           this.textContent = 'Voltar';
+          document.querySelector(`.${targetId} .conteudocx`).style.width = `50vw`;
+          document.querySelector(`.${targetId} .botoes`).display =`none`;
         } else {
           aba.style.display = 'none';
-          this.textContent = 'Aprender Mais';
+          this.textContent = 'Ver Mais';
+          document.querySelector(`.${targetId} .conteudocx`).style.width = `100vw`;
+          document.querySelector(`.${targetId} .botoes`).style.display =`flex`;
         }
       });
     });
