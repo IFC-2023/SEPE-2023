@@ -83,6 +83,7 @@
 
 .conteudo .caixa:nth-of-type(1){
     background: #BF8C60;
+    
 }
 .conteudo .caixa:nth-of-type(2){
     background: #6C9BD9;
@@ -147,7 +148,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
+ 
 
 
 }
@@ -163,6 +165,8 @@
 .conteudo .caixa .conteudocx h2{
     font-size: 3em;
     color: #ffff;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 10px;
 }
 
 
@@ -182,7 +186,7 @@
     padding: 15px 15px;
     background: #ffff;
     border: none;
-    border-radius: 30px;
+    border-radius: 8px;
     margin-top: 10px;
     cursor: pointer;
     transition: .3s;
@@ -201,19 +205,21 @@
     display: none;
     text-align: left;
     justify-content: center;
-}
-
-.aba>p{
-    margin: 40px;
+    text-align: center;
 }
 
 .aba>h1{
  text-align: center;
  margin: 40px;
+ margin-top: 80px;
+ font-family: 'Bebas Neue', sans-serif;
+ letter-spacing: 10px;
 }
 
 .aba>ul, li{
-    margin: 40px;
+    font-size: 1.2em;
+    margin: 60px;
+    text-align: left;
 }
 .aba>a>button{
     font-size: 1.2em;
@@ -223,13 +229,14 @@
     padding: 15px 15px;
     background: #01173b;
     border: none;
-    border-radius: 30px;
+    border-radius: 8px;
     margin-top: 10px;
     cursor: pointer;
     transition: .3s;
     color:white;
     justify-content: center;
-    margin: 45px;
+    margin: 50px;
+   
 }
 
 
