@@ -1,4 +1,4 @@
-const pg1 = document.getElementById("secao-pergunta-1");
+/*const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
 const pg3 = document.getElementById("secao-pergunta-3");
 const pg4 = document.getElementById("secao-pergunta-4");
@@ -132,5 +132,7 @@ function responder4() {
     }
 }
 
-document.getElementById("btnPergunta4").addEventListener("click", responder4);
+document.getElementById("btnPergunta4").addEventListener("click", responder4); 
+
+*/
 >>>>>>> 071066fa049884f2ecd795f96e6cae5b6c114499
