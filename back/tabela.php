@@ -30,13 +30,29 @@ if (isset($_POST['submit'])) {
 
     if ($mitologia_nome === 'grega') {
         $mitologia_id = '1';
+    } else if ($mitologia_nome === 'egipcia') {
+        $mitologia_id = '2';
+    } else if ($mitologia_nome === 'hindu') {
+        $mitologia_id = '3';
+    } else if ($mitologia_nome === 'irlandesa') {
+        $mitologia_id = '4';
+    } else if ($mitologia_nome === 'japonesa') {
+        $mitologia_id = '5';
+    } else if ($mitologia_nome === 'mesopotamica') {
+        $mitologia_id = '6';
+    } else if ($mitologia_nome === 'nordica') {
+        $mitologia_id = '7';
+    } else if ($mitologia_nome === 'romana') {
+        $mitologia_id = '8';
+    } else if ($mitologia_nome === 'geral') {
+        $mitologia_id = '9';
     }
 
     $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', '$mitologia_id')";
 
     $resultado = mysqli_query($conexao, $inserirDados);
 
-$recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
+$recebendoId = "SELECT * FROM partida WHERE mitologia_id = " . intval($mitologia_id);
 $result = mysqli_query($conexao, $recebendoId);
 $objetosPartida = [];
 
