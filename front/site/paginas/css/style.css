@@ -432,6 +432,7 @@ ul li ul.dropdown a:hover {
     background-color: rgb(20, 18, 126);
     width: 100%;
     display: block;
+    height: 2px;
     animation-name: sair-dropdown-animations;
     animation-duration: .2s;
     animation-iteration-count: 1;
