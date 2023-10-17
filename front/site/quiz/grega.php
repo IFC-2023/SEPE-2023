@@ -1,3 +1,59 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+include_once('../../../back/config.php');
+
+if (isset($_POST['submit'])) {
+    $arrayContador = [];
+    $q1 = $_POST['questao1'];
+    $q2 = $_POST['questao2'];
+    $q3 = $_POST['questao3'];
+    $q4 = $_POST['questao4'];
+    $q5 = $_POST['questao5'];
+    $q6 = $_POST['questao6'];
+    $q7 = $_POST['questao7'];
+    $q8 = $_POST['questao8'];
+    $q9 = $_POST['questao9'];
+    $q10 = $_POST['questao10'];
+    array_push($arrayContador, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10);
+    $contadorAcertos = array_reduce($arrayContador, function ($soma, $valor) {
+        if ($valor === "certo") {
+            return $soma + 1;
+        }
+    }, 0);
+
+    $totalAcertos = $contadorAcertos;
+    $mitologia_nome = $_POST['tipo_quiz'];
+    $mitologia_id = '';
+
+    if ($mitologia_nome === 'grega') {
+        $mitologia_id = '1';
+    } else if ($mitologia_nome === 'egipcia') {
+        $mitologia_id = '2';
+    } else if ($mitologia_nome === 'hindu') {
+        $mitologia_id = '3';
+    } else if ($mitologia_nome === 'irlandesa') {
+        $mitologia_id = '4';
+    } else if ($mitologia_nome === 'japonesa') {
+        $mitologia_id = '5';
+    } else if ($mitologia_nome === 'mesopotamica') {
+        $mitologia_id = '6';
+    } else if ($mitologia_nome === 'nordica') {
+        $mitologia_id = '7';
+    } else if ($mitologia_nome === 'romana') {
+        $mitologia_id = '8';
+    } else if ($mitologia_nome === 'geral') {
+        $mitologia_id = '9';
+    }
+
+    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', '$mitologia_id')";
+
+    $resultado = mysqli_query($conexao, $inserirDados);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -376,12 +432,13 @@
                 <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
                 <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
             </div>
+            <div id="tabelaContainer"></div>
         </section>
     </main>
 
     <script>
-        document.getElementById('formulario_quiz').addEventListener('submit', function(e) {
-            e.preventDefault(); // Impede o envio padrão do formulário.
+        let tabelaContainer = document.getElementById("tabelaContainer");
+        document.getElementById('formulario_quiz').addEventListener('submit', function() {
 
             // Coleta os dados do formulário.
             var formData = new FormData(this);
@@ -396,13 +453,14 @@
             // Defina uma função a ser executada quando a solicitação estiver concluída.
             xhr.onload = function() {
                 if (xhr.status >= 200 && xhr.status < 300) {
-                    // A solicitação foi bem-sucedida. Você pode tratar a resposta do servidor aqui, se necessário.
-                    console.log('Solicitação bem-sucedida');
+                    // A solicitação foi bem-sucedida. Manipule a resposta do servidor e insira a tabela.
+                    tabelaContainer.innerHTML = xhr.responseText;
                 } else {
                     // A solicitação falhou. Trate o erro aqui, se necessário.
                     console.log('Erro na solicitação');
                 }
             };
+
 
             // Envie a solicitação com os dados do formulário.
             xhr.send(formData);
