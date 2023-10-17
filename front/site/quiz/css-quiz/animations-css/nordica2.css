@@ -321,7 +321,7 @@ ul li ul.dropdown a:hover {
     grid-area: informacoes;
     background-color: #639FA6;
     color: #fff;
-    height: 91.9vh;
+    height: 90.9vh;
     display: grid;
     grid-template-areas:
     "pergunta"
@@ -372,11 +372,13 @@ ul li ul.dropdown a:hover {
 }
 
 .buttonResponder > input[type=button] {
+    position: relative;
     border: none;
     background-color: #0388A6;
     color: #fff;
     width: 150%;
     padding: 20px;
+    top: 20px;
     font-size: 18px;
     border-radius: 37px;
     cursor: pointer;
