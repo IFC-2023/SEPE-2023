@@ -479,3 +479,21 @@ header  {
     background-color: #01173b;
     color: #FDFDFD;
 }
+
+.img-dupla img{
+    width: 350px;
+ }
+ 
+ 
+ .img-dupla{
+    display: flex;
+    justify-content: center;
+ }
+ 
+ 
+ .col-8 img{
+ width: 350px;
+ display: block;
+ margin:auto;
+ }
+ 
