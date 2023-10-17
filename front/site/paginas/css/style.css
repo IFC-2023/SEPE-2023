@@ -429,42 +429,18 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.saiuEgipcia::after, .saiuGeral::after, .saiuJaponesa::after, .saiuHindu::after,.saiuIrlandesa::after, .saiuNordica::after, .saiuRomana::after {
+.saiuEgipcia::after, .saiuGrecia::after, .saiuGeral::after, .saiuJaponesa::after, .saiuHindu::after,.saiuIrlandesa::after, .saiuNordica::after, .saiuRomana::after, .saiuMesopotamia::after {
     content: "";
     background-color: rgb(20, 18, 126);
-    width: 100%;
     display: block;
-    height: 2px;
-    animation-name: sair-dropdown-animations;
+    width: 100%;
+    animation-name: sair-dropdown;
     animation-duration: .2s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes sair-dropdown-animations {
-    0% {
-        width: 100%;
-        height: 2px;
-    }
-
-    100% {
-        width: 0%;
-        height: 2px;
-    }
-}
-
-.saiuMesopotamia::after {
-    content: "";
-    background-color: rgb(20, 18, 126);
-    display: block;
-    width: 100%;
-    animation-name: sair-dropdown-excessao;
-    animation-duration: .2s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-}
-
-@keyframes sair-dropdown-excessao {
+@keyframes sair-dropdown {
     0% {
         width: 100%;
         height: 2px;
