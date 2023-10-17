@@ -284,7 +284,7 @@ ul li ul.dropdown a:hover {
     margin-top: 20px;
     border: none;
     font-size: 1.5em;
-    background-color: #170ceb;
+    background-color: #023535;
     color: #fff;
     width: 250px;
     padding: 12px;
@@ -293,7 +293,7 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao > input[type=button]:hover {
-    box-shadow: 0 0 6px blue;
+    box-shadow: 0 0 6px #023535;
 }
 
 #secao-pergunta-1 {
@@ -305,7 +305,7 @@ ul li ul.dropdown a:hover {
 
 .informacoes-questao {
     grid-area: informacoes;
-    background-color: #241bb9;
+    background-color: #023535;
     color: #fff;
     height: 92vh;
     display: grid;
@@ -377,7 +377,7 @@ ul li ul.dropdown a:hover {
 
 .buttonResponder > input[type=button] {
     border: none;
-    background-color: #241bb9;
+    background-color: #023535;
     color: #fff;
     width: 150%;
     padding: 20px;
@@ -439,7 +439,7 @@ input[type=radio] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #241bb9;
+    background-color: #023535;
     color: #fff;
 }
 

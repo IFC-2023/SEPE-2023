@@ -2,6 +2,13 @@ const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
 const pg3 = document.getElementById("secao-pergunta-3");
 const pg4 = document.getElementById("secao-pergunta-4");
+const pg5 = document.getElementById("secao-pergunta-5");
+const pg6 = document.getElementById("secao-pergunta-6");
+const pg7 = document.getElementById("secao-pergunta-7");
+const pg8 = document.getElementById("secao-pergunta-8");
+const pg9 = document.getElementById("secao-pergunta-9");
+const pg10 = document.getElementById("secao-pergunta-10");
+
 const resCerta = document.getElementById("res-certa");
 const resErrada = document.getElementById("res-errada");
 let contadorAcertos = 0;
@@ -39,14 +46,14 @@ function responder1() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg2.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg1.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg2.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -69,14 +76,14 @@ function responder2() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg3.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg2.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg3.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -100,6 +107,14 @@ function responder3() {
                     pg4.style.display = 'grid';
                 }, 2000);
             }
+            else if (valorResposta == 'errado') {
+              pg3.style.display = 'none';
+              resErrada.style.display = 'grid';
+              setTimeout(() => {
+                resErrada.style.display = 'none';
+                pg4.style.display = 'grid';
+              }, 2000);
+            }
         }
     }
   }
@@ -120,14 +135,14 @@ function responder4() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg5.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg4.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg5.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -150,14 +165,14 @@ function responder5() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg6.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg5.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg6.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -180,14 +195,14 @@ function responder6() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg7.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg6.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg7.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -210,14 +225,14 @@ function responder7() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg8.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg7.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg8.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -240,14 +255,14 @@ function responder8() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg9.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg8.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg9.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -270,14 +285,14 @@ function responder9() {
         setTimeout(() => {
           resCerta.style.display = "none";
           pg10.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg9.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           pg10.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
@@ -300,14 +315,14 @@ function responder10() {
         setTimeout(() => {
           resCerta.style.display = "none";
           fim.style.display = "grid";
-        }, 1500);
+        }, 2000);
       } else if (valorResposta === "errado") {
         pg10.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
           fim.style.display = "grid";
-        }, 1500);
+        }, 2000);
       }
       break;
     }
