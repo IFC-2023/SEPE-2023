@@ -1,9 +1,10 @@
-<?php
+<!-- <?php
 if (!isset($_SESSION)) {
     session_start();
 }
+include_once('config_php/config-front.php');
 
-include_once('../../../back/config.php');
+include('../../../back/protecao.php');
 
 if (isset($_POST['submit'])) {
     $arrayContador = [];
@@ -25,34 +26,12 @@ if (isset($_POST['submit'])) {
     }, 0);
 
     $totalAcertos = $contadorAcertos;
-    $mitologia_nome = $_POST['tipo_quiz'];
-    $mitologia_id = '';
 
-    if ($mitologia_nome === 'grega') {
-        $mitologia_id = '1';
-    } else if ($mitologia_nome === 'egipcia') {
-        $mitologia_id = '2';
-    } else if ($mitologia_nome === 'hindu') {
-        $mitologia_id = '3';
-    } else if ($mitologia_nome === 'irlandesa') {
-        $mitologia_id = '4';
-    } else if ($mitologia_nome === 'japonesa') {
-        $mitologia_id = '5';
-    } else if ($mitologia_nome === 'mesopotamica') {
-        $mitologia_id = '6';
-    } else if ($mitologia_nome === 'nordica') {
-        $mitologia_id = '7';
-    } else if ($mitologia_nome === 'romana') {
-        $mitologia_id = '8';
-    } else if ($mitologia_nome === 'geral') {
-        $mitologia_id = '9';
-    }
-
-    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', '$mitologia_id')";
+    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', 1)";
 
     $resultado = mysqli_query($conexao, $inserirDados);
 }
-?>
+?>-->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -64,15 +43,12 @@ if (isset($_POST['submit'])) {
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
     <style>
-        table,
-        th,
-        td {
+        table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
         }
 
-        th,
-        td {
+        th, td {
             padding: 5px;
         }
     </style>
@@ -107,8 +83,6 @@ if (isset($_POST['submit'])) {
         <form action="grega.php" method="post" id="formulario_quiz">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
-
-                <input type="text" name="tipo_quiz" id="" disabled value="grega">
 
                 <ol>
                     <li>O quiz terá 10 perguntas, essas perguntas serão separadas em 3 niveis: fácil, intermediário e díficil. Serão 3 perguntas fáceis, 3 perguntas intermediárias e 4 perguntas difíceis.</li>
@@ -209,28 +183,29 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-3">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 3:</h1>
-                    <p class="pergunta">Qual é o nome do herói grego conhecido por sua força extraordinária e seus Doze Trabalhos?</p>
+                    <p class="pergunta">Além de ser o deus dos mares, Poseidon também era frequentemente 
+                    considerado como o deus de qual outro fenômeno natural na mitologia grega?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Perseu</label>
-                    </div>
-
-                    <div class="radio-container">
-                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Teseu</label>
-                    </div>
-
-                    <div class="radio-container">
-                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Édipo</label>
-                    </div>
-
-                    <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="certo">
-                        <label> D - Hércules</label>
+                        <label>A - Terremotos</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Tempestades</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Vulcões</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Furacões</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -242,18 +217,29 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-4">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 4:</h1>
-                    <p class="pergunta">Explique o mito da criação do mundo na mitologia grega, incluindo os titãs e os deuses olímpicos.</p>
+                    <p class="pergunta">Quais eram os três irmãos primordiais que personificavam as forças básicas 
+                    da natureza na mitologia grega, sendo considerados filhos de Gaia?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Na mitologia grega, o mundo foi criado por um único deus, Zeus.</label>
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="certo">
+                        <label>A - Urano, Cronos e Oceano</label>
                     </div>
 
                     <div class="radio-container">
-                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
-                        <label>Na mitologia grega, o mundo começou com o Caos, seguido pelos titãs, que foram sucedidos pelos deuses olímpicos, liderados por Zeus.</label>
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                        <label>B - Zeus, Poseidon e Hades</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                        <label>C - Tártaro, Érebo e Nix</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
+                        <label>D - Ponto, Céu e Terra</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -265,23 +251,34 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-5">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 5:</h1>
-                    <p class="pergunta">Qual é a história do mito de Prometeu e por que ele é castigado por Zeus?</p>
+                    <p class="pergunta">Além de Ícaro, Dédalo também teve outro filho notável na mitologia grega. 
+                    Qual era o nome deste filho e qual foi sua trágica história?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Prometeu não é uma figura mitológica grega.</label>
+                        <label>A - Talos, o autômato de bronze que guardava Creta e que foi derrotado por Jasão e os 
+                        Argonautas.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Prometeu é recompensado por Zeus por seus serviços à humanidade.</label>
+                        <label>B - Ífis, uma jovem que se disfarçou de homem para escapar de um destino trágico e 
+                        posteriormente foi transformada em uma estátua de pedra por Cibele.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="certo">
-                        <label>Prometeu rouba o fogo dos deuses para dar aos humanos, o que enfurece Zeus, levando-o a punir Prometeu de maneira terrível.</label>
+                        <label>C - Perdix, que Dédalo empurrou do alto da Acrópole de Atenas por ciúmes de 
+                        sua inteligência e foi transformado em uma perdiz por Atena.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                        <label>D - Glauco, um pescador que se tornou um deus marinho após comer uma erva
+                        mágica dada a ele por Circe.6-Quem são os principais deuses do Olimpo na mitologia 
+                        grega e quais são suas áreas de domínio?</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -293,18 +290,30 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-6">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 6:</h1>
-                    <p class="pergunta">Quem são os principais deuses do Olimpo na mitologia grega e quais são suas áreas de domínio?</p>
+                    <p class="pergunta">Glauco, um pescador que se tornou um deus marinho após comer uma erva 
+                    mágica dada a ele por Circe.6-Quem são os principais deuses do Olimpo na mitologia 
+                    grega e quais são suas áreas de domínio?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Os principais deuses do Olimpo são Hades, Poseidon e Afrodite, que governam sobre a morte, o mar e o amor, respectivamente.</label>
+                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
+                        <label>A - Colheita</label>
                     </div>
 
                     <div class="radio-container">
-                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>Os principais deuses do Olimpo são Zeus (deus dos céus e rei dos deuses), Hera (deusa do casamento e da família), Atena (deusa da sabedoria e da estratégia), Apolo (deus das artes e da música) e muitos outros, cada um com áreas de domínio específicas.</label>
+                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Guerra</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Comércio</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Cura</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -322,7 +331,7 @@ if (isset($_POST['submit'])) {
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Ícaro não é uma figura mitológica grega.</label>
+                        <label>A - Qual é a história da Titanomaquia na mitologia grega e como os deuses olímpicos derrotaram os titãs?</label>
                     </div>
 
                     <div class="radio-container">
@@ -427,45 +436,64 @@ if (isset($_POST['submit'])) {
             </section>
         </form>
 
-        <section id="fim">
-            <div id="congratulations">
-                <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
-                <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
-            </div>
-            <div id="tabelaContainer"></div>
-        </section>
-    </main>
+            <section id="fim">
+                <div id="congratulations">
+                    <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
+                    <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
 
-    <script>
-        let tabelaContainer = document.getElementById("tabelaContainer");
-        document.getElementById('formulario_quiz').addEventListener('submit', function() {
-
-            // Coleta os dados do formulário.
-            var formData = new FormData(this);
-
-            // Crie uma instância do objeto XMLHttpRequest para fazer a solicitação AJAX.
-            var xhr = new XMLHttpRequest();
-
-            // Configure a solicitação AJAX.
-            xhr.open('POST', 'http://localhost/SEPE/back/tabela.php', true);
-            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-
-            // Defina uma função a ser executada quando a solicitação estiver concluída.
-            xhr.onload = function() {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    // A solicitação foi bem-sucedida. Manipule a resposta do servidor e insira a tabela.
-                    tabelaContainer.innerHTML = xhr.responseText;
-                } else {
-                    // A solicitação falhou. Trate o erro aqui, se necessário.
-                    console.log('Erro na solicitação');
+                    <?php
+                if(isset($_POST['submit'])) {
+                    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
+                    $result = mysqli_query($conexao, $recebendoId);
+                    $objetosPartida = [];
+                
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $objetosPartida[] = array(
+                            "id" => $row['id'],
+                            "pontuacao" => $row['pontuacao'],
+                            "idJogador" => $row['jogador_id']
+                        );
+                    }
+                
+                    function compararDecrescente($a, $b) {
+                        if ($a['pontuacao'] == $b['pontuacao']) {
+                            return 0;
+                        }
+                        return ($a['pontuacao'] < $b['pontuacao']) ? 1 : -1;
+                    }
+                
+                    usort($objetosPartida, 'compararDecrescente');
+                
+                    $idUsuario = '';
+                    $qtdAcertos = '';
+                
+                    echo "<table id='tabela'>";
+                    echo "<thead>";
+                    echo "<th>Colocação</th>";
+                    echo "<th>Nome</th>";
+                    echo "<th>Pontuação</th>";
+                    echo "</thead>";
+                    for ($c = 0; $c < count($objetosPartida); $c++) {
+                        $idNum = intval($objetosPartida[$c]['idJogador']);
+                        $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
+                        $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
+                        if (!$resultadoNome) {
+                            die ("Erro: " . mysqli_error($conexao));
+                        }
+                        $rowNome = mysqli_fetch_assoc($resultadoNome);
+                        $nome = $rowNome['apelido'];
+                        echo "<tr>";
+                        echo "<td>" . $c + 1 . "</td>";
+                        echo "<td>" . $nome . "</td>";
+                        echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
                 }
-            };
-
-
-            // Envie a solicitação com os dados do formulário.
-            xhr.send(formData);
-        });
-    </script>
+                ?>
+                </div>
+            </section>
+    </main>
 </body>
 
 </html>

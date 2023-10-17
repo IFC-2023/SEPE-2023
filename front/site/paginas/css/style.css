@@ -72,24 +72,22 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 170px;
+    height: 130px;
     background-color: #01173b;
     color: #FDFDFD;
 }
 
-header > h1{
+.h1-texto {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 10px;
 }
 
-.h1-texto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .logo{
-    width: 200px;
+    width: 180px;
 }
 
 #asideD {
@@ -97,7 +95,7 @@ header > h1{
 }
 
 footer {
-    background-color: #0f0f0f;
+    background-color: #000000;
     color: #fff;
     padding: 2px 0;
     font-size: 16px;
@@ -112,11 +110,10 @@ footer {
 
 .footer-container {
     padding: 20px;
-    max-width: 1500px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-
+    background-color: #001836;
 }
 
 .footer-logo {
@@ -130,6 +127,11 @@ footer {
     border-radius: 50%;
 }
 
+.footer-links{
+    display: block;
+    margin: auto;
+}
+
 .footer-links > ul > li {
     list-style: none;
     font-size: 16px;
@@ -139,35 +141,37 @@ footer {
     margin-bottom: 6px;
 }
 
-.footer-links a {
+.footer-links a, .footer-sociais a {
     text-decoration: none;
     color: #fff;
     transition: color 0.2s;
     font-size: 16px;
 }
 
-.footer-links a:hover {
+.footer-links a:hover, .footer-sociais a:hover {
     color: #3479d4;
     scale: 1.04;
 }
 
-.footer-social > ul > li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-sociais a{
+    margin: 0 20px;
 }
 
-.footer-social a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.2s;
+
+
+.footer-sociais{
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.footer-social a:hover {
-    color: #3479d4;
-    scale: 1.04;
+.footer-sociais img{
+    width: 150px;
 }
+
 
 .footer-bottom {
     font-size: 18px;
@@ -200,6 +204,7 @@ input[type=button] {
     border-radius: 8px;
     cursor: pointer;
     background-color: #3479d4;
+    margin-bottom: 20px;
 }
 
 input[type=button]:hover {
@@ -210,7 +215,7 @@ input[type=button]:hover {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 0 0;
 }
 
 .lista-nav > li > a {
@@ -234,7 +239,7 @@ ul li{
 
 .footer-container ul{
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
 }
 
 ul li a {
@@ -318,7 +323,7 @@ ul li ul.dropdown a:hover {
 
 .mouseSaiu::after {
     content: "";
-    background-color: pink;
+    background-color: rgb(20, 18, 126);
     margin-left: 25px;
     display: block;
     animation-name: sair-animation;
@@ -355,7 +360,7 @@ ul li ul.dropdown a:hover {
 
 .mouseSaiuQuiz::after {
     content: "";
-    background-color: pink;
+    background-color: rgb(20, 18, 126);
     margin-left: 25px;
     display: block;
     animation-name: sair-animation-quiz;
@@ -424,41 +429,18 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.saiuEgipcia::after, .saiuGeral::after, .saiuJaponesa::after, .saiuHindu::after,.saiuIrlandesa::after, .saiuNordica::after, .saiuRomana::after {
+.saiuEgipcia::after, .saiuGrecia::after, .saiuGeral::after, .saiuJaponesa::after, .saiuHindu::after,.saiuIrlandesa::after, .saiuNordica::after, .saiuRomana::after, .saiuMesopotamia::after {
     content: "";
     background-color: rgb(20, 18, 126);
-    width: 100%;
     display: block;
-    animation-name: sair-dropdown-animations;
+    width: 100%;
+    animation-name: sair-dropdown;
     animation-duration: .2s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes sair-dropdown-animations {
-    0% {
-        width: 100%;
-        height: 2px;
-    }
-
-    100% {
-        width: 0%;
-        height: 2px;
-    }
-}
-
-.saiuMesopotamia::after {
-    content: "";
-    background-color: pink;
-    display: block;
-    width: 100%;
-    animation-name: sair-dropdown-excessao;
-    animation-duration: .2s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-}
-
-@keyframes sair-dropdown-excessao {
+@keyframes sair-dropdown {
     0% {
         width: 100%;
         height: 2px;
@@ -473,3 +455,21 @@ header  {
     background-color: #01173b;
     color: #FDFDFD;
 }
+
+.img-dupla img{
+    width: 350px;
+ }
+ 
+ 
+ .img-dupla{
+    display: flex;
+    justify-content: center;
+ }
+ 
+ 
+ .col-8 img{
+ width: 350px;
+ display: block;
+ margin:auto;
+ }
+ 

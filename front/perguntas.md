@@ -80,7 +80,7 @@
 
 3. Qual é a morada dos deuses na mitologia nórdica?
    - A Valhalla
-   - B Helheim
+   - B Helheimx
    - C Midgard
    - D Asgard
 
