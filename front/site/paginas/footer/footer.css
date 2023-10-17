@@ -39,7 +39,7 @@ main {
     font-size: 14px;
     color: #666;
   }
-  .portifolio{
+  .portifolio {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -48,9 +48,13 @@ main {
 
   .language-icon img{
     width: 25px;
+    display: flex;
+    align-items: self-end;
+    font-size: 1.5rem;
+    padding: 0.5rem;
   }
 
-  .language-icon{
+  .language-icon {
     justify-content: center;
     display: flex;
     text-align: center;
