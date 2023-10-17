@@ -1,10 +1,3 @@
-<?php
-  if(!isset($_SESSION)) {
-    session_start();
-  }
-  
-  include('../../../back/protecao.php');
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,8 +35,8 @@
       <div class="conteudo">
         <div class="caixa egipcia">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
-            <h2>Mitologia egipcia</h2>
+            <img src="imagens/icons/Ankh.png" alt="" width="200px">
+            <h2>Mitologia egípcia</h2>
             <p>A mitologia egípcia é uma antiga tradição de crenças e histórias do Egito Antigo, envolvendo deuses, rituais e uma forte influência na cultura egípcia, com ênfase na vida após a morte.</p>
             <button class="alternar-aba" data-target="egipcia">Ver Mais</button>
           </div>
@@ -61,7 +54,7 @@
         </div>
         <div class="caixa grega">
           <div class="conteudocx">
-            <ion-icon name="flash-outline"></ion-icon>
+            <img src="imagens/icons/helenismo2.png" alt="" width="200px">
             <h2>Mitologia grega</h2>
             <p>A mitologia grega é um conjunto de lendas e histórias da Grécia Antiga sobre deuses, heróis e criaturas míticas que desempenharam papéis significativos na cultura e na compreensão do mundo naquela época.</p>
             <button class="alternar-aba" data-target="grega">Ver Mais</button>
@@ -80,7 +73,7 @@
         </div>
         <div class="caixa hindu">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+            <img src="imagens/icons/hindu.png" alt="" width="200px">
             <h2>Mitologia hindu</h2>
             <p>A mitologia hindu é um conjunto de histórias e crenças da Índia, envolvendo diversos deuses e deusas, lendas e ensinamentos espirituais que têm sido fundamentais na cultura e na religião hindu ao longo da história.</p>
             <button class="alternar-aba" data-target="hindu">Ver Mais</button>
@@ -99,7 +92,7 @@
         </div>
         <div class="caixa irlandesa">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+            <img src="imagens/icons/celta.png" alt="" width="200px">
             <h2>Mitologia irlandesa</h2>
             <p>A mitologia irlandesa é um rico conjunto de mitos e lendas que fazem parte do folclore da Irlanda. Ela apresenta deuses, heróis e criaturas mágicas, e desempenhou um papel importante na cultura irlandesa ao longo da história.</p>
             <button class="alternar-aba" data-target="irlandesa">Ver Mais</button>
@@ -119,7 +112,7 @@
         </div>
         <div class="caixa japonesa">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+           <img src="imagens/icons/flor.png" alt="" width="200px">
             <h2>Mitologia japonesa</h2>
             <p>A mitologia japonesa é um conjunto de crenças e lendas do Japão, envolvendo deuses, espíritos e criaturas míticas que desempenham papéis significativos na cultura e espiritualidade japonesa.</p>
             <button class="alternar-aba" data-target="japonesa">Ver Mais</button>
@@ -138,8 +131,8 @@
         </div>
         <div class="caixa mesopotamica">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
-            <h2>Mitologia mesopotamica</h2>
+            <img src="imagens/icons/meso.png" alt="" width="200px">
+            <h2>Mitologia mesopotâmica</h2>
             <p>A mitologia mesopotâmica é um conjunto de crenças e lendas das antigas civilizações que habitaram a região da Mesopotâmia, entre os rios Tigre e Eufrates. Ela envolve uma variedade de deuses e figuras míticas que desempenharam papéis significativos na cultura dessas civilizações.</p>
             <button class="alternar-aba" data-target="mesopotamica">Ver Mais</button>
           </div>
@@ -157,7 +150,7 @@
         </div>
         <div class="caixa nordica">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+            <img src="imagens/icons/1200px-Aegishjalmr.svg.png" alt="" width="200px">
             <h2>Mitologia nordica</h2>
             <p>A mitologia nórdica, ou escandinava, é um conjunto de lendas e crenças das culturas da Escandinávia, incluindo deuses, heróis e criaturas míticas que desempenham papéis importantes nas histórias e na cultura desses povos.</p>
             <button class="alternar-aba" data-target="nordica">Ver Mais</button>
@@ -176,7 +169,7 @@
         </div>
         <div class="caixa romana">
           <div class="conteudocx">
-            <img src="../../../back/imagens/simbolo-romano-index.png" alt="" class="logo-index">
+            <img src="imagens/icons/ddf1d5c26412724c504305be6351106a-icone-de-golpe-de-capacete-romano.png" alt="" width="200px">
             <h2>Mitologia romana</h2>
             <p>A mitologia romana é um conjunto de crenças e lendas da Roma Antiga, envolvendo deuses, heróis e histórias que desempenharam papéis significativos na cultura e religião romanas.</p>
             <button class="alternar-aba" data-target="romana">Ver Mais</button>
@@ -195,7 +188,7 @@
         </div>
         <div class="caixa quiz">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+           <img src="imagens/icons/25400.png" alt="" width="200px">
             <h2>Quiz geral</h2>
             <p>Agora que você já leu tudo sobre as mitologias, que tal jogar um quiz para testar os seus conhecimentos?</p>            
             <a href="../quiz/geral.html"><button>Jogue Agora!</button></a>
