@@ -321,7 +321,7 @@ ul li ul.dropdown a:hover {
 
 .mouseSaiu::after {
     content: "";
-    background-color: pink;
+    background-color: rgb(20, 18, 126);
     margin-left: 25px;
     display: block;
     animation-name: sair-animation;
@@ -358,7 +358,7 @@ ul li ul.dropdown a:hover {
 
 .mouseSaiuQuiz::after {
     content: "";
-    background-color: pink;
+    background-color: rgb(20, 18, 126);
     margin-left: 25px;
     display: block;
     animation-name: sair-animation-quiz;
@@ -453,7 +453,7 @@ ul li ul.dropdown a:hover {
 
 .saiuMesopotamia::after {
     content: "";
-    background-color: pink;
+    background-color: rgb(20, 18, 126);
     display: block;
     width: 100%;
     animation-name: sair-dropdown-excessao;
