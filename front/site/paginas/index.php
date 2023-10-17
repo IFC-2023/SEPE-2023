@@ -1,4 +1,10 @@
-
+<?php
+  if(!isset($_SESSION)) {
+    session_start();
+  }
+  
+  include('../../../back/protecao.php');
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -170,7 +176,7 @@
         </div>
         <div class="caixa romana">
           <div class="conteudocx">
-            <ion-icon name="male-outline"></ion-icon>
+            <img src="../../../back/imagens/simbolo-romano-index.png" alt="" class="logo-index">
             <h2>Mitologia romana</h2>
             <p>A mitologia romana é um conjunto de crenças e lendas da Roma Antiga, envolvendo deuses, heróis e histórias que desempenharam papéis significativos na cultura e religião romanas.</p>
             <button class="alternar-aba" data-target="romana">Ver Mais</button>
