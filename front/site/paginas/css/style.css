@@ -148,7 +148,7 @@ footer {
     font-size: 16px;
 }
 
-.footer-links a:hover, .footer-sociais a:hover() {
+.footer-links a:hover, .footer-sociais a:hover {
     color: #3479d4;
     scale: 1.04;
 }
@@ -204,6 +204,7 @@ input[type=button] {
     border-radius: 8px;
     cursor: pointer;
     background-color: #3479d4;
+    margin-bottom: 20px;
 }
 
 input[type=button]:hover {
