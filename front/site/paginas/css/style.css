@@ -72,12 +72,13 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 170px;
+    height: 130px;
     background-color: #01173b;
     color: #FDFDFD;
 }
 
 .h1-texto {
+    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,7 +87,7 @@ header {
 }
 
 .logo{
-    width: 200px;
+    width: 180px;
 }
 
 #asideD {
@@ -213,7 +214,7 @@ input[type=button]:hover {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 0 0;
 }
 
 .lista-nav > li > a {

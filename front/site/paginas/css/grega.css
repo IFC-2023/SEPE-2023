@@ -1,11 +1,9 @@
 /* AQUI SOMENTE CORES DA PÁGINA */
 
 
-
 .col{
     background-color: #6C9BD9;
 }
-
 .lista-nav {
     display: flex;
     justify-content: flex-start;
