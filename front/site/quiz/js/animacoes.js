@@ -7,6 +7,7 @@ let hindu = document.getElementById("linkHindu");
 let nordica = document.getElementById("linkNordica");
 let romana = document.getElementById("linkRomana");
 let mesopotamia = document.getElementById("link-dropdown-excessao");
+let mitologia = document.getElementById("link-mitologia");
 let quiz = document.getElementById("link-quiz");
 
 function mouseSair() {
@@ -19,15 +20,16 @@ function mouseSair() {
 
 document.getElementById("link-home").addEventListener("mouseleave", mouseSair);
 
-function mouseSairMitologia() {
-    let elementoGrecia = document.getElementById("link-mitologia");
-    elementoGrecia.classList.add("mouseSaiuMitologia");
-    setTimeout(() => {
-        elementoGrecia.classList.remove("mouseSaiuMitologia");
-    }, 300)
+if (mitologia !== null) {
+    function mouseSairMitologia() {
+        let elementoGrecia = document.getElementById("link-mitologia");
+        elementoGrecia.classList.add("mouseSaiuMitologia");
+        setTimeout(() => {
+            elementoGrecia.classList.remove("mouseSaiuMitologia");
+        }, 300)
+    }
+    document.getElementById("link-mitologia").addEventListener("mouseleave", mouseSairMitologia);
 }
-
-document.getElementById("link-mitologia").addEventListener("mouseleave", mouseSairMitologia);
 
 if (egito !== null) {
     function sairEgipcia() {
@@ -83,7 +85,7 @@ if (japonesa !== null) {
         let elementoJaponesa = document.getElementById("linkJaponesa");
         elementoJaponesa.classList.add("saiuJaponesa");
         setTimeout(() => {
-            elementoGr.classList.remove("saiuJaponesa");
+            elementoJaponesa.classList.remove("saiuJaponesa");
         }, 300);
     }
 
