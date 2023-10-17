@@ -479,6 +479,9 @@ header  {
  .col-8 img{
  height: 350px;
  display: block;
- margin:auto;
+ margin:20px auto;
  }
  
+ *, ::after, ::before {
+    box-sizing: border-box;
+  }
