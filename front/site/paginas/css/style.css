@@ -297,6 +297,13 @@ ul li ul.dropdown a:hover {
     padding-bottom: 8px;
 }
 
+#link-quiz{
+    background-color: #006a8a;
+    border-radius: 30px;
+    padding: 5px;
+ }
+ 
+
 #link-home:hover::after {
     content: "";
     height: 2px;
@@ -454,7 +461,9 @@ ul li ul.dropdown a:hover {
 header  {
     background-color: #01173b;
     color: #FDFDFD;
-}
+    padding: 20px;
+ }
+ 
 
 .img-dupla img{
     width: 350px;
@@ -468,7 +477,7 @@ header  {
  
  
  .col-8 img{
- width: 350px;
+ height: 350px;
  display: block;
  margin:auto;
  }
