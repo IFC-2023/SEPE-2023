@@ -88,15 +88,15 @@ ul li ul.dropdown a:hover {
     bottom: 2px;
 }
 
-#link-home > a, #link-mitologia > a {
+#link-home > a, #link-mitologia > a, #link-sair > a {
     padding-bottom: 8px;
 }
 
-#link-home:hover::after {
+#link-home:hover::after, #link-sair:hover::after {
     content: "";
     height: 2px;
     background-color: #366D73;
-    margin-left: 25px;
+    margin-left: 20px;
     display: block;
     width: 70%;
     transition: .5s;
@@ -116,10 +116,10 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.mouseSaiu::after {
+.mouseSaiu::after, .saiuLogin::after {
     content: "";
     background-color: #366D73;
-    margin-left: 25px;
+    margin-left: 20px;
     display: block;
     animation-name: sair-animation;
     animation-duration: .2s;
