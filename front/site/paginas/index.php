@@ -35,8 +35,8 @@
       <div class="conteudo">
         <div class="caixa egipcia">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
-            <h2>Mitologia egipcia</h2>
+            <img src="imagens/icons/Ankh.png" alt="" width="200px">
+            <h2>Mitologia egípcia</h2>
             <p>A mitologia egípcia é uma antiga tradição de crenças e histórias do Egito Antigo, envolvendo deuses, rituais e uma forte influência na cultura egípcia, com ênfase na vida após a morte.</p>
             <button class="alternar-aba" data-target="egipcia">Ver Mais</button>
           </div>
@@ -112,7 +112,7 @@
         </div>
         <div class="caixa japonesa">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+           <img src="imagens/icons/flor.png" alt="" width="200px">
             <h2>Mitologia japonesa</h2>
             <p>A mitologia japonesa é um conjunto de crenças e lendas do Japão, envolvendo deuses, espíritos e criaturas míticas que desempenham papéis significativos na cultura e espiritualidade japonesa.</p>
             <button class="alternar-aba" data-target="japonesa">Ver Mais</button>
@@ -131,8 +131,8 @@
         </div>
         <div class="caixa mesopotamica">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
-            <h2>Mitologia mesopotamica</h2>
+            <img src="imagens/icons/meso.png" alt="" width="200px">
+            <h2>Mitologia mesopotâmica</h2>
             <p>A mitologia mesopotâmica é um conjunto de crenças e lendas das antigas civilizações que habitaram a região da Mesopotâmia, entre os rios Tigre e Eufrates. Ela envolve uma variedade de deuses e figuras míticas que desempenharam papéis significativos na cultura dessas civilizações.</p>
             <button class="alternar-aba" data-target="mesopotamica">Ver Mais</button>
           </div>
@@ -188,7 +188,7 @@
         </div>
         <div class="caixa quiz">
           <div class="conteudocx">
-            <ion-icon name="image-outline"></ion-icon>
+           <img src="imagens/icons/25400.png" alt="" width="200px">
             <h2>Quiz geral</h2>
             <p>Agora que você já leu tudo sobre as mitologias, que tal jogar um quiz para testar os seus conhecimentos?</p>            
             <a href="../quiz/geral.html"><button>Jogue Agora!</button></a>

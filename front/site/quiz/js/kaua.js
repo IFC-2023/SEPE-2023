@@ -340,12 +340,4 @@ document.getElementById("btnPergunta10").addEventListener("click", () => {
     verificarContador();
 });
 
-// Após o envio bem-sucedido do formulário, rolar até a seção "fim"
-document.getElementById("quizForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Impedir o envio padrão do formulário
-
-    // Redirecionar para a seção "fim" (você pode usar métodos JavaScript para rolar suavemente)
-    document.getElementById("fim").scrollIntoView({ behavior: "smooth" });
-});
-
 
