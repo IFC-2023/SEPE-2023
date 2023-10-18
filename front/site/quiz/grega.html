@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
     <header>
         <nav>
             <ul class="lista-nav">
-                <li id="link-home"><a href="../paginas/index.html">HOME</a></li>
+                <li id="link-home"><a href="../paginas/index.php">HOME</a></li>
                 <li>
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
                     </ul>
                 </li>
                 <li id="link-mitologia"><a href="../paginas/grega.html">MITOLOGIA GREGA</a></li>
-                <li><a href="../../../back/logout.php">SAIR</a></li>
+                <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
             </ul>
         </nav>
     </header>
@@ -290,9 +290,7 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-6">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 6:</h1>
-                    <p class="pergunta">Glauco, um pescador que se tornou um deus marinho após comer uma erva 
-                    mágica dada a ele por Circe.6-Quem são os principais deuses do Olimpo na mitologia 
-                    grega e quais são suas áreas de domínio?</p>
+                    <p class="pergunta">Qual aspecto fundamental da natureza e da agricultura está diretamente associado a Deméter na mitologia grega?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
@@ -325,23 +323,28 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-7">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 7:</h1>
-                    <p class="pergunta">Explique a história de Ícaro na mitologia grega e como ela se relaciona com Dédalo.</p>
+                    <p class="pergunta">Qual é a história da Titanomaquia na mitologia grega e como os deuses olímpicos derrotaram os titãs?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Qual é a história da Titanomaquia na mitologia grega e como os deuses olímpicos derrotaram os titãs?</label>
-                    </div>
-
-                    <div class="radio-container">
-                        <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Ícaro é um deus menor sem uma história relevante.</label>
-                    </div>
-
-                    <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>Ícaro é o filho de Dédalo, um habilidoso artesão e inventor. Eles tentaram escapar de Creta voando com asas feitas de penas e cera, mas Ícaro voou muito perto do sol e caiu no mar.</label>
+                        <label>A - Os titãs eram deuses mais antigos que os olímpicos e foram derrotados em uma batalha liderada por Zeus.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Os titãs eram deuses mais poderosos que os olímpicos e governaram o Olimpo antes de uma trégua ser estabelecida.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Os titãs e os olímpicos uniram forças para enfrentar ameaças externas.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Os deuses olímpicos solicitaram ajuda a outras divindades para derrotar os titãs.</label>
                     </div>
 
                     <div class="buttonResponder">

@@ -8,7 +8,7 @@ let nordica = document.getElementById("linkNordica");
 let romana = document.getElementById("linkRomana");
 let mesopotamia = document.getElementById("link-dropdown-excessao");
 let mitologia = document.getElementById("link-mitologia");
-let quiz = document.getElementById("link-quiz");
+let sairLogin = document.getElementById("link-sair");
 
 function mouseSair() {
     let elementoHome = document.getElementById("link-home");
@@ -142,15 +142,13 @@ if (mesopotamia !== null) {
     document.getElementById("link-dropdown-excessao").addEventListener("mouseleave", linkMesopotamiaSair);
 }
 
-if (quiz !== null) {
-    function linkQuizSair() {
-        let elementoQuiz = document.getElementById("link-quiz");
-        elementoQuiz.classList.add("saiuQuiz");
 
-        setTimeout(() => {
-            elementoQuiz.classList.remove("saiuQuiz");
-        }, 300);
-    }
-
-    document.getElementById("link-quiz").addEventListener("mouseleave", linkQuizSair);
+function sairLogout() {
+    let elementoHome = document.getElementById("link-sair");
+    elementoHome.classList.add("saiuLogin");
+    setTimeout(() => {
+        elementoHome.classList.remove("saiuLogin");
+    }, 300);
 }
+
+document.getElementById("link-sair").addEventListener("mouseleave", sairLogout);

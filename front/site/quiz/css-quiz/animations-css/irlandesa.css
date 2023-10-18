@@ -88,15 +88,15 @@ ul li ul.dropdown a:hover {
     bottom: 2px;
 }
 
-#link-home > a, #link-mitologia > a {
+#link-home > a, #link-mitologia > a, #link-sair > a {
     padding-bottom: 8px;
 }
 
-#link-home:hover::after {
+#link-home:hover::after, #link-sair:hover::after {
     content: "";
     height: 2px;
     background-color: #ff883e;
-    margin-left: 25px;
+    margin-left: 20px;
     display: block;
     width: 70%;
     transition: .5s;
@@ -116,10 +116,10 @@ ul li ul.dropdown a:hover {
     }
 }
 
-.mouseSaiu::after {
+.mouseSaiu::after, .saiuLogin::after {
     content: "";
     background-color: #ff883e;
-    margin-left: 25px;
+    margin-left: 20px;
     display: block;
     animation-name: sair-animation;
     animation-duration: .2s;
@@ -270,8 +270,8 @@ ul li ul.dropdown a:hover {
 }
 
 #introducao {
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -480,8 +480,8 @@ label {
 }
 
 #secao-pergunta-1 {
-    display: grid;
-    /* display: none; */
+    /* display: grid; */
+    display: none;
     grid-template-areas:
     "informacoes" "alternativas";
     grid-template-columns: 1fr 1fr;

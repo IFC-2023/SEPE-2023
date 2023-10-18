@@ -47,7 +47,7 @@ main {
   }
 
   .language-icon img{
-    width: 25px;
+    width: 40px;
     display: flex;
     align-items: self-end;
     font-size: 1.5rem;
@@ -60,3 +60,55 @@ main {
     text-align: center;
     align-items: center;
   }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #01173b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 30px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+input[type=button] {
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    color: #fff;
+    width: 250px;
+    padding: 12px;
+    margin-left: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3479d4;
+    margin-bottom: 20px;
+}
