@@ -29,14 +29,22 @@ if (isset($_POST['submit'])) {
     $idUsuarioSession = $_SESSION['idUsuario'];
     $idMitologiaSession = $_SESSION['idMitologia'];
     $totalAcertos = $contadorAcertos;
-    $verificacaoDados = "SELECT * FROM jogador WHERE jogador_id = '" . intval($idUsuarioSession) . "' AND mitologia_id = " . intval($idMitologiaSession);
+    $verificacaoDados = "SELECT * FROM partida WHERE jogador_id = '" . intval($idUsuarioSession) . "' AND mitologia_id = " . intval($idMitologiaSession);
+    $resultadoVerificacao = mysqli_query($conexao, $verificacaoDados);
 
 
-    if ()
-    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', 1)";
+    if ($resultadoVerificacao->num_rows > 0) {
+        $updateDados = mysqli_query($conexao, "UPDATE partida SET pontuacao = '$contadorAcertos' WHERE jogador_id = '" . intval($idUsuarioSession) . "' AND mitologia_id = " . intval($idMitologiaSession));
+    } else {
+        $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', '" . $_SESSION['idMitologia'] . "')";
 
-    $resultado = mysqli_query($conexao, $inserirDados);
+        $resultado = mysqli_query($conexao, $inserirDados);
+    }
 
-    header('Location: http://localhost/SEPE/front/site/quiz/resultados.php');
+    $verificacaoInsert = mysqli_query($conexao, "SELECT * FROM partida WHERE jogador_id = " . intval($idUsuarioSession) . " AND mitologia_id = " . intval($idMitologiaSession));
+
+    if ($verificacaoInsert -> num_rows > 0) {
+        header('Location: http://localhost/SEPE/front/site/quiz/resultados.php');
+    }
 }
 ?>
