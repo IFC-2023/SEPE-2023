@@ -439,18 +439,23 @@ if (isset($_POST['submit'])) {
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Os Argonautas são deuses menores sem uma missão lendária.</label>
-                    </div>
-
-                    <div class="radio-container">
-                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>Os Argonautas são um grupo de heróis liderados por Jasão, que embarcaram na busca pelo Velocino de Ouro, uma missão épica repleta de desafios e aventuras.
-                        </label>
+                        <label>A - Édipo era um herói que realizou grandes feitos.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Os Argonautas são monstros marinhos temidos pelos marinheiros gregos.</label>
+                        <label>B - Édipo era um deus que se apaixonou por uma mortal.
+                        </label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
+                        <label>C - Édipo era um rei que matou seu pai e se casou com sua mãe, trazendo desgraça à sua cidade.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Édipo era um adivinho que previu o futuro com precisão.</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -463,7 +468,7 @@ if (isset($_POST['submit'])) {
             <section id="fim">
                 <div id="congratulations">
                     <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
-                    <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
+                    <p id="acertos"></p>
 
                     <?php
                 if(isset($_POST['submit'])) {

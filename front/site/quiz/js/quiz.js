@@ -1,4 +1,3 @@
-const main = document.getElementsByTagName("main");
 const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
 const pg3 = document.getElementById("secao-pergunta-3");
@@ -310,10 +309,6 @@ function responder10() {
         setTimeout(() => {
           resCerta.style.display = "none";
           fim.style.display = "grid";
-          for (let c = 0; c < main.length; c++) {
-            main[c].style.backgroundColor = "#241bb9";
-            main[c].style.height = "91.9vh";
-          }
         }, 1500);
       } else if (valorResposta === "errado") {
         pg10.style.display = "none";
@@ -321,10 +316,6 @@ function responder10() {
         setTimeout(() => {
           resErrada.style.display = "none";
           fim.style.display = "grid";
-          for (let c = 0; c < main.length; c++) {
-            main[c].style.backgroundColor = "#241bb9";
-            main[c].style.height = "91.9vh";
-          }
         }, 1500);
       }
       break;
