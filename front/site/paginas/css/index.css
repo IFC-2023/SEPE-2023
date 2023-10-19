@@ -205,8 +205,18 @@
     text-align: left;
     justify-content: center;
     text-align: center;
+    animation: abaVindo 0.7s ease forwards;
 }
 
+@keyframes abaVindo {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
 .aba>h1{
  text-align: center;
  margin: 40px;
