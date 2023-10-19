@@ -111,4 +111,5 @@ input[type=button] {
     cursor: pointer;
     background-color: #3479d4;
     margin-bottom: 20px;
+    margin-left: 20px;
 }
