@@ -45,6 +45,8 @@ if (isset($_POST['submit'])) {
 
     if ($verificacaoInsert -> num_rows > 0) {
         header('Location: http://localhost/SEPE/front/site/quiz/resultados.php');
+    } else {
+        echo "Conexão falhou " . mysqli_error($conexao);
     }
 }
 ?>

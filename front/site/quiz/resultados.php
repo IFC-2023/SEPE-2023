@@ -1,6 +1,7 @@
 <?php
-if (isset($_POST['submit'])) {
-    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
+    include_once("./back/processar.php");
+
+    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = " . intval($idMitologiaSession);
     $result = mysqli_query($conexao, $recebendoId);
     $objetosPartida = [];
 
@@ -47,5 +48,43 @@ if (isset($_POST['submit'])) {
         echo "</tr>";
     }
     echo "</table>";
-}
+
+    $imagem = '';
+    if ($idMitologiaSession === '1') {
+        $imagem = '../../../back/imagens/mitologia-grega.jpg';
+    } else if ($idMitologiaSession === '2') {
+        $imagem = '../../../back/imagens/mitologia-egipcia.jpg';
+    } else if ($idMitologiaSession === '3') {
+        $imagem = '../../../back/imagens/mitologia-hindu.jpg';
+    } else if ($idMitologiaSession === '4') {
+        $imagem = '../../../back/imagens/irlandesa/brigid-1.jpg';
+    } else if ($idMitologiaSession === '5') {
+        $imagem = '../../../back/imagens/Prince_Hanzoku_terrorised_by_a_nine-_tailed_fox.jpg';
+    } else if ($idMitologiaSession === '6') {
+        $imagem = '../../../back/imagens/mitologia-mesopotamica.jpg';
+    } else if ($idMitologiaSession === '7') {
+        $imagem = '../../../back/imagens/mitologia-nordica.jpg';
+    } else if ($idMitologiaSession === '8') {
+        $imagem = '../../../back/imagens/mitologia-romana.jpg';
+    } else if ($idMitologiaSession === '9') {
+        $imagem = '../../../back/imagens/';
+    } else {
+        echo "Id errado";
+    }
+
+
+
+    $_SESSION['idMitologia'] = '';
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+</head>
+<body>
+
+</body>
+</html>
