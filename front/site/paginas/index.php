@@ -1,3 +1,11 @@
+<?php
+if(!isset($_SESSION)) {
+  session_start();
+}
+
+include('../../../back/protecao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

@@ -1,3 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+.lista-nav {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 20px 0 20px 0;
+}
+
+.lista-nav > li > a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.dropdown {
+    background-color: rgba(255, 255, 255, 0.959);
+    padding: 8px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 40px;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+ul li ul.dropdown a {
+    opacity: 0.5;
+}
+  
+
+ul li ul.dropdown a:hover {
+    opacity: 1;
+    color: #000;
+}
+
+.dropdown > li > a {
+    padding: 10px 50px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown > #margin-top-dropdown > a {
+    margin-top: 20px;
+}
+
+#seta-baixo {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+}
+
+#link-home > a, #link-mitologia > a, #link-sair > a {
+    padding-bottom: 8px;
+}
+
+#link-home:hover::after, #link-sair:hover::after {
+    content: "";
+    height: 2px;
+    background-color: #01173b;
+    margin-left: 20px;
+    display: block;
+    width: 70%;
+    transition: .5s;
+    animation-name: hover-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes hover-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.mouseSaiu::after, .saiuLogin::after {
+    content: "";
+    background-color: #01173b;
+    margin-left: 20px;
+    display: block;
+    animation-name: sair-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-animation {
+    0% {
+        width: 70%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+#link-mitologia:hover::after {
+    content: "";
+    height: 2px;
+    background-color: #01173b;
+    margin-left: 25px;
+    display: block;
+    width: 80%;
+    transition: .5s;
+    animation-name: hover-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.mouseSaiuMitologia::after {
+    content: "";
+    background-color: #01173b;
+    margin-left: 25px;
+    display: block;
+    animation-name: sair-animation-grecia;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-animation-grecia {
+    0% {
+        width: 80%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+.dropdown > li > a {
+    padding: 8px 8px;
+}
+
+#margin-top-dropdown:hover::after,  #linkGrecia:hover::after, #linkHindu:hover::after, #linkIrlandesa:hover::after, #linkJaponesa:hover::after, #linkNordica:hover::after, #linkGeral:hover::after, #linkRomana:hover::after {
+    content: "";
+    height: 2px;
+    background-color: #01173b;
+    display: block;
+    width: 100%;
+    animation-name: dropdown-animations;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes dropdown-animations {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+#link-dropdown-excessao:hover::after {
+    content: "";
+    height: 2px;
+    background-color: #01173b;
+    display: block;
+    width: 100%;
+    animation-name: dropdown-excessao-animation;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes dropdown-excessao-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.saiuEgipcia::after, .saiuGrecia::after, .saiuGeral::after, .saiuHindu::after, .saiuIrlandesa::after, .saiuJaponesa::after, .saiuNordica::after, .saiuRomana::after {
+    content: "";
+    background-color: #01173b;
+    width: 100%;
+    display: block;
+    animation-name: sair-dropdown-animations;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-dropdown-animations {
+    0% {
+        width: 100%;
+        height: 2px;
+    }
+
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+.saiuMesopotamia::after {
+    content: "";
+    background-color: #01173b;
+    display: block;
+    width: 100%;
+    animation-name: sair-dropdown-excessao;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes sair-dropdown-excessao {
+    0% {
+        width: 100%;
+        height: 2px;
+    }
+    100% {
+        width: 0%;
+        height: 2px;
+    }
+}
+
+main {
+    height: 90.9vh;
+}
+
+#fim {
+    display: flex;
+    justify-content: space-around;
+    height: 90.9vh;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -13,5 +294,7 @@ th {
 }
 
 #imagemMitologia {
-    width: 200px;
+    width: 50%;
+    margin-left: 100px;
 }
+

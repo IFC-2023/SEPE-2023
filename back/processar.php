@@ -18,10 +18,12 @@ if (isset($_POST['submit'])) {
     $q9 = $_POST['questao9'];
     $q10 = $_POST['questao10'];
     array_push($arrayContador, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10);
-    $contadorAcertos = array_reduce($arrayContador, function ($soma, $valor) {
+
+    $contadorAcertos = array_reduce($arrayContador, function($soma, $valor) {
         if ($valor === "certo") {
             return $soma + 1;
         }
+        return $soma; // Retorne $soma em todos os casos
     }, 0);
 
     $idUsuarioSession = $_SESSION['idUsuario'];

@@ -4,6 +4,7 @@ if (!isset($_SESSION)) {
 }
 
 include_once("../../../back/config.php");
+include_once("../../../back/processar.php");
 
 $idMitologiaSession = $_SESSION['idMitologia'];
 $recebendoId = "SELECT * FROM partida WHERE mitologia_id = " . intval($idMitologiaSession);
@@ -61,11 +62,34 @@ if ($idMitologiaSession === '1') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-quiz/resultados.css">
+    <link rel="stylesheet" href="css-quiz/animations-css/resultados.css">
+    <script src="js/animacoes.js" defer></script>
     <title>Resultados</title>
 </head>
 
 <body>
+
+    <header>
+        <nav>
+            <ul class="lista-nav">
+                <li id="link-home"><a href="../paginas/index.php">HOME</a></li>
+                <li>
+                    <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
+                    <ul class="dropdown">
+                        <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
+                        <li class="link-dropdown" id="linkHindu"><a href="hindu.html">Hindu</a></li>
+                        <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
+                        <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
+                        <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
+                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
+                        <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
+                    </ul>
+                </li>
+                <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section id="fim">
@@ -73,33 +97,35 @@ if ($idMitologiaSession === '1') {
                 <img <?php echo "src=$imagem" ?> alt="" id="imagemMitologia">
                 <p id="acertos"></p>
             </div>
-        </section>
 
-        <section>
-            <?php
-            echo "<table id='tabela'>";
-            echo "<thead>";
-            echo "<th>Colocação</th>";
-            echo "<th>Nome</th>";
-            echo "<th>Pontuação</th>";
-            echo "</thead>";
-            for ($c = 0; $c < count($objetosPartida); $c++) {
-                $idNum = intval($objetosPartida[$c]['idJogador']);
-                $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
-                $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
-                if (!$resultadoNome) {
-                    die("Erro: " . mysqli_error($conexao));
+            <div>
+                <?php
+                echo "<table id='tabela'>";
+                echo "<thead>";
+                echo "<th>Colocação</th>";
+                echo "<th>Nome</th>";
+                echo "<th>Pontuação</th>";
+                echo "</thead>";
+                for ($c = 0; $c < count($objetosPartida); $c++) {
+                    $idNum = intval($objetosPartida[$c]['idJogador']);
+                    $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
+                    $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
+
+                    if (!$resultadoNome) {
+                        die("Erro: " . mysqli_error($conexao));
+                    }
+                    $rowNome = mysqli_fetch_assoc($resultadoNome);
+
+                    $nome = $rowNome['apelido'];
+                    echo "<tr>";
+                    echo "<td>" . ($c + 1) . "</td>";
+                    echo "<td>" . $nome . "</td>";
+                    echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
+                    echo "</tr>";
                 }
-                $rowNome = mysqli_fetch_assoc($resultadoNome);
-                $nome = $rowNome['apelido'];
-                echo "<tr>";
-                echo "<td>" . $c + 1 . "</td>";
-                echo "<td>" . $nome . "</td>";
-                echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-            ?>
+                echo "</table>";
+                ?>
+            </div>
         </section>
     </main>
 
