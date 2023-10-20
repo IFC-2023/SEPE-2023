@@ -5,8 +5,6 @@ if (!isset($_SESSION)) {
 
 include_once("config.php");
 
-include('../../../back/protecao.php');
-
 if (isset($_POST['submit'])) {
     $arrayContador = [];
     $q1 = $_POST['questao1'];

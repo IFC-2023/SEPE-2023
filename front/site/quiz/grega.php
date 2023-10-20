@@ -35,9 +35,9 @@ if (!isset($_SESSION)) {
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
                         <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
-                        <li class="link-dropdown" id="linkGrecoRomana"><a href="greco-romana.html">Greco-Romana</a></li>
                         <li class="link-dropdown" id="linkHindu"><a href="hindu.html">Hindu</a></li>
                         <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
                         <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
                         <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
                         <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
@@ -248,8 +248,7 @@ if (!isset($_SESSION)) {
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
                         <label>D - Glauco, um pescador que se tornou um deus marinho após comer uma erva
-                        mágica dada a ele por Circe.6-Quem são os principais deuses do Olimpo na mitologia 
-                        grega e quais são suas áreas de domínio?</label>
+                        mágica dada a ele por Circe.</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -429,7 +428,7 @@ if (!isset($_SESSION)) {
                         <label>D - Édipo era um adivinho que previu o futuro com precisão.</label>
                     </div>
 
-                    <?php $_SESSION['idMitologia'] = "1" ?>
+                    <?php $_SESSION['idMitologia'] = "1"; ?>
 
                     <div class="buttonResponder">
                         <input type="submit" value="Terminar" id="btnPergunta10" name="submit">
@@ -437,13 +436,6 @@ if (!isset($_SESSION)) {
                 </div>
             </section>
         </form>
-
-            <section id="fim">
-                <div id="congratulations">
-                    <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
-                    <p id="acertos"></p>
-                </div>
-            </section>
     </main>
 
     <script>
@@ -455,7 +447,7 @@ if (!isset($_SESSION)) {
             xhr.open('POST', '../../../back/processar.php', true);
             xhr.onload = function () {
                 if (xhr.status === 200) {
-                    window.location.href = 'resultados.php'
+                    window.location.href = '../../../back/processar.php';
                 } else {
                     console.log('Erro ao processar o formulário');
                 }
