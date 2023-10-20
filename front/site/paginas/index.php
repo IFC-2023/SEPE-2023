@@ -1,6 +1,14 @@
+<?php
+if(!isset($_SESSION)) {
+  session_start();
+}
+
+include('../../../back/protecao.php');
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +45,8 @@
           <div class="conteudocx">
             <img src="imagens/icons/Ankh.png" alt="" width="200px">
             <h2>Mitologia egípcia</h2>
-            <p>A mitologia egípcia é uma antiga tradição de crenças e histórias do Egito Antigo, envolvendo deuses, rituais e uma forte influência na cultura egípcia, com ênfase na vida após a morte.</p>
+            <p>A mitologia egípcia é uma antiga tradição de crenças e histórias do Egito Antigo, envolvendo deuses,
+              rituais e uma forte influência na cultura egípcia, com ênfase na vida após a morte.</p>
             <button class="alternar-aba" data-target="egipcia">Ver Mais</button>
           </div>
           <div class="aba">
@@ -56,7 +65,8 @@
           <div class="conteudocx">
             <img src="imagens/icons/helenismo2.png" alt="" width="200px">
             <h2>Mitologia grega</h2>
-            <p>A mitologia grega é um conjunto de lendas e histórias da Grécia Antiga sobre deuses, heróis e criaturas míticas que desempenharam papéis significativos na cultura e na compreensão do mundo naquela época.</p>
+            <p>A mitologia grega é um conjunto de lendas e histórias da Grécia Antiga sobre deuses, heróis e criaturas
+              míticas que desempenharam papéis significativos na cultura e na compreensão do mundo naquela época.</p>
             <button class="alternar-aba" data-target="grega">Ver Mais</button>
           </div>
           <div class="aba">
@@ -75,7 +85,9 @@
           <div class="conteudocx">
             <img src="imagens/icons/hindu.png" alt="" width="200px">
             <h2>Mitologia hindu</h2>
-            <p>A mitologia hindu é um conjunto de histórias e crenças da Índia, envolvendo diversos deuses e deusas, lendas e ensinamentos espirituais que têm sido fundamentais na cultura e na religião hindu ao longo da história.</p>
+            <p>A mitologia hindu é um conjunto de histórias e crenças da Índia, envolvendo diversos deuses e deusas,
+              lendas e ensinamentos espirituais que têm sido fundamentais na cultura e na religião hindu ao longo da
+              história.</p>
             <button class="alternar-aba" data-target="hindu">Ver Mais</button>
           </div>
           <div class="aba">
@@ -94,7 +106,9 @@
           <div class="conteudocx">
             <img src="imagens/icons/celta.png" alt="" width="200px">
             <h2>Mitologia irlandesa</h2>
-            <p>A mitologia irlandesa é um rico conjunto de mitos e lendas que fazem parte do folclore da Irlanda. Ela apresenta deuses, heróis e criaturas mágicas, e desempenhou um papel importante na cultura irlandesa ao longo da história.</p>
+            <p>A mitologia irlandesa é um rico conjunto de mitos e lendas que fazem parte do folclore da Irlanda. Ela
+              apresenta deuses, heróis e criaturas mágicas, e desempenhou um papel importante na cultura irlandesa ao
+              longo da história.</p>
             <button class="alternar-aba" data-target="irlandesa">Ver Mais</button>
           </div>
           <div class="aba">
@@ -105,16 +119,17 @@
               <li>Panteão Irlandês</li>
               <li>Elementos Folclóricos</li>
               <li>The Leprechauns</li>
-              
+
             </ul>
             <a href="../paginas/irlandesa.html"><button class="irlandesa">Ir Para A Pagina</button></a>
           </div>
         </div>
         <div class="caixa japonesa">
           <div class="conteudocx">
-           <img src="imagens/icons/flor.png" alt="" width="200px">
+            <img src="imagens/icons/flor.png" alt="" width="200px">
             <h2>Mitologia japonesa</h2>
-            <p>A mitologia japonesa é um conjunto de crenças e lendas do Japão, envolvendo deuses, espíritos e criaturas míticas que desempenham papéis significativos na cultura e espiritualidade japonesa.</p>
+            <p>A mitologia japonesa é um conjunto de crenças e lendas do Japão, envolvendo deuses, espíritos e criaturas
+              míticas que desempenham papéis significativos na cultura e espiritualidade japonesa.</p>
             <button class="alternar-aba" data-target="japonesa">Ver Mais</button>
           </div>
           <div class="aba">
@@ -133,7 +148,9 @@
           <div class="conteudocx">
             <img src="imagens/icons/meso.png" alt="" width="200px">
             <h2>Mitologia mesopotâmica</h2>
-            <p>A mitologia mesopotâmica é um conjunto de crenças e lendas das antigas civilizações que habitaram a região da Mesopotâmia, entre os rios Tigre e Eufrates. Ela envolve uma variedade de deuses e figuras míticas que desempenharam papéis significativos na cultura dessas civilizações.</p>
+            <p>A mitologia mesopotâmica é um conjunto de crenças e lendas das antigas civilizações que habitaram a
+              região da Mesopotâmia, entre os rios Tigre e Eufrates. Ela envolve uma variedade de deuses e figuras
+              míticas que desempenharam papéis significativos na cultura dessas civilizações.</p>
             <button class="alternar-aba" data-target="mesopotamica">Ver Mais</button>
           </div>
           <div class="aba">
@@ -152,7 +169,9 @@
           <div class="conteudocx">
             <img src="imagens/icons/1200px-Aegishjalmr.svg.png" alt="" width="200px">
             <h2>Mitologia nordica</h2>
-            <p>A mitologia nórdica, ou escandinava, é um conjunto de lendas e crenças das culturas da Escandinávia, incluindo deuses, heróis e criaturas míticas que desempenham papéis importantes nas histórias e na cultura desses povos.</p>
+            <p>A mitologia nórdica, ou escandinava, é um conjunto de lendas e crenças das culturas da Escandinávia,
+              incluindo deuses, heróis e criaturas míticas que desempenham papéis importantes nas histórias e na cultura
+              desses povos.</p>
             <button class="alternar-aba" data-target="nordica">Ver Mais</button>
           </div>
           <div class="aba">
@@ -169,9 +188,11 @@
         </div>
         <div class="caixa romana">
           <div class="conteudocx">
-            <img src="imagens/icons/ddf1d5c26412724c504305be6351106a-icone-de-golpe-de-capacete-romano.png" alt="" width="200px">
+            <img src="imagens/icons/ddf1d5c26412724c504305be6351106a-icone-de-golpe-de-capacete-romano.png" alt=""
+              width="200px">
             <h2>Mitologia romana</h2>
-            <p>A mitologia romana é um conjunto de crenças e lendas da Roma Antiga, envolvendo deuses, heróis e histórias que desempenharam papéis significativos na cultura e religião romanas.</p>
+            <p>A mitologia romana é um conjunto de crenças e lendas da Roma Antiga, envolvendo deuses, heróis e
+              histórias que desempenharam papéis significativos na cultura e religião romanas.</p>
             <button class="alternar-aba" data-target="romana">Ver Mais</button>
           </div>
           <div class="aba">
@@ -188,9 +209,10 @@
         </div>
         <div class="caixa quiz">
           <div class="conteudocx">
-           <img src="imagens/icons/25400.png" alt="" width="200px">
+            <img src="imagens/icons/25400.png" alt="" width="200px">
             <h2>Quiz geral</h2>
-            <p>Agora que você já leu tudo sobre as mitologias, que tal jogar um quiz para testar os seus conhecimentos?</p>            
+            <p>Agora que você já leu tudo sobre as mitologias, que tal jogar um quiz para testar os seus conhecimentos?
+            </p>
             <a href="../quiz/geral.html"><button>Jogue Agora!</button></a>
           </div>
         </div>
@@ -202,31 +224,33 @@
   <script>
     const buttons = document.querySelectorAll('.alternar-aba');
     buttons.forEach(button => {
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         const targetId = this.getAttribute('data-target');
         const aba = document.querySelector(`.${targetId} .aba`);
-        
+
         if (aba.style.display === 'none' || aba.style.display === '') {
           aba.style.display = 'block';
           this.textContent = 'Voltar';
-          document.querySelector(`.${targetId} .conteudocx`).style.width = `50vw`;
-          document.querySelector(`.${targetId} .botoes`).display =`none`;
+          document.querySelector(`.${targetId} .conteudocx`).style.width = '50vw';
+          document.querySelector(`.${targetId} .botoes`).style.display = 'none';
           let botoes = document.getElementsByClassName("botoes");
-          for (let c = 0; c < botoes; c++) {
+          for (let c = 0; c < botoes.length; c++) {
             botoes[c].style.display = 'flex';
           }
         } else {
           aba.style.display = 'none';
           this.textContent = 'Ver Mais';
-          document.querySelector(`.${targetId} .conteudocx`).style.width = `100vw`;
-          document.querySelector(`.${targetId} .botoes`).style.display =`flex`;
+          document.querySelector(`.${targetId} .conteudocx`).style.width = '100vw';
+          document.querySelector(`.${targetId} .botoes`).style.display = 'flex';
           let botoes = document.getElementsByClassName("botoes");
-          for (let c = 0; c < botoes; c++) {
+          for (let c = 0; c < botoes.length; c++) {
             botoes[c].style.display = 'none';
           }
+          aba.classList.add('voltar');
         }
       });
     });
   </script>
 </body>
+
 </html>

@@ -1,37 +1,8 @@
-<!-- <?php
+<?php
 if (!isset($_SESSION)) {
     session_start();
 }
-include_once('config_php/config-front.php');
-
-include('../../../back/protecao.php');
-
-if (isset($_POST['submit'])) {
-    $arrayContador = [];
-    $q1 = $_POST['questao1'];
-    $q2 = $_POST['questao2'];
-    $q3 = $_POST['questao3'];
-    $q4 = $_POST['questao4'];
-    $q5 = $_POST['questao5'];
-    $q6 = $_POST['questao6'];
-    $q7 = $_POST['questao7'];
-    $q8 = $_POST['questao8'];
-    $q9 = $_POST['questao9'];
-    $q10 = $_POST['questao10'];
-    array_push($arrayContador, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10);
-    $contadorAcertos = array_reduce($arrayContador, function ($soma, $valor) {
-        if ($valor === "certo") {
-            return $soma + 1;
-        }
-    }, 0);
-
-    $totalAcertos = $contadorAcertos;
-
-    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', 1)";
-
-    $resultado = mysqli_query($conexao, $inserirDados);
-}
-?>-->
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -64,9 +35,9 @@ if (isset($_POST['submit'])) {
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
                         <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
-                        <li class="link-dropdown" id="linkGrecoRomana"><a href="greco-romana.html">Greco-Romana</a></li>
                         <li class="link-dropdown" id="linkHindu"><a href="hindu.html">Hindu</a></li>
                         <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
                         <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
                         <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
                         <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
@@ -80,7 +51,7 @@ if (isset($_POST['submit'])) {
     </header>
 
     <main>
-        <form action="grega.php" method="post" id="formulario_quiz">
+        <form action="../../../back/processar.php" method="post" id="formulario_quiz">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
 
@@ -277,8 +248,7 @@ if (isset($_POST['submit'])) {
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
                         <label>D - Glauco, um pescador que se tornou um deus marinho após comer uma erva
-                        mágica dada a ele por Circe.6-Quem são os principais deuses do Olimpo na mitologia 
-                        grega e quais são suas áreas de domínio?</label>
+                        mágica dada a ele por Circe.</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -458,71 +428,33 @@ if (isset($_POST['submit'])) {
                         <label>D - Édipo era um adivinho que previu o futuro com precisão.</label>
                     </div>
 
+                    <?php $_SESSION['idMitologia'] = "1"; ?>
+
                     <div class="buttonResponder">
                         <input type="submit" value="Terminar" id="btnPergunta10" name="submit">
                     </div>
                 </div>
             </section>
         </form>
-
-            <section id="fim">
-                <div id="congratulations">
-                    <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
-                    <p id="acertos"></p>
-
-                    <?php
-                if(isset($_POST['submit'])) {
-                    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
-                    $result = mysqli_query($conexao, $recebendoId);
-                    $objetosPartida = [];
-                
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $objetosPartida[] = array(
-                            "id" => $row['id'],
-                            "pontuacao" => $row['pontuacao'],
-                            "idJogador" => $row['jogador_id']
-                        );
-                    }
-                
-                    function compararDecrescente($a, $b) {
-                        if ($a['pontuacao'] == $b['pontuacao']) {
-                            return 0;
-                        }
-                        return ($a['pontuacao'] < $b['pontuacao']) ? 1 : -1;
-                    }
-                
-                    usort($objetosPartida, 'compararDecrescente');
-                
-                    $idUsuario = '';
-                    $qtdAcertos = '';
-                
-                    echo "<table id='tabela'>";
-                    echo "<thead>";
-                    echo "<th>Colocação</th>";
-                    echo "<th>Nome</th>";
-                    echo "<th>Pontuação</th>";
-                    echo "</thead>";
-                    for ($c = 0; $c < count($objetosPartida); $c++) {
-                        $idNum = intval($objetosPartida[$c]['idJogador']);
-                        $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
-                        $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
-                        if (!$resultadoNome) {
-                            die ("Erro: " . mysqli_error($conexao));
-                        }
-                        $rowNome = mysqli_fetch_assoc($resultadoNome);
-                        $nome = $rowNome['apelido'];
-                        echo "<tr>";
-                        echo "<td>" . $c + 1 . "</td>";
-                        echo "<td>" . $nome . "</td>";
-                        echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
-                        echo "</tr>";
-                    }
-                    echo "</table>";
-                }
-                ?>
-                </div>
-            </section>
     </main>
+
+    <script>
+        function submitForm() {
+            let form = document.getElementById("formulario_quiz");
+            let formData = new FormData(form);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '../../../back/processar.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = '../../../back/processar.php';
+                } else {
+                    console.log('Erro ao processar o formulário');
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
 </body>
 
 </html>
