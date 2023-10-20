@@ -26,6 +26,8 @@ if (isset($_POST['submit'])) {
         return $soma; // Retorne $soma em todos os casos
     }, 0);
 
+    $_SESSION['acertos'] = $contadorAcertos;
+
     $idUsuarioSession = $_SESSION['idUsuario'];
     $idMitologiaSession = $_SESSION['idMitologia'];
     $totalAcertos = $contadorAcertos;

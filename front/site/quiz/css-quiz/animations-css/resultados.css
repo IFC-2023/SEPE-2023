@@ -270,13 +270,24 @@ ul li ul.dropdown a:hover {
 }
 
 main {
-    height: 90.9vh;
+    height: 91.84vh;
 }
 
 #fim {
     display: flex;
     justify-content: space-around;
     height: 90.9vh;
+}
+
+#div_tabela {
+}
+
+table {
+    position: relative;
+    margin-top: 100px;
+    margin-right: 200px;
+    right: 80px;
+    width: 100%;
 }
 
 table, th, td {
@@ -295,6 +306,30 @@ th {
 
 #imagemMitologia {
     width: 50%;
+    height: 80%;
+    border-radius: 20px;
+    border: 3px solid;
+    margin-top: 80px;
     margin-left: 100px;
+}
+
+#acertos {
+    color: #000;
+    position: relative;
+    bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.959);
+    left: 103px;
+    width: 660px;
+    height: 45px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#parabens {
+    position: relative;
+    text-align: center;
+    top: 6px;
+    margin-right: 10px;
+    font-size: 1.8em;
 }
 

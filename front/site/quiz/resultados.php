@@ -6,6 +6,7 @@ if (!isset($_SESSION)) {
 include_once("../../../back/config.php");
 include_once("../../../back/processar.php");
 
+$sessaoAcertos = $_SESSION['acertos'];
 $idMitologiaSession = $_SESSION['idMitologia'];
 $recebendoId = "SELECT * FROM partida WHERE mitologia_id = " . intval($idMitologiaSession);
 $result = mysqli_query($conexao, $recebendoId);
@@ -54,6 +55,9 @@ if ($idMitologiaSession === '1') {
 } else {
     echo "Id errado";
 }
+
+$_SESSION['IdMitologia'] = '';
+$_SESSION['acertos'] = '';
 ?>
 
 <!DOCTYPE html>
@@ -77,13 +81,13 @@ if ($idMitologiaSession === '1') {
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
                         <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
+                        <li class="link-dropdown" id="linkGrecia"><a href="grega.php">Grega</a></li>
                         <li class="link-dropdown" id="linkHindu"><a href="hindu.html">Hindu</a></li>
                         <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
                         <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
                         <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
                         <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
                         <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
-                        <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
                     </ul>
                 </li>
                 <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
@@ -95,10 +99,10 @@ if ($idMitologiaSession === '1') {
         <section id="fim">
             <div id="congratulations">
                 <img <?php echo "src=$imagem" ?> alt="" id="imagemMitologia">
-                <p id="acertos"></p>
+                <div id="acertos"><p id="parabens">Parabéns, você acertou <?php echo "$sessaoAcertos"?> de 10!</p></div>
             </div>
 
-            <div>
+            <div id="div_tabela">
                 <?php
                 echo "<table id='tabela'>";
                 echo "<thead>";
