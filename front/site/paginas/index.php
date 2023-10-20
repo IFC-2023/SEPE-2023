@@ -1,9 +1,9 @@
 <?php
-if(!isset($_SESSION)) {
-  session_start();
-}
-
-include('../../../back/protecao.php');
+  if(!isset($_SESSION)) {
+    session_start();
+  }
+  
+  include('../../../back/protecao.php');
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +43,7 @@ include('../../../back/protecao.php');
       <div class="conteudo">
         <div class="caixa egipcia">
           <div class="conteudocx">
-            <img src="imagens/icons/Ankh.png" alt="" width="200px">
+            <img src="imagens/icons/a3c8d320af0892d9de11c70f30f2fb8a-olho-budista-do-icone-de-horus.png" alt="" width="200px">
             <h2>Mitologia egípcia</h2>
             <p>A mitologia egípcia é uma antiga tradição de crenças e histórias do Egito Antigo, envolvendo deuses,
               rituais e uma forte influência na cultura egípcia, com ênfase na vida após a morte.</p>
