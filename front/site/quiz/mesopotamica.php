@@ -1,12 +1,18 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-quiz/animations-css/egipcia.css">
+    <link rel="stylesheet" href="css-quiz/animations-css/mesopotamica.css">
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
-    <title>Quiz Egípcia</title>
+    <title>Quiz Mesopotâmia</title>
 </head>
 <body>
     <header>
@@ -16,24 +22,24 @@
                 <li>
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
+                        <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
                         <li class="link-dropdown" id="linkGrecia"><a href="grega.php">Grécia</a></li>
                         <li class="link-dropdown"id="linkHindu"><a href="hindu.html">Hindu</a></li>
-                        <li id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
                         <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
-                        <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
                         <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
-                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
                         <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
+                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
                     </ul>
                 </li>
-                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA EGÍPCIA</a></li>
+                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA MESOPOTÂMICA</a></li>
                 <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form action="egipcia.html" id="formulario_quiz" method="post">
+        <form action="" id="formulario_quiz" method="post">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
                 <ol>
@@ -48,26 +54,26 @@
             <section id="secao-pergunta-1">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 1:</h1>
-                    <p class="pergunta">Qual deus egípcio foi frequentemente associado como o "Rei dos Deuses" e 
-                        muitas vezes era representado como uma figura humana usando uma coroa dupla?</p>
+                    <p class="pergunta">Quem dos deuses é considerado “Deus(a) da Lua” na mitologia 
+                        mesopotâmica?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
+                        <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Anu</label>
+                    </div>
+                    <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>A - Amon</label>
+                        <label>B - Sin</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Thoth</label>
+                        <label>C - Ninhursag</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Ptah</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D -Sobek</label>
+                        <label>D - Enki</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta1">
@@ -93,25 +99,25 @@
             <section id="secao-pergunta-2">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 2:</h1>
-                    <p class="pergunta">Qual é o nome da rainha lendária do Egito que se casou com Marco Antônio e Júlio César?</p>
+                    <p class="pergunta">Qual é o nome do antigo poema épico da Mesopotâmia que conta a história de Gilgamesh?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Nefertiti</label>
+                        <label>A - A Odisséia</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - A Eneida</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - A Ilíada</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Cleópatra</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Hatshepsut</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Ísis</label>
+                        <label>D - A Epopeia de Gilgamesh</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta2">
@@ -121,25 +127,26 @@
             <section id="secao-pergunta-3">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 3:</h1>
-                    <p class="pergunta">Que deusa da mitologia irlandesa é associada à terra, à fertilidade e ao gado?</p>
+                    <p class="pergunta">Quem foi o lendário rei que governou a cidade de Uruk e é o protagonista de 
+                        uma das obras literárias mais antigas da humanidade?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
+                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Enkidu</label>
+                    </div>
+                    <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>A - Íbis</label>
+                        <label>B - Gilgamesh</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Gato</label>
+                        <label>C - Inanna</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Falcão</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> D - Serpente</label>
+                        <label> D - Shtar</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta3">
@@ -149,26 +156,25 @@
             <section id="secao-pergunta-4">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 4:</h1>
-                    <p class="pergunta">Quem se tornou juiz dos mortos após ser assassinado pelo irmão na mitologia 
-                        Egípcia?</p>
+                    <p class="pergunta">Qual é a história da criação do mundo na mitologia mesopotâmica, e qual deus desempenha um papel fundamental nesse mito? </p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="certo">
-                        <label> A - Osíris</label>
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="errado">
+                        <label> A - O mundo foi criado por Enlil, o deus do ar.</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
+                        <label> B - Marduk, o deus da sabedoria, cria o mundo a partir do corpo de um monstro.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label> B - Anúbis</label>
+                        <label> C - O mundo foi criado por Ninhursag, a deusa da fertilidade.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label> C - Thot</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label> D - Rá</label>
+                        <label> D - Na mitologia mesopotâmica, o mundo é concebido como uma realidade eterna e atemporal, onde não existe um relato singular de criação, mas sim uma visão cíclica da existência.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -180,26 +186,25 @@
             <section id="secao-pergunta-5">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 5:</h1>
-                    <p class="pergunta">Qual criatura mitológica egípcia é conhecida como a "Devoradora de Almas" e 
-                    possui a cabeça de crocodilo?</p>
+                    <p class="pergunta">Quem é Ishtar na mitologia mesopotâmica e qual é o seu papel nas histórias mitológicas?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> A - Rá</label>
+                        <label> A - Ishtar é a deusa da agricultura que controla as colheitas.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> B - Anúbis</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao5" class="tamanhoInputOriginal" value="certo">
-                        <label> C - Ammut</label>
+                        <label> B - Ishtar é a deusa do amor e da guerra, frequentemente associada a Vênus, mas também é conhecida por ser a deusa da astrologia e da previsão do tempo nas histórias mitológicas mesopotâmicas</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
-                        <label> D - Ísis</label>
+                        <label> C - Ishtar é a mãe de todos os deuses na mitologia mesopotâmica.</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao5" class="tamanhoInputOriginal" value="certo">
+                        <label> D - Ishtar é a deusa do amor e da guerra, frequentemente associada a Vênus.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -210,25 +215,25 @@
             <section id="secao-pergunta-6">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 6:</h1>
-                    <p class="pergunta" id="ajustePergunta6">Qual é o deus com cabeça de chacal associado à morte e ao embalsamamento na mitologia egípcia?</p>
+                    <p class="pergunta" id="ajustePergunta6">Qual era o principal propósito da construção dos zigurates na antiga Mesopotâmia?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
-                        <label> A - Anúbis</label>
+                        <label>A - Templos religiosos e centros cerimoniais</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> B - Seth</label>
+                        <label>B- Residências para a nobreza</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> C - Hórus</label>
+                        <label>C- Escolas de filosofia</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> D - Ptah</label>
+                        <label>D- Estações de comércio e troca</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -239,29 +244,29 @@
             <section id="secao-pergunta-7">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 7:</h1>
-                    <p class="pergunta" id="ajustePergunta7">Na mitologia egípcia, qual era o papel e importância da deusa Ma'at no conceito de justiça e equilíbrio cósmico, e como ela era frequentemente representada?</p>
+                    <p class="pergunta" id="ajustePergunta7">Qual foi o papel do deus Enki (também conhecido como Ea) na mitologia mesopotâmica e como suas ações afetaram a humanidade?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Ma'at era a deusa da guerra e da destruição, frequentemente representada com 
-                        uma lança e um escudo.</label>
+                        <label>A - Ea era o deus da guerra e liderou exércitos divinos contra os deuses rebeldes, 
+                        garantindo a segurança da humanidade.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Ma'at personificava a ordem, a verdade e a justiça, e era representada com 
-                        uma pena de avestruz em sua cabeça.</label>
+                        <label>B - Ele era o deus da sabedoria e conhecimento, e muitas vezes interveio para 
+                        proteger e aconselhar os humanos.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Ma'at era a deusa do amor e da fertilidade, muitas vezes retratada com uma 
-                        cornucópia em suas mãos.</label>
+                        <label>C - Ea era o governante supremo dos deuses e exercia controle absoluto sobre a vida 
+                        e a morte dos mortais.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Ma'at era uma deusa lunar, simbolizando a passagem do tempo, e era 
-                        representada com uma lua crescente sobre sua testa.</label>
+                        <label>D - Ele era o deus das artes e inspirava os humanos a criar obras de arte e literatura 
+                        para celebrar os deuses.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -272,25 +277,25 @@
             <section id="secao-pergunta-8">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 8:</h1>
-                    <p class="pergunta" id="ajustePergunta8">Qual é a história de Osíris na mitologia egípcia e qual é o seu papel na religião egípcia?</p>
+                    <p class="pergunta" id="ajustePergunta8">Como o herói Gilgamesh está relacionado aos deuses na mitologia mesopotâmica?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Osíris era um deus guerreiro que liderou o exército egípcio em batalhas.</label>
+                        <label> A - Gilgamesh era um semideus nascido da união de um deus menor com uma deusa maior, o que lhe conferiu habilidades especiais.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Osíris era um deus associado à morte e à ressurreição, simbolizando a crença na vida após a morte e o renascimento.</label>
+                        <label> B - Gilgamesh era dois terços deus e um terço humano, o que lhe conferia força e sabedoria.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Osíris era um faraó cruel que governou o Egito com mão de ferro.</label>
+                        <label> C - Gilgamesh era um rei escolhido pelos deuses para liderar os humanos na Terra.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Osíris era um deus menor sem grande influência na religião egípcia.</label>
+                        <label> D - Gilgamesh era um aliado dos deuses e ajudou-os a manter o equilíbrio no mundo mitológico.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -301,25 +306,25 @@
             <section id="secao-pergunta-9">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 9:</h1>
-                    <p class="pergunta">Qual é o significado dos hieróglifos na cultura egípcia antiga?</p>
+                    <p class="pergunta">O que acontece com o herói Gilgamesh no final da "Epopeia de Gilgamesh"?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>A - Os hieróglifos eram um sistema de escrita que incluía símbolos e imagens usados para registrar eventos, história e religião.</label>
+                        <label> A - Ele aceita sua mortalidade e retorna a Uruk como um rei sábio.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Os hieróglifos eram utilizados apenas para a contabilidade e registros comerciais.</label>
+                        <label> B - Ele se torna um deus imortal.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Os hieróglifos eram usados exclusivamente pelos faraós e sacerdotes para manter segredos.</label>
+                        <label> C - Ele é amaldiçoado pelos deuses e se transforma em uma estátua de pedra.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Os hieróglifos não tinham nenhum significado especial na cultura egípcia.</label>
+                        <label>D - Ele é derrotado em uma batalha final contra Huwawa.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -330,27 +335,28 @@
             <section id="secao-pergunta-10">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 10:</h1>
-                    <p class="pergunta" id="ajustePergunta10">Qual era o propósito principal do Livro dos Mortos na mitologia egípcia, além de guiar os mortos na vida após a morte?</p>
+                    <p class="pergunta" id="ajustePergunta10">Como a mitologia mesopotâmica influenciou a civilização da Mesopotâmia na antiguidade?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Registrar os feitos heroicos dos faraós</label>
+                        <label>A - A mitologia mesopotâmica foi um mero elemento folclórico sem relevância na vida cotidiana das antigas civilizações da Mesopotâmia.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Preservar receitas culinárias antigas</label>
+                        <label>B - A mitologia mesopotâmica era apenas um elemento superficial nas práticas culturais e religiosas da época, frequentemente obscurecido por outras influências.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>C - Auxiliar o falecido em várias etapas do processo de transição para o além e 
-                        assegurar um julgamento favorável</label>
+                        <label>C - A mitologia mesopotâmica desempenhou um papel central na religião, na arte e nas práticas culturais da região.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Registrar os registros astronômicos da antiga civilização egípcia</label>
+                        <label>D - A mitologia mesopotâmica desempenhou um papel secundário em relação a outras crenças e mitologias, mas ainda assim deixou vestígios em algumas áreas da cultura mesopotâmica.</label>
                     </div>
+
+                    <?php $_SESSION['idMitologia'] = "6"; ?>
             
                     <div class="buttonResponder">
                         <input type="button" value="Terminar" id="btnPergunta10">

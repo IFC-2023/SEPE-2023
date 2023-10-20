@@ -1,12 +1,18 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-quiz/animations-css/mesopotamica.css">
+    <link rel="stylesheet" href="css-quiz/animations-css/romana.css">
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
-    <title>Quiz Mesopotâmia</title>
+    <title>Quiz Roma</title>
 </head>
 <body>
     <header>
@@ -20,13 +26,13 @@
                         <li class="link-dropdown" id="linkGrecia"><a href="grega.php">Grécia</a></li>
                         <li class="link-dropdown"id="linkHindu"><a href="hindu.html">Hindu</a></li>
                         <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
-                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
+                        <li class="link-dropdown" id="linkGrecoRomana"><a href="japonesa.html">Japonesa</a></li>
+                        <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
                         <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
                         <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
-                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
                     </ul>
                 </li>
-                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA MESOPOTÂMICA</a></li>
+                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA ROMANA</a></li>
                 <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
             </ul>
         </nav>
@@ -48,26 +54,25 @@
             <section id="secao-pergunta-1">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 1:</h1>
-                    <p class="pergunta">Quem dos deuses é considerado “Deus(a) da Lua” na mitologia 
-                        mesopotâmica?</p>
+                    <p class="pergunta">Quem era a deusa romana do amor e da beleza?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Anu</label>
+                        <label>A - Ceres</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Sin</label>
+                        <label>B - Vênus</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Ninhursag</label>
+                        <label>C - Cibele</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Enki</label>
+                        <label>D - Diana</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta1">
@@ -93,25 +98,25 @@
             <section id="secao-pergunta-2">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 2:</h1>
-                    <p class="pergunta">Qual é o nome do antigo poema épico da Mesopotâmia que conta a história de Gilgamesh?</p>
+                    <p class="pergunta">Qual deus romano era associado ao comércio, viajantes e ladrões?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - A Odisséia</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - A Eneida</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - A Ilíada</label>
-                    </div>
-                    <div class="radio-container">
                         <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>D - A Epopeia de Gilgamesh</label>
+                        <label>A - Mercúrio</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Júpiter</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Netuno</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Plutão</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta2">
@@ -121,26 +126,25 @@
             <section id="secao-pergunta-3">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 3:</h1>
-                    <p class="pergunta">Quem foi o lendário rei que governou a cidade de Uruk e é o protagonista de 
-                        uma das obras literárias mais antigas da humanidade?</p>
+                    <p class="pergunta">Quem é o deus romano dos mares, equivalente a Poseidon na mitologia grega?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Enkidu</label>
+                        <label>A - Aegir</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Urano</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Mercúrio</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Gilgamesh</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Inanna</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> D - Shtar</label>
+                        <label> D - Netuno</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta3">
@@ -150,25 +154,25 @@
             <section id="secao-pergunta-4">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 4:</h1>
-                    <p class="pergunta">Qual é a história da criação do mundo na mitologia mesopotâmica, e qual deus desempenha um papel fundamental nesse mito? </p>
+                    <p class="pergunta">Explique como a mitologia romana absorveu elementos da mitologia grega e quais deuses romanos correspondem aos deuses gregos mais importantes.</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> A - O mundo foi criado por Enlil, o deus do ar.</label>
+                        <label>A mitologia romana é uma fusão sutil de elementos próprios com influências da mitologia grega, incorporando deuses romanos correspondentes aos gregos.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
-                        <label> B - Marduk, o deus da sabedoria, cria o mundo a partir do corpo de um monstro.</label>
+                        <label>A mitologia romana foi influenciada e enriquecida pela mitologia grega, incorporando divindades romanas equivalentes às divindades gregas mais importantes.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label> C - O mundo foi criado por Ninhursag, a deusa da fertilidade.</label>
+                        <label>A mitologia romana evoluiu a partir da interação cultural com a mitologia grega, resultando na criação de deuses romanos que têm paralelos notáveis com os deuses gregos.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label> D - Na mitologia mesopotâmica, o mundo é concebido como uma realidade eterna e atemporal, onde não existe um relato singular de criação, mas sim uma visão cíclica da existência.</label>
+                        <label>A mitologia romana desenvolveu uma sinergia com a mitologia grega, produzindo deidades romanas que compartilham características e atributos com os deuses gregos mais proeminentes.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -180,25 +184,25 @@
             <section id="secao-pergunta-5">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 5:</h1>
-                    <p class="pergunta">Quem é Ishtar na mitologia mesopotâmica e qual é o seu papel nas histórias mitológicas?</p>
+                    <p class="pergunta">Qual é a lenda da fundação de Roma e quem são os irmãos gêmeos envolvidos nela?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> A - Ishtar é a deusa da agricultura que controla as colheitas.</label>
+                        <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="certo">
+                        <label> A - Os irmãos gêmeos são Rômulo e Remo, que foram criados por uma loba, e a história envolve sua rivalidade na escolha do local para fundar a cidade de Roma.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> B - Ishtar é a deusa do amor e da guerra, frequentemente associada a Vênus, mas também é conhecida por ser a deusa da astrologia e da previsão do tempo nas histórias mitológicas mesopotâmicas</label>
+                        <label> B - A fundação de Roma é atribuída a um grupo de três irmãos, cada um com habilidades mágicas, que juntos conjuraram a cidade a partir do nada.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
-                        <label> C - Ishtar é a mãe de todos os deuses na mitologia mesopotâmica.</label>
+                        <label> C - Os irmãos gêmeos na lenda de fundação de Roma são Castor e Pólux, que tiveram uma disputa lendária que levou à criação da cidade.</label>
                     </div>
                     <div class="radio-container">
-                        <input type="radio" name="questao5" class="tamanhoInputOriginal" value="certo">
-                        <label> D - Ishtar é a deusa do amor e da guerra, frequentemente associada a Vênus.</label>
+                        <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                        <label> D - Na lenda da fundação de Roma, os irmãos gêmeos são Cástor e Pólux, associados à constelação de Gêmeos, que, através de uma jornada heroica, unem forças para estabelecer a cidade de Roma, simbolizando a harmonia e o heroísmo como fundamentos da civilização romana</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -209,25 +213,25 @@
             <section id="secao-pergunta-6">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 6:</h1>
-                    <p class="pergunta" id="ajustePergunta6">Qual era o principal propósito da construção dos zigurates na antiga Mesopotâmia?</p>
+                    <p class="pergunta">Quem é o deus romano dos mensageiros, das estradas e dos viajantes?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
+                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Hades</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Marte</label>
+                    </div>
+                    <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>A - Templos religiosos e centros cerimoniais</label>
+                        <label>C - Mercúrio</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B- Residências para a nobreza</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C- Escolas de filosofia</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D- Estações de comércio e troca</label>
+                        <label>D - Plutão</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -238,29 +242,27 @@
             <section id="secao-pergunta-7">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 7:</h1>
-                    <p class="pergunta" id="ajustePergunta7">Qual foi o papel do deus Enki (também conhecido como Ea) na mitologia mesopotâmica e como suas ações afetaram a humanidade?</p>
+                    <p class="pergunta">Qual dos seguintes deuses romanos era frequentemente representado com
+                        um martelo, associado à forja e à metalurgia?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Ea era o deus da guerra e liderou exércitos divinos contra os deuses rebeldes, 
-                        garantindo a segurança da humanidade.</label>
+                        <label> A - Marte, o deus da guerra e da agricultura</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Ele era o deus da sabedoria e conhecimento, e muitas vezes interveio para 
-                        proteger e aconselhar os humanos.</label>
+                        <label> B - Vulcano, o deus do fogo e da metalurgia</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Ea era o governante supremo dos deuses e exercia controle absoluto sobre a vida 
-                        e a morte dos mortais.</label>
+                        <label> C - Plutão, o deus do submundo e dos mortos
+                        </label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Ele era o deus das artes e inspirava os humanos a criar obras de arte e literatura 
-                        para celebrar os deuses.</label>
+                        <label> D - Mercúrio, o deus do comércio e dos viajantes</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -271,25 +273,25 @@
             <section id="secao-pergunta-8">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 8:</h1>
-                    <p class="pergunta" id="ajustePergunta8">Como o herói Gilgamesh está relacionado aos deuses na mitologia mesopotâmica?</p>
+                    <p class="pergunta">Qual é a história do mito de Rômulo e Remo e como ela se relaciona com a fundação de Roma?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> A - Gilgamesh era um semideus nascido da união de um deus menor com uma deusa maior, o que lhe conferiu habilidades especiais.</label>
+                        <label> A - Rômulo e Remo são irmãos gêmeos que, de acordo com a lenda, foram criados por uma loba. No entanto, essa narrativa é frequentemente interpretada como uma metáfora para a influência da natureza selvagem na formação da sociedade romana, representando a dualidade entre a civilização e a barbárie.</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
+                        <label> B - Rômulo e Remo inicialmente aliados, mas divergências políticas levaram a um conflito mortal, representando rivalidades políticas.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="certo">
-                        <label> B - Gilgamesh era dois terços deus e um terço humano, o que lhe conferia força e sabedoria.</label>
+                        <label> C - O mito de Rômulo e Remo não está diretamente ligado à fundação de Roma, mas representa temas culturais romanos.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> C - Gilgamesh era um rei escolhido pelos deuses para liderar os humanos na Terra.</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> D - Gilgamesh era um aliado dos deuses e ajudou-os a manter o equilíbrio no mundo mitológico.</label>
+                        <label> D - Rômulo e Remo são fundadores míticos, simbolizando lutas pelo poder e a complexidade da história de Roma.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -300,25 +302,25 @@
             <section id="secao-pergunta-9">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 9:</h1>
-                    <p class="pergunta">O que acontece com o herói Gilgamesh no final da "Epopeia de Gilgamesh"?</p>
+                    <p class="pergunta">Qual é o nome da deusa romana da sorte, do destino e do acaso?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
+                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Minerva</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Diana</label>
+                    </div>
+                    <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
-                        <label> A - Ele aceita sua mortalidade e retorna a Uruk como um rei sábio.</label>
+                        <label>C - Fortuna</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> B - Ele se torna um deus imortal.</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label> C - Ele é amaldiçoado pelos deuses e se transforma em uma estátua de pedra.</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Ele é derrotado em uma batalha final contra Huwawa.</label>
+                        <label>D - Vesta</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -329,26 +331,30 @@
             <section id="secao-pergunta-10">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 10:</h1>
-                    <p class="pergunta" id="ajustePergunta10">Como a mitologia mesopotâmica influenciou a civilização da Mesopotâmia na antiguidade?</p>
+                    <p class="pergunta">Qual dos seguintes deuses é frequentemente associado à passagem das
+                        estações e ao ciclo da vegetação, sendo filho de Flora e frequentemente
+                        representado com um jovem portando um feixe de trigo?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - A mitologia mesopotâmica foi um mero elemento folclórico sem relevância na vida cotidiana das antigas civilizações da Mesopotâmia.</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - A mitologia mesopotâmica era apenas um elemento superficial nas práticas culturais e religiosas da época, frequentemente obscurecido por outras influências.</label>
-                    </div>
-                    <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>C - A mitologia mesopotâmica desempenhou um papel central na religião, na arte e nas práticas culturais da região.</label>
+                        <label>A - Vertumno, deus das transformações e do cultivo</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - A mitologia mesopotâmica desempenhou um papel secundário em relação a outras crenças e mitologias, mas ainda assim deixou vestígios em algumas áreas da cultura mesopotâmica.</label>
+                        <label>B - Jano, deus das portas e passagens</label>
                     </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Saturno, deus do tempo e da agricultura</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Neptuno, deus dos mares e oceanos</label>
+                    </div>
+
+                    <?php $_SESSION['idMitologia'] = "8"; ?>
             
                     <div class="buttonResponder">
                         <input type="button" value="Terminar" id="btnPergunta10">

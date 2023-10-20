@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -343,6 +349,8 @@
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
                         <label>D - Cú Chulainn</label>
                     </div>
+
+                    <?php $_SESSION['idMitologia'] = "4"; ?>
             
                     <div class="buttonResponder">
                         <input type="button" value="Terminar" id="btnPergunta10">

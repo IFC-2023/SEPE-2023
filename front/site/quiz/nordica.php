@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -353,6 +359,8 @@
                         <label>D - A mitologia nórdica não teve um impacto significativo na cultura viking; eles eram mais
                         pragmáticos e guerreiros do que preocupados com a mitologia</label>
                     </div>
+
+                    <?php $_SESSION['idMitologia'] = "7"; ?>
             
                     <div class="buttonResponder">
                         <input type="button" value="Terminar" id="btnPergunta10">

@@ -1,12 +1,18 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-quiz/animations-css/nordica.css">
+    <link rel="stylesheet" href="css-quiz/animations-css/geral.css">
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
-    <title>Quiz Hindu</title>
+    <title>Quiz Geral</title>
 </head>
 <body>
     <header>
@@ -18,15 +24,14 @@
                     <ul class="dropdown">
                         <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
                         <li class="link-dropdown" id="linkGrecia"><a href="grega.php">Grécia</a></li>
+                        <li class="link-dropdown"id="linkHindu"><a href="hindu.html">Hindu</a></li>
                         <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
                         <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
                         <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
-                        <li class="link-dropdown"id="linkHindu"><a href="nordica.html">Nórdica</a></li>
+                        <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
                         <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
-                        <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
                     </ul>
                 </li>
-                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA HINDU</a></li>
                 <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
             </ul>
         </nav>
@@ -48,25 +53,25 @@
             <section id="secao-pergunta-1">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 1:</h1>
-                    <p class="pergunta">Quem é o deus supremo na mitologia hindu?</p>
+                    <p class="pergunta">Qual dos seguintes ciclos é um dos principais ciclos da mitologia irlandesa?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
+                        <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Ciclo Mitológico</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - Ciclo Feniano</label>
+                    </div>
+                    <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>A - Vishnu</label>
+                        <label>C - Ciclo Ulster</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Shiva</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Brahma</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao1" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Krishna</label>
+                        <label>D - Ciclo Histórico</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta1">
@@ -92,25 +97,25 @@
             <section id="secao-pergunta-2">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 2:</h1>
-                    <p class="pergunta">Como os deuses da mitologia Hindu geralmente se locomovem?</p>
+                    <p class="pergunta">Sobre a mitologia egipcia: Quais são os Neterus e sua ordem?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Usando tapetes mágicos</label>
+                        <label>A - Geradores, Primordiais, Primeira Geração e Segunda Geração</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Montando em criaturas míticas aladas</label>
+                        <label>B - Primeira Geração, Segunda Geração, Genitores e Primeiro</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Progenitores, Primeira Geração, Segunda Geração e Terceira Geração</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>C - Utilizando animais como veículos</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao2" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Voando por conta própria</label>
+                        <label>D - Primordiais, Geradores, Primeira Geração e Segunda Geração</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta2">
@@ -120,26 +125,25 @@
             <section id="secao-pergunta-3">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 3:</h1>
-                    <p class="pergunta">Qual deus é frequentemente retratado como o Senhor Supremo e o Criador do 
-                    Universo na mitologia Hindu?</p>
+                    <p class="pergunta">Sobre a mitologia hindu: como também pode ser chamada a trindade dos principais deuses?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Vishnu</label>
-                    </div>
-                    <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Brahma</label>
+                        <label>A - Trimurti</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Shiva</label>
+                        <label>B - Trimuri</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Ganesha</label>
+                        <label>C - Muriti</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao3" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Muriri</label>
                     </div>
                     <div class="buttonResponder">
                         <input type="button" value="Responder" id="btnPergunta3">
@@ -149,25 +153,25 @@
             <section id="secao-pergunta-4">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 4:</h1>
-                    <p class="pergunta">Qual é a trindade divina na mitologia hindu e quais são os papéis principais de cada deus nessa trindade?</p>
+                    <p class="pergunta">Dá mitologia mesopotamica: Os objetos e a tumba que abrigava o corpo do falecido indicava o que?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>A - Brahma (criação), Vishnu (preservação), Shiva (destruição)</label>
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Como a pessoa faleceu</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
+                        <label>B - Riqueza</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label>B - Brahma (criação), Vishnu (preservação), Shiva (destruição)</label>
+                        <label>C - Terras</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label>C - Shiva (criação), Vishnu (preservação), Brahma (destruição)</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label>D - Brahma (criação), Shiva (preservação), Vishnu (destruição)</label>
+                        <label>D - Como era amado</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -179,26 +183,25 @@
             <section id="secao-pergunta-5">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 5:</h1>
-                    <p class="pergunta">Qual deusa da mitologia Hindu é frequentemente associada à prosperidade, 
-                    riqueza e fortuna?</p>
+                    <p class="pergunta">Quantas mitologias apresentadas não tem influência na história?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Saraswati</label>
+                        <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="certo">
+                        <label>A - 0</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Parvati</label>
+                        <label>B - 5</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
-                        <label>C - Durga</label>
+                        <label>C - 3</label>
                     </div>
                     <div class="radio-container">
-                        <input type="radio" name="questao5" class="tamanhoInputOriginal" value="certo">
-                        <label>D - Lakshmi</label>
+                        <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
+                        <label>D - 1</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -209,25 +212,25 @@
             <section id="secao-pergunta-6">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 6:</h1>
-                    <p class="pergunta" id="ajustePergunta6">Qual é o papel de Hanuman na mitologia hindu e por que ele é reverenciado?</p>
+                    <p class="pergunta">Como era a relação da vida dos romanos com a religião?</p>
                     <p class="dificuldade">Nível Médio</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Hanuman é o deus da guerra que liderou os exércitos divinos na batalha.</label>
+                        <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
+                        <label>A - Durante muito tempo a vida dos romanos estava intimamente relacionada com a religião politeísta e, portanto, com os deuses do panteão romano. Eram eles que favoreciam as colheitas, a saúde, a proteção, a harmonia e a prosperidade entre os homens.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - Hanuman é o deus da sabedoria que ensinou aos humanos os segredos do conhecimento divino.</label>
+                        <label>B - Na Roma Antiga, a religião tinha um papel mínimo na vida cotidiana dos romanos, que eram predominantemente secularizados e não tinham muita relação com os deuses.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>C - Hanuman é um herói macaco que ajudou Rama a resgatar Sita e é reverenciado por sua devoção e força.</label>
+                        <label>C - Os romanos sempre mantiveram uma religião estritamente monoteísta, adorando apenas um deus supremo, e a vida cotidiana não estava diretamente relacionada a um panteão de divindades.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao6" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Hanuman é um deus da natureza que governa sobre os animais e as plantas.</label>
+                        <label>D - Os romanos eram completamente ateus e não se envolviam em práticas religiosas ou rituais, pois consideravam a religião irrelevante para suas vidas.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -238,25 +241,25 @@
             <section id="secao-pergunta-7">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 7:</h1>
-                    <p class="pergunta">Qual é o conceito de karma na mitologia hindu e como ele influencia a vida e o destino das pessoas?</p>
+                    <p class="pergunta">Qual é o objetivo principal da mitologia grega?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
-                        <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - O karma é uma divindade que decide o destino de cada pessoa com base em seus atos passados.</label>
-                    </div>
-                    <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - O karma é uma força cósmica que governa o ciclo de nascimento, morte e reencarnação, onde as ações de uma pessoa em vidas passadas afetam sua situação atual.</label>
+                        <label> A - O objetivo principal era de explicar alguns fatos, como a origem da vida, a vida após a morte, ou até mesmo os fenômenos da natureza. Assim, a criação das narrativas fantásticas que englobam a mitologia grega foi a maneira encontrada pelos gregos para preservarem sua história.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - O karma é um ritual hindu realizado para buscar a bênção dos deuses.</label>
+                        <label> B - A mitologia grega tinha como objetivo principal a promoção de uma única religião e moral específica, para orientar a conduta dos gregos em todos os aspectos de suas vidas.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - O karma é uma prática de meditação usada para alcançar a iluminação espiritual.</label>
+                        <label> C - A mitologia grega era exclusivamente uma forma de entretenimento, criada para divertir as pessoas com histórias fictícias e não tinha nenhum propósito mais profundo.</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao7" class="tamanhoInputOriginal" id="" value="errado">
+                        <label> D - A mitologia grega foi desenvolvida para fins políticos, com o objetivo de consolidar o poder de líderes e governantes, fornecendo-lhes uma base mitológica para justificar seu domínio.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -267,27 +270,25 @@
             <section id="secao-pergunta-8">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 8:</h1>
-                    <p class="pergunta" id="ajustePergunta8">Qual é a importância do épico Ramayana na mitologia Hindu e quem são os principais personagens?</p>
+                    <p class="pergunta">Como Odin, um dos maiores deuses da mitologia nordica, perdeu o olho?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - O Ramayana é um tratado filosófico sobre a natureza da realidade, e os principais 
-                        personagens são Ganesha, Lakshmi e Ravana.</label>
+                        <label>A - Odin perdeu o olho em uma batalha contra um gigante do gelo, que arrancou seu olho durante o confronto. Isso aconteceu durante a lendária guerra dos nove reinos, uma guerra que envolveu todas as terras da mitologia nordica</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - O Ramayana é um épico que narra a jornada do príncipe Rama para resgatar sua esposa Sita, e os principais personagens incluem Rama, Sita, Lakshmana e o devoto macaco Hanuman.</label>
+                        <label>B - Odin arrancou o seu propio olho pois ele acreditava que a inteligência valia qualquer preço e às vezes era preciso fazer sacrifícios. Para desvendar as runas nórdicas, em uma ocasião, ele chegou a se enforcar, se esfaquear e passar mais de uma semana sem comer.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - O Ramayana é um tratado militar sobre as estratégias de guerra, e os principais 
-                        personagens são Arjuna, Draupadi e Krishna.</label>
+                        <label>C - Odin perdeu o olho como parte de um acordo com um troll, que exigiu o olho como pagamento para salvar seu reino da destruição.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - O Ramayana é um manual de práticas espirituais avançadas, e os principais personagens são Brahma, Vishnu e Shiva.</label>
+                        <label>D - Odin perdeu o olho como punição por quebrar uma regra celestial, em que ele foi temporariamente cegado por um deus mais poderoso como castigo.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -298,25 +299,25 @@
             <section id="secao-pergunta-9">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 9:</h1>
-                    <p class="pergunta">Quem é o deus Rama e qual é a importância de sua história no "Ramayana" na mitologia hindu?</p>
+                    <p class="pergunta">Sobre a mitologia japonesa, o que são as regioes?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Rama é um deus menor que não desempenha um papel significativo na mitologia hindu.</label>
+                        <label>A - As "regiões" na mitologia japonesa se referem a divisões geográficas do Japão, sem qualquer significado espiritual ou mitológico.</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>B - As "regiões" na mitologia japonesa representam diferentes períodos históricos da história do Japão, sem relação com divindades ou entidades míticas.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Rama é um deus menor que não desempenha um papel significativo na mitologia hindu.</label>
+                        <label>C - As "regiões" geralmente se referem a diferentes reinos ou domínios associados a deidades específicas, e muitas vezes são consideradas como lugares de poderes divinos ou locais de grande importância na cosmologia japonesa.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Rama é uma divindade marinha que controla as águas e protege os pescadores.</label>
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Rama é uma divindade marinha que controla as águas e protege os pescadores.</label>
+                        <label>D - As "regiões" na mitologia japonesa são apenas um conceito literário e poético, não tendo nenhuma base real ou mítica na tradição japonesa.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -327,26 +328,28 @@
             <section id="secao-pergunta-10">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 10:</h1>
-                    <p class="pergunta" id="ajustePergunta10">Rama é uma divindade marinha que controla as águas e protege os pescadores.</p>
+                    <p class="pergunta">Uma similaridade entre todas as mitologias é o fato de:</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
+                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Todas as mitologias têm a mesma narrativa e história central, apenas com nomes de deuses e heróis diferentes.</label>
+                    </div>
+                    <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>A - As divindades animais representam os aspectos naturais e espirituais da vida, ensinando-nos a viver em harmonia com a natureza.</label>
+                        <label>B - Exercerem uma grande influencia nos seus respectivos povos</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>B - As divindades animais são consideradas deuses menores e não têm grande significado na mitologia hindu.</label>
+                        <label>C - Todas as mitologias são baseadas em eventos históricos reais, e não têm elementos míticos ou sobrenaturais.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - As divindades animais são consideradas deuses menores e não têm grande significado na mitologia hindu.</label>
+                        <label>D - Todas as mitologias compartilham os mesmos ensinamentos morais e éticos, sem variação nas lições transmitidas aos seus respectivos povos.</label>
                     </div>
-                    <div class="radio-container">
-                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - As divindades animais são consideradas deuses menores e não têm grande significado na mitologia hindu.</label>
-                    </div>
+
+                    <?php $_SESSION['idMitologia'] = "9"; ?>
             
                     <div class="buttonResponder">
                         <input type="button" value="Terminar" id="btnPergunta10">
