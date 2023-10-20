@@ -23,23 +23,23 @@ if (!isset($_SESSION)) {
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
                         <li class="link-dropdown" id="linkGrecia"><a href="grega.php">Grécia</a></li>
-                        <li class="link-dropdown"id="linkHindu"><a href="hindu.html">Hindu</a></li>
-                        <li id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
-                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
-                        <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
-                        <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
-                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
-                        <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
+                        <li class="link-dropdown"id="linkHindu"><a href="hindu.php">Hindu</a></li>
+                        <li id="linkIrlandesa"><a href="irlandesa.php">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.php">Japonesa</a></li>
+                        <li id="link-dropdown-excessao"><a href="mesopotamica.php">Mesopotâmica</a></li>
+                        <li class="link-dropdown" id="linkNordica"><a href="nordica.php">Nórdica</a></li>
+                        <li class="link-dropdown" id="linkRomana"><a href="romana.php">Romana</a></li>
+                        <li class="link-dropdown" id="linkGeral"><a href="geral.php">Geral</a></li>
                     </ul>
                 </li>
-                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA EGÍPCIA</a></li>
+                <li id="link-mitologia"><a href="../paginas/egipcia.html">MITOLOGIA EGÍPCIA</a></li>
                 <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form action="egipcia.html" id="formulario_quiz" method="post">
+        <form action="../../../back/processar.php" id="formulario_quiz" method="post">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
                 <ol>
@@ -127,7 +127,7 @@ if (!isset($_SESSION)) {
             <section id="secao-pergunta-3">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 3:</h1>
-                    <p class="pergunta">Que deusa da mitologia irlandesa é associada à terra, à fertilidade e ao gado?</p>
+                    <p class="pergunta">Qual é o animal sagrado associado a Thoth, o deus da sabedoria, na mitologia egípcia?</p>
                     <p class="dificuldade">Nível Fácil</p>
                 </div>
                 <div class="alternativas">
@@ -366,12 +366,24 @@ if (!isset($_SESSION)) {
                 </div>
             </section>
         </form>
-
-        <section id="fim">
-            <h1>Fim, obrigado por participar!</h1>
-
-            <p id="acertos"></p>
-        </section>
     </main>
+    
+    <script>
+        function submitForm() {
+            let form = document.getElementById("formulario_quiz");
+            let formData = new FormData(form);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '../../../back/processar.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = '../../../back/processar.php';
+                } else {
+                    console.log('Erro ao processar o formulário');
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
 </body>
 </html>

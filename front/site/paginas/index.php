@@ -50,7 +50,7 @@
             <button class="alternar-aba" data-target="egipcia">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>Neterus Primordiais</li>
@@ -58,7 +58,7 @@
               <li>Neterus da Primeira Geração</li>
               <li>Neterus da Segunda Geração</li>
             </ul>
-            <a href="../paginas/egipcia.html"><button>Ir Para A Pagina</button></a>
+            <a href="../paginas/egipcia.html"><button>Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa grega">
@@ -70,7 +70,7 @@
             <button class="alternar-aba" data-target="grega">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>Seres Mitológicos</li>
@@ -78,7 +78,7 @@
               <li>Principais Deuses da Mitologia Grega</li>
               <li>Mitos</li>
             </ul>
-            <a href="../paginas/grega.html"><button>Ir Para A Pagina</button></a>
+            <a href="../paginas/grega.html"><button>Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa hindu">
@@ -91,7 +91,7 @@
             <button class="alternar-aba" data-target="hindu">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>Vaca Sagrada</li>
@@ -99,7 +99,7 @@
               <li>Hanuman</li>
               <li>Devoção A Hanuman</li>
             </ul>
-            <a href="../paginas/hindu.html"><button>Ir Para A Pagina</button></a>
+            <a href="../paginas/hindu.html"><button>Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa irlandesa">
@@ -112,7 +112,7 @@
             <button class="alternar-aba" data-target="irlandesa">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>Ciclos da mitologia irlandesa</li>
@@ -121,7 +121,7 @@
               <li>The Leprechauns</li>
 
             </ul>
-            <a href="../paginas/irlandesa.html"><button class="irlandesa">Ir Para A Pagina</button></a>
+            <a href="../paginas/irlandesa.html"><button class="irlandesa">Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa japonesa">
@@ -133,7 +133,7 @@
             <button class="alternar-aba" data-target="japonesa">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>Origem</li>
@@ -141,7 +141,7 @@
               <li>Deuses</li>
               <li>Lendas</li>
             </ul>
-            <a href="../paginas/japonesa.html"><button>Ir Para A Pagina</button></a>
+            <a href="../paginas/japonesa.html"><button>Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa mesopotamica">
@@ -154,7 +154,7 @@
             <button class="alternar-aba" data-target="mesopotamica">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>O mito da criação</li>
@@ -162,7 +162,7 @@
               <li>Gilgamesh</li>
               <li>A Epopeia</li>
             </ul>
-            <a href="../paginas/mesopotamica.html"><button>Ir Para A Pagina</button></a>
+            <a href="../paginas/mesopotamica.html"><button>Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa nordica">
@@ -175,7 +175,7 @@
             <button class="alternar-aba" data-target="nordica">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>Reinos</li>
@@ -183,7 +183,7 @@
               <li>As Criaturas Nórdicas</li>
               <li>Os Mitos Mais Conhecidos</li>
             </ul>
-            <a href="../paginas/nordica.html"><button>Ir Para A Pagina</button></a>
+            <a href="../paginas/nordica.html"><button>Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa romana">
@@ -196,7 +196,7 @@
             <button class="alternar-aba" data-target="romana">Ver Mais</button>
           </div>
           <div class="aba">
-            <h1>Tópicos da pagina</h1>
+            <h1>Tópicos da página</h1>
             <hr>
             <ul>
               <li>Deuses</li>
@@ -204,7 +204,7 @@
               <li>História de Enéias</li>
               <li>influencia dos gregos</li>
             </ul>
-            <a href="../paginas/romana.html"><button>Ir Para A Pagina</button></a>
+            <a href="../paginas/romana.html"><button>Ir Para A Página</button></a>
           </div>
         </div>
         <div class="caixa quiz">

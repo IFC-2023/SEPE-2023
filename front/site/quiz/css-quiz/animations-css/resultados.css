@@ -279,9 +279,6 @@ main {
     height: 90.9vh;
 }
 
-#div_tabela {
-}
-
 table {
     position: relative;
     margin-top: 100px;
@@ -297,6 +294,7 @@ table, th, td {
 
 th, td {
     padding: 5px;
+    color: white;
 }
 
 th {

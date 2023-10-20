@@ -22,24 +22,24 @@ if (!isset($_SESSION)) {
                 <li>
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
-                        <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
+                        <li id="margin-top-dropdown"><a href="egipcia.php">Egípcia</a></li>
                         <li class="link-dropdown" id="linkGrecia"><a href="grega.php">Grécia</a></li>
-                        <li class="link-dropdown"id="linkHindu"><a href="hindu.html">Hindu</a></li>
-                        <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
-                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
-                        <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
-                        <li class="link-dropdown" id="linkGeral"><a href="geral.html">Geral</a></li>
-                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
+                        <li class="link-dropdown"id="linkHindu"><a href="hindu.php">Hindu</a></li>
+                        <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.php">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.php">Japonesa</a></li>
+                        <li class="link-dropdown" id="linkNordica"><a href="nordica.php">Nórdica</a></li>
+                        <li class="link-dropdown" id="linkGeral"><a href="geral.php">Geral</a></li>
+                        <li class="link-dropdown" id="linkRomana"><a href="romana.php">Romana</a></li>
                     </ul>
                 </li>
-                <li id="link-mitologia"><a href="../paginas/romana.html">MITOLOGIA MESOPOTÂMICA</a></li>
+                <li id="link-mitologia"><a href="../paginas/mesopotamica.html">MITOLOGIA MESOPOTÂMICA</a></li>
                 <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form action="" id="formulario_quiz" method="post">
+        <form action="../../../back/processar.php" id="formulario_quiz" method="post">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
                 <ol>
