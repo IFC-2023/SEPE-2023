@@ -20,7 +20,7 @@
       if ($confirmResult && mysqli_num_rows($confirmResult) === 0) {
         echo "Email não cadastrado";
       } else {
-        echo "Email cadastrado";
+        header("Location: http://localhost/SEPE/back/login.php");
       }
     }
   }

@@ -1,37 +1,8 @@
-<!-- <?php
+<?php
 if (!isset($_SESSION)) {
     session_start();
 }
-include_once('config_php/config-front.php');
-
-include('../../../back/protecao.php');
-
-if (isset($_POST['submit'])) {
-    $arrayContador = [];
-    $q1 = $_POST['questao1'];
-    $q2 = $_POST['questao2'];
-    $q3 = $_POST['questao3'];
-    $q4 = $_POST['questao4'];
-    $q5 = $_POST['questao5'];
-    $q6 = $_POST['questao6'];
-    $q7 = $_POST['questao7'];
-    $q8 = $_POST['questao8'];
-    $q9 = $_POST['questao9'];
-    $q10 = $_POST['questao10'];
-    array_push($arrayContador, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10);
-    $contadorAcertos = array_reduce($arrayContador, function ($soma, $valor) {
-        if ($valor === "certo") {
-            return $soma + 1;
-        }
-    }, 0);
-
-    $totalAcertos = $contadorAcertos;
-
-    $inserirDados = "INSERT INTO partida (pontuacao, jogador_id, mitologia_id) VALUES ('$contadorAcertos', '" . $_SESSION['idUsuario'] . "', 1)";
-
-    $resultado = mysqli_query($conexao, $inserirDados);
-}
-?>-->
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -64,9 +35,9 @@ if (isset($_POST['submit'])) {
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
                         <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
-                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
                         <li class="link-dropdown" id="linkHindu"><a href="hindu.html">Hindu</a></li>
                         <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
                         <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
                         <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
                         <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
@@ -80,7 +51,7 @@ if (isset($_POST['submit'])) {
     </header>
 
     <main>
-        <form action="grega.php" method="post" id="formulario_quiz">
+        <form action="../../../back/processar.php" method="post" id="formulario_quiz">
             <section id="introducao">
                 <h1>Antes de começar vamos explicar como ira funcionar o quiz:</h1>
 
@@ -277,8 +248,7 @@ if (isset($_POST['submit'])) {
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
                         <label>D - Glauco, um pescador que se tornou um deus marinho após comer uma erva
-                        mágica dada a ele por Circe.6-Quem são os principais deuses do Olimpo na mitologia 
-                        grega e quais são suas áreas de domínio?</label>
+                        mágica dada a ele por Circe.</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -356,23 +326,33 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-8">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 8:</h1>
-                    <p class="pergunta">Explique a história de Ícaro na mitologia grega e como ela se relaciona com Dédalo.</p>
+                    <p class="pergunta">Além de ser o deus do submundo, Hades também era frequentemente 
+                    associado a qual outro elemento na mitologia grega?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
+                        <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>A - Mineração e riquezas provenientes das profundezas da terra, já que o submundo 
+                        era considerado a fonte desses recursos valiosos.</label>
+                    </div>
+
+                    <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>As Moiras são deusas do destino, que tecem, medem e cortam o fio da vida de cada mortal, determinando seu destino.</label>
+                        <label>B - Os metais preciosos, particularmente o ouro e a prata, eram vistos como 
+                            tesouros escondidos nas entranhas da terra, sob a supervisão de Hades.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>As Moiras são guerreiras que protegem os mortais em batalhas.</label>
+                        <label>C - A invisibilidade era uma característica associada a Hades, permitindo-lhe mover-se 
+                        sem ser visto, um traço muitas vezes ligado ao seu papel como deus do submundo.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>As Moiras são deusas do amor e da beleza na mitologia grega.</label>
+                        <label>D - As tempestades não estão diretamente associadas a Hades na mitologia grega. 
+                        Portanto, esta alternativa não é correta.</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -384,23 +364,34 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-9">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 9:</h1>
-                    <p class="pergunta">Explique o mito de Édipo na mitologia grega e como ele lida com seu destino trágico.</p>
+                    <p class="pergunta">Qual das seguintes afirmações sobre as Ninfas na mitologia grega é 
+                    verdadeira?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Édipo não é uma figura mitológica grega.</label>
-                    </div>
-
-                    <div class="radio-container">
-                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Édipo é um herói que derrota monstros em várias jornadas.</label>
+                        <label>A - Náiades eram ninfas associadas com fontes de água doce, como rios, lagos e 
+                        nascentes. Eram consideradas as protectoras das fontes e muitas vezes eram retratadas dançando à beira da água.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>Édipo é um homem que, sem saber, mata seu pai e se casa com sua mãe, cumprindo uma terrível profecia. Quando descobre a verdade, ele se cega e se exila.</label>
+                        <label>B - Náiades eram ninfas associadas com fontes de água doce, como rios, lagos e 
+                        nascentes. Eram consideradas as protectoras das fontes e muitas vezes eram retratadas dançando à beira da água.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>C - Dríades eram ninfas que habitavam as árvores e florestas. Eram protetoras das 
+                        árvores e da vida selvagem, sendo essenciais para a manutenção do equilíbrio 
+                        natural.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Lâmpades eram ninfas subterrâneas, associadas às grutas e cavernas. Eram 
+                        frequentemente vistas como guardiãs de segredos e conhecimentos ocultos.</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -412,25 +403,32 @@ if (isset($_POST['submit'])) {
             <section id="secao-pergunta-10">
                 <div class="informacoes-questao">
                     <h1 class="questao">Pergunta 10:</h1>
-                    <p class="pergunta">Quem são os Argonautas e qual é a missão lendária que realizaram na mitologia grega?</p>
+                    <p class="pergunta">Como é retratado o mito de Édipo em tragédias gregas como a de Sófocles?</p>
                     <p class="dificuldade">Nível Difícil</p>
                 </div>
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Os Argonautas são deuses menores sem uma missão lendária.</label>
-                    </div>
-
-                    <div class="radio-container">
-                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>Os Argonautas são um grupo de heróis liderados por Jasão, que embarcaram na busca pelo Velocino de Ouro, uma missão épica repleta de desafios e aventuras.
-                        </label>
+                        <label>A - Édipo era um herói que realizou grandes feitos.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>Os Argonautas são monstros marinhos temidos pelos marinheiros gregos.</label>
+                        <label>B - Édipo era um deus que se apaixonou por uma mortal.
+                        </label>
                     </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="certo">
+                        <label>C - Édipo era um rei que matou seu pai e se casou com sua mãe, trazendo desgraça à sua cidade.</label>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" name="questao10" class="tamanhoInputOriginal" id="" value="errado">
+                        <label>D - Édipo era um adivinho que previu o futuro com precisão.</label>
+                    </div>
+
+                    <?php $_SESSION['idMitologia'] = "1"; ?>
 
                     <div class="buttonResponder">
                         <input type="submit" value="Terminar" id="btnPergunta10" name="submit">
@@ -438,65 +436,25 @@ if (isset($_POST['submit'])) {
                 </div>
             </section>
         </form>
-
-            <section id="fim">
-                <div id="congratulations">
-                    <img src="../../../back/imagens/mitologia-grega.jpg" alt="fundo-grega">
-                    <p id="acertos">Parabéns, Você acertou 9 de 10 questões!</p>
-
-                    <?php
-                if(isset($_POST['submit'])) {
-                    $recebendoId = "SELECT * FROM partida WHERE mitologia_id = 1";
-                    $result = mysqli_query($conexao, $recebendoId);
-                    $objetosPartida = [];
-                
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $objetosPartida[] = array(
-                            "id" => $row['id'],
-                            "pontuacao" => $row['pontuacao'],
-                            "idJogador" => $row['jogador_id']
-                        );
-                    }
-                
-                    function compararDecrescente($a, $b) {
-                        if ($a['pontuacao'] == $b['pontuacao']) {
-                            return 0;
-                        }
-                        return ($a['pontuacao'] < $b['pontuacao']) ? 1 : -1;
-                    }
-                
-                    usort($objetosPartida, 'compararDecrescente');
-                
-                    $idUsuario = '';
-                    $qtdAcertos = '';
-                
-                    echo "<table id='tabela'>";
-                    echo "<thead>";
-                    echo "<th>Colocação</th>";
-                    echo "<th>Nome</th>";
-                    echo "<th>Pontuação</th>";
-                    echo "</thead>";
-                    for ($c = 0; $c < count($objetosPartida); $c++) {
-                        $idNum = intval($objetosPartida[$c]['idJogador']);
-                        $consultaIdTabela = "SELECT apelido FROM jogador WHERE id = $idNum";
-                        $resultadoNome = mysqli_query($conexao, $consultaIdTabela);
-                        if (!$resultadoNome) {
-                            die ("Erro: " . mysqli_error($conexao));
-                        }
-                        $rowNome = mysqli_fetch_assoc($resultadoNome);
-                        $nome = $rowNome['apelido'];
-                        echo "<tr>";
-                        echo "<td>" . $c + 1 . "</td>";
-                        echo "<td>" . $nome . "</td>";
-                        echo "<td>" . $objetosPartida[$c]['pontuacao'] . "/10</td>";
-                        echo "</tr>";
-                    }
-                    echo "</table>";
-                }
-                ?>
-                </div>
-            </section>
     </main>
+
+    <script>
+        function submitForm() {
+            let form = document.getElementById("formulario_quiz");
+            let formData = new FormData(form);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '../../../back/processar.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = '../../../back/processar.php';
+                } else {
+                    console.log('Erro ao processar o formulário');
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-const main = document.getElementsByTagName("main");
 const pg1 = document.getElementById("secao-pergunta-1");
 const pg2 = document.getElementById("secao-pergunta-2");
 const pg3 = document.getElementById("secao-pergunta-3");
@@ -309,22 +308,12 @@ function responder10() {
         contadorAcertos++;
         setTimeout(() => {
           resCerta.style.display = "none";
-          fim.style.display = "grid";
-          for (let c = 0; c < main.length; c++) {
-            main[c].style.backgroundColor = "#241bb9";
-            main[c].style.height = "91.9vh";
-          }
         }, 1500);
       } else if (valorResposta === "errado") {
         pg10.style.display = "none";
         resErrada.style.display = "grid";
         setTimeout(() => {
           resErrada.style.display = "none";
-          fim.style.display = "grid";
-          for (let c = 0; c < main.length; c++) {
-            main[c].style.backgroundColor = "#241bb9";
-            main[c].style.height = "91.9vh";
-          }
         }, 1500);
       }
       break;
@@ -332,30 +321,7 @@ function responder10() {
   }
 }
 
-function verificarContador() {
-    if (contadorAcertos >= 8) {
-      document.getElementById(
-        "acertos"
-      ).innerHTML = `<strong>Parabéns!</strong> Você acertou <strong>${contadorAcertos}</strong> de 10 questões.`;
-    } else if (contadorAcertos >= 5 && contadorAcertos <= 7) {
-      document.getElementById(
-        "acertos"
-      ).innerHTML = `Está na média, mas dá pra melhorar! Você acertou <strong>${contadorAcertos}</strong> de 10 questões!`;
-    } else if (contadorAcertos >= 2 && contadorAcertos <= 4) {
-      document.getElementById(
-        "acertos"
-      ).innerHTML = `Estude novamente os textos e refaça o quiz! Você acertou apenas <strong>${contadorAcertos}</strong> de 10 questões!`;
-    } else {
-      document.getElementById(
-        "acertos"
-      ).innerHTML = `Vamos ligar o monitor e ler os textos, porque tá difícil! Você acertou apenas <strong>${contadorAcertos}</strong> de 10 questões!`;
-    }
-}
-
-document.getElementById("btnPergunta10").addEventListener("click", () => {
-    responder10();
-    verificarContador();
-});
+document.getElementById("btnPergunta10").addEventListener("click", responder10())
 
 // Após o envio bem-sucedido do formulário, rolar até a seção "fim"
 // document.getElementById("quizForm").addEventListener("submit", function (event) {
