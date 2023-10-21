@@ -13,6 +13,19 @@ if (!isset($_SESSION)) {
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
     <title>Quiz Irlanda</title>
+    <style>
+        .buttonResponder>input[type=button],
+        .buttonResponder>input[type=submit] {
+            border: none;
+            background-color: #169b62;
+            color: #fff;
+            width: 150%;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 37px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -353,7 +366,7 @@ if (!isset($_SESSION)) {
                     <?php $_SESSION['idMitologia'] = "4"; ?>
             
                     <div class="buttonResponder">
-                        <input type="button" value="Terminar" id="btnPergunta10">
+                        <input type="submit" value="Terminar" id="btnPergunta10" name="submit">
                     </div>
                 </div>
             </section>
@@ -365,5 +378,23 @@ if (!isset($_SESSION)) {
             <p id="acertos"></p>
         </section>
     </main>
+    
+    <script>
+        function submitForm() {
+            let form = document.getElementById("formulario_quiz");
+            let formData = new FormData(form);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '../../../back/processar.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = '../../../back/processar.php';
+                } else {
+                    console.log('Erro ao processar o formulário');
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
 </body>
 </html>

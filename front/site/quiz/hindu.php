@@ -13,6 +13,19 @@ if (!isset($_SESSION)) {
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
     <title>Quiz Hindu</title>
+    <style>
+        .buttonResponder>input[type=button],
+        .buttonResponder>input[type=submit] {
+            border: none;
+            background-color: #0388A6;
+            color: #fff;
+            width: 150%;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 37px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -310,7 +323,7 @@ if (!isset($_SESSION)) {
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Rama é um deus menor que não desempenha um papel significativo na mitologia hindu.</label>
+                        <label>A - Rama é um deus menor que desempenha um papel significativo na mitologia hindu.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
@@ -357,7 +370,7 @@ if (!isset($_SESSION)) {
                     <?php $_SESSION['idMitologia'] = "3"; ?>
             
                     <div class="buttonResponder">
-                        <input type="button" value="Terminar" id="btnPergunta10">
+                        <input type="submit" value="Terminar" id="btnPergunta10" name="submit">
                     </div>
                 </div>
             </section>
@@ -369,5 +382,23 @@ if (!isset($_SESSION)) {
             <p id="acertos"></p>
         </section>
     </main>
+    
+    <script>
+        function submitForm() {
+            let form = document.getElementById("formulario_quiz");
+            let formData = new FormData(form);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '../../../back/processar.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = '../../../back/processar.php';
+                } else {
+                    console.log('Erro ao processar o formulário');
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
 </body>
 </html>

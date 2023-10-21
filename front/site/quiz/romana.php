@@ -13,6 +13,19 @@ if (!isset($_SESSION)) {
     <script src="js/animacoes.js" defer></script>
     <script src="js/quiz.js" defer></script>
     <title>Quiz Roma</title>
+    <style>
+        .buttonResponder>input[type=button],
+        .buttonResponder>input[type=submit] {
+            border: none;
+            background-color: #A61212;
+            color: #fff;
+            width: 150%;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 37px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -160,7 +173,7 @@ if (!isset($_SESSION)) {
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A mitologia romana é uma fusão sutil de elementos próprios com influências da mitologia grega, incorporando deuses romanos correspondentes aos gregos.</label>
+                        <label>A mitologia romana mescla elementos gregos e romanos, com deuses romanos correspondentes aos gregos.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="certo">
@@ -168,11 +181,11 @@ if (!isset($_SESSION)) {
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label>A mitologia romana evoluiu a partir da interação cultural com a mitologia grega, resultando na criação de deuses romanos que têm paralelos notáveis com os deuses gregos.</label>
+                        <label>A mitologia romana se originou da influência grega, gerando deuses romanos paralelos aos gregos.</label>
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao4" class="tamanhoInputOriginal" value="errado">
-                        <label>A mitologia romana desenvolveu uma sinergia com a mitologia grega, produzindo deidades romanas que compartilham características e atributos com os deuses gregos mais proeminentes.</label>
+                        <label>A mitologia romana sinergizou com a grega, criando deidades romanas que compartilham características com os deuses gregos.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -202,7 +215,7 @@ if (!isset($_SESSION)) {
                     </div>
                     <div class="radio-container">
                         <input type="radio" name="questao5" class="tamanhoInputOriginal" value="errado">
-                        <label> D - Na lenda da fundação de Roma, os irmãos gêmeos são Cástor e Pólux, associados à constelação de Gêmeos, que, através de uma jornada heroica, unem forças para estabelecer a cidade de Roma, simbolizando a harmonia e o heroísmo como fundamentos da civilização romana</label>
+                        <label> D - Na lenda da fundação de Roma, os irmãos gêmeos são Cástor e Pólux, associados à constelação de Gêmeos, que, através de uma jornada heroica, unem forças para estabelecer a cidade de Roma.</label>
                     </div>
             
                     <div class="buttonResponder">
@@ -357,7 +370,7 @@ if (!isset($_SESSION)) {
                     <?php $_SESSION['idMitologia'] = "8"; ?>
             
                     <div class="buttonResponder">
-                        <input type="button" value="Terminar" id="btnPergunta10">
+                        <input type="submit" value="Terminar" id="btnPergunta10" name="submit">
                     </div>
                 </div>
             </section>
@@ -369,5 +382,23 @@ if (!isset($_SESSION)) {
             <p id="acertos"></p>
         </section>
     </main>
+    
+    <script>
+        function submitForm() {
+            let form = document.getElementById("formulario_quiz");
+            let formData = new FormData(form);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '../../../back/processar.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = '../../../back/processar.php';
+                } else {
+                    console.log('Erro ao processar o formulário');
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
 </body>
 </html>

@@ -43,13 +43,13 @@ if ($idMitologiaSession === '1') {
 } else if ($idMitologiaSession === '4') {
     $imagem = '../../../back/imagens/irlandesa/brigid-1.jpg';
 } else if ($idMitologiaSession === '5') {
-    $imagem = '../../../back/imagens/Prince_Hanzoku_terrorised_by_a_nine-_tailed_fox.jpg';
+    $imagem = '../../../back/imagens/japonesa/Prince_Hanzoku_terrorised_by_a_nine-_tailed_fox.jpg';
 } else if ($idMitologiaSession === '6') {
-    $imagem = '../../../back/imagens/mitologia-mesopotamica.jpg';
+    $imagem = '../../../back/imagens/mitologia-mesopotamica.webp';
 } else if ($idMitologiaSession === '7') {
-    $imagem = '../../../back/imagens/mitologia-nordica.jpg';
+    $imagem = '../../../back/imagens/mitologia-nordica.webp';
 } else if ($idMitologiaSession === '8') {
-    $imagem = '../../../back/imagens/mitologia-romana.jpg';
+    $imagem = '../../../back/imagens/mitologia-romana.webp';
 } else if ($idMitologiaSession === '9') {
     $imagem = '../../../back/imagens/';
 } else {
@@ -80,14 +80,14 @@ $_SESSION['acertos'] = '';
                 <li>
                     <a href="#">QUIZ <span id="seta-baixo">&darr;</span></a>
                     <ul class="dropdown">
-                        <li id="margin-top-dropdown"><a href="egipcia.html">Egípcia</a></li>
+                        <li id="margin-top-dropdown"><a href="egipcia.php">Egípcia</a></li>
                         <li class="link-dropdown" id="linkGrecia"><a href="grega.php">Grega</a></li>
-                        <li class="link-dropdown" id="linkHindu"><a href="hindu.html">Hindu</a></li>
-                        <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.html">Irlandesa</a></li>
-                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.html">Japonesa</a></li>
-                        <li id="link-dropdown-excessao"><a href="mesopotamica.html">Mesopotâmica</a></li>
-                        <li class="link-dropdown" id="linkNordica"><a href="nordica.html">Nórdica</a></li>
-                        <li class="link-dropdown" id="linkRomana"><a href="romana.html">Romana</a></li>
+                        <li class="link-dropdown" id="linkHindu"><a href="hindu.php">Hindu</a></li>
+                        <li class="link-dropdown" id="linkIrlandesa"><a href="irlandesa.php">Irlandesa</a></li>
+                        <li class="link-dropdown" id="linkJaponesa"><a href="japonesa.php">Japonesa</a></li>
+                        <li id="link-dropdown-excessao"><a href="mesopotamica.php">Mesopotâmica</a></li>
+                        <li class="link-dropdown" id="linkNordica"><a href="nordica.php">Nórdica</a></li>
+                        <li class="link-dropdown" id="linkRomana"><a href="romana.php">Romana</a></li>
                     </ul>
                 </li>
                 <li id="link-sair"><a href="../../../back/logout.php">SAIR</a></li>

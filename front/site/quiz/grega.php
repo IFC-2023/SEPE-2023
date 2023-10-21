@@ -22,6 +22,17 @@ if (!isset($_SESSION)) {
         th, td {
             padding: 5px;
         }
+        .buttonResponder>input[type=button],
+        .buttonResponder>input[type=submit] {
+            border: none;
+            background-color: #daba04;
+            color: #fff;
+            width: 150%;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 37px;
+            cursor: pointer;
+        }
     </style>
     <title>Quiz Grécia</title>
 </head>
@@ -351,8 +362,7 @@ if (!isset($_SESSION)) {
 
                     <div class="radio-container">
                         <input type="radio" name="questao8" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - As tempestades não estão diretamente associadas a Hades na mitologia grega. 
-                        Portanto, esta alternativa não é correta.</label>
+                        <label>D - As tempestades não estão diretamente associadas a Hades na mitologia grega.</label>
                     </div>
 
                     <div class="buttonResponder">
@@ -371,27 +381,22 @@ if (!isset($_SESSION)) {
                 <div class="alternativas">
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>A - Náiades eram ninfas associadas com fontes de água doce, como rios, lagos e 
-                        nascentes. Eram consideradas as protectoras das fontes e muitas vezes eram retratadas dançando à beira da água.</label>
+                        <label>A - As ninfas eram deidades masculinas na mitologia grega.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="certo">
-                        <label>B - Náiades eram ninfas associadas com fontes de água doce, como rios, lagos e 
-                        nascentes. Eram consideradas as protectoras das fontes e muitas vezes eram retratadas dançando à beira da água.</label>
+                        <label>B - As ninfas eram divindades na mitologia grega associadas a elementos da natureza, como árvores, água e montanhas, desempenhando papéis protetores e misteriosos.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>C - Dríades eram ninfas que habitavam as árvores e florestas. Eram protetoras das 
-                        árvores e da vida selvagem, sendo essenciais para a manutenção do equilíbrio 
-                        natural.</label>
+                        <label>C - As ninfas eram deidades exclusivamente associadas ao Olimpo.</label>
                     </div>
 
                     <div class="radio-container">
                         <input type="radio" name="questao9" class="tamanhoInputOriginal" id="" value="errado">
-                        <label>D - Lâmpades eram ninfas subterrâneas, associadas às grutas e cavernas. Eram 
-                        frequentemente vistas como guardiãs de segredos e conhecimentos ocultos.</label>
+                        <label>D - As ninfas não tinham qualquer influência na natureza ou no mundo natural.</label>
                     </div>
 
                     <div class="buttonResponder">
