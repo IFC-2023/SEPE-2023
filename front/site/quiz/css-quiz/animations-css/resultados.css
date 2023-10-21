@@ -279,9 +279,17 @@ main {
     height: 90.9vh;
 }
 
+#div_tabela > h1 {
+    position: relative;
+    text-align: center;
+    margin-right: 160px;
+    top: 120px;
+    font-size: 2.5em;
+}
+
 table {
     position: relative;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-right: 200px;
     right: 80px;
     width: 100%;
@@ -300,6 +308,10 @@ th, td {
 th {
     background-color: green;
     color: white;
+}
+
+tbody {
+    color: #fdfdfd;
 }
 
 #imagemMitologia {

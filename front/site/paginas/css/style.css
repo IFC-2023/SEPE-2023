@@ -304,11 +304,11 @@ ul li ul.dropdown a:hover {
  }
  
 
-#link-home:hover::after {
+ #link-home:hover::after, #link-sair:hover::after {
     content: "";
     height: 2px;
     background-color: rgb(20, 18, 126);
-    margin-left: 25px;
+    margin-left: 20px;
     display: block;
     width: 70%;
     transition: .5s;
@@ -351,34 +351,20 @@ ul li ul.dropdown a:hover {
     }
 }
 
-#link-quiz:hover::after {
+.mouseSaiu::after, .saiuLogin::after {
     content: "";
-    height: 2px;
     background-color: rgb(20, 18, 126);
-    margin-left: 25px;
+    margin-left: 20px;
     display: block;
-    width: 80%;
-    transition: .5s;
-    animation-name: hover-animation;
+    animation-name: sair-animation;
     animation-duration: .2s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-.saiuQuiz::after {
-    content: "";
-    background-color: rgb(20, 18, 126);
-    margin-left: 25px;
-    display: block;
-    animation-name: sair-animation-quiz;
-    animation-duration: .3s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-}
-
-@keyframes sair-animation-quiz {
+@keyframes sair-animation {
     0% {
-        width: 80%;
+        width: 70%;
         height: 2px;
     }
 

@@ -103,6 +103,7 @@ $_SESSION['acertos'] = '';
             </div>
 
             <div id="div_tabela">
+                <h1>Ranking</h1>
                 <?php
                 echo "<table id='tabela'>";
                 echo "<thead>";
