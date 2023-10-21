@@ -330,6 +330,9 @@ ul li ul.dropdown a:hover {
     box-shadow: 0 0 6px blue;
 }
 
+#secao-pergunta-5 > .alternativas > .radio-container > label {
+    font-size: 1.5em;
+}
 
 .informacoes-questao {
     grid-area: informacoes;

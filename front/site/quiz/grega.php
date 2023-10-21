@@ -25,7 +25,7 @@ if (!isset($_SESSION)) {
         .buttonResponder>input[type=button],
         .buttonResponder>input[type=submit] {
             border: none;
-            background-color: #daba04;
+            background-color: #3027da;
             color: #fff;
             width: 150%;
             padding: 20px;

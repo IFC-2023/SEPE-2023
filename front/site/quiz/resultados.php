@@ -69,6 +69,19 @@ $_SESSION['acertos'] = '';
     <link rel="stylesheet" href="css-quiz/animations-css/resultados.css">
     <script src="js/animacoes.js" defer></script>
     <title>Resultados</title>
+    <style>
+        #acertos {
+            color: #000;
+            position: relative;
+            bottom: 50px;
+            background-color: rgba(255, 255, 255, 0.959);
+            left: 103px;
+            width: 562px;
+            height: 45px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,7 +112,11 @@ $_SESSION['acertos'] = '';
         <section id="fim">
             <div id="congratulations">
                 <img <?php echo "src=$imagem" ?> alt="" id="imagemMitologia">
-                <div id="acertos"><p id="parabens">Parabéns, você acertou <?php echo "$sessaoAcertos"?> de 10!</p></div>
+                <div id="acertos">
+                    <p id="parabens">Parabéns, você acertou
+                        <?php echo "$sessaoAcertos" ?> de 10!
+                    </p>
+                </div>
             </div>
 
             <div id="div_tabela">
